@@ -49,6 +49,10 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/');
 });
 
+test('試作運用のビルドでは「試作版」と表示する', async ({ page }) => {
+  await expect(page.getByText(/^試作版：/)).toBeVisible();
+});
+
 test('新しい問題 → 答え合わせ → 結果 → 翌日の復習', async ({ page }) => {
   await startNew(page);
   await expectQuestionFits(page);

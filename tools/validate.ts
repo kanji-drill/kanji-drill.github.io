@@ -77,7 +77,7 @@ export function validate(words: readonly Word[]) {
     const evenPairs = [...byKey.values()].every((kws) => kws.length === 2);
     if (!evenPairs || byKey.size % 3 !== 0) {
       warnings.push(
-        `音「${reading}」は漢字 ${byKey.size} 種・語数 ${[...byKey.values()].map((k) => k.length).join(',')}。1 漢字 2 語・漢字 6 種か 9 種にすると、周回の終わりに使用済みの語で埋める問題が減ります`,
+        `音「${reading}」は漢字 ${byKey.size} 種・語数 ${[...byKey.values()].map((k) => k.length).join(',')}。1 漢字 2 語・漢字 3 の倍数種（6・9・12…）にすると、周回の終わりに使用済みの語で埋める問題が減ります`,
       );
     }
     if (ws.length < CHOICES + 1 || byKey.size < CHOICES) {

@@ -36,15 +36,34 @@ function pickDistractors(group: Group, target: Word, opts: BuildOptions): Word[]
     group.words.filter((w) => w.key !== target.key && !opts.exclude.has(w.id) && !sharesChar(w.word, target.word)),
     opts.rng,
   ).sort((a, b) => opts.rank(a.id) - opts.rank(b.id) || (remaining.get(b.key) ?? 0) - (remaining.get(a.key) ?? 0));
+  // ただし、未使用の語が 2 つ以上残る漢字は、この先の問題の「同じ漢字の 2 語」に要る。
+  // 残りの問題数を q、そうした漢字の数を n2 とすると、誤りの選択肢に回せるのは n2 − q 字まで
+  // （漢字 9 種以上のグループで、周回の最後の問題を組めなくなるのを防ぐ）
+  const unusedTotal = [...remaining.values()].reduce((a, b) => a + b, 0);
+  const pairKeys = [...remaining.values()].filter((n) => n >= 2).length;
+  let pairBudget = pairKeys - Math.floor(unusedTotal / (CHOICES + 1));
   const picked: Word[] = [];
   const keys = new Set<string>();
-  // まず漢字が重ならないように選び、足りなければ重なりを許す
-  for (const w of candidates) {
-    if (picked.length === CHOICES - 1) break;
-    if (keys.has(w.key)) continue;
+  const pick = (w: Word) => {
     picked.push(w);
     keys.add(w.key);
+  };
+  // まず未使用の語から、漢字が重ならないように選ぶ
+  for (const w of candidates) {
+    if (picked.length === CHOICES - 1) break;
+    if (keys.has(w.key) || opts.rank(w.id) !== 0) continue;
+    if ((remaining.get(w.key) ?? 0) >= 2) {
+      if (pairBudget <= 0) continue;
+      pairBudget--;
+    }
+    pick(w);
   }
+  // 足りなければ、上限を超えた漢字や使用済みの語からも、漢字が重ならないように選ぶ
+  for (const w of candidates) {
+    if (picked.length === CHOICES - 1) break;
+    if (!keys.has(w.key)) pick(w);
+  }
+  // それでも足りなければ、漢字の重なりを許す
   for (const w of candidates) {
     if (picked.length === CHOICES - 1) break;
     if (!picked.includes(w)) picked.push(w);

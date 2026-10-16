@@ -1,7 +1,7 @@
 import fc from 'fast-check';
 import { describe, expect, it } from 'vitest';
 import master from '../src/data/words.json';
-import { buildNewSet, buildReviewSet, checkQuestion, questionWordIds } from '../src/domain/generator';
+import { buildNewSet, buildQuestion, buildReviewSet, checkQuestion, questionWordIds } from '../src/domain/generator';
 import { buildIndex, sharesChar, splitOkurigana } from '../src/domain/master';
 import { mulberry32 } from '../src/domain/rng';
 import {
@@ -12,7 +12,7 @@ import {
   rankOf,
   unusedCount,
 } from '../src/domain/scheduler';
-import type { Word } from '../src/domain/types';
+import { CHOICES, type Word } from '../src/domain/types';
 
 const words = master.words as Word[];
 
@@ -146,6 +146,46 @@ describe('generator', () => {
       p = advanceCycleIfExhausted(markUsed(p, ids), index.usableIds);
     }
     expect(seen.size).toBe(index.usableIds.length);
+  });
+
+  it('1 漢字 2 語・漢字 3 の倍数種のグループは、1 周を未使用の語だけで組み切れる', () => {
+    for (const kinds of [6, 9, 12, 15]) {
+      const ws: Word[] = [];
+      for (let k = 0; k < kinds; k++) {
+        const key = String.fromCodePoint(0x4e00 + k);
+        for (let n = 0; n < 2; n++) {
+          ws.push({
+            id: `w${k * 2 + n}`,
+            word: key + String.fromCodePoint(0x5000 + k * 2 + n),
+            kana: 'ア',
+            key,
+            keyIndex: 0,
+            reading: 'R',
+            keyKana: 'ア',
+            sentence: '{ア}',
+            source: null,
+            verified: true,
+          });
+        }
+      }
+      const group = buildIndex(ws).groups.get('R');
+      if (!group) throw new Error('グループがありません');
+      for (let seed = 1; seed <= 20; seed++) {
+        const rng = mulberry32(seed);
+        const used = new Set<string>();
+        for (let i = 0; i < ws.length / (CHOICES + 1); i++) {
+          const q = buildQuestion(group, { rank: (id) => (used.has(id) ? 1 : 0), exclude: new Set(), rng });
+          if (!q) throw new Error(`漢字 ${kinds} 種・seed ${seed}: ${i + 1} 問目を組めません`);
+          const ids = questionWordIds(q);
+          expect(
+            ids.filter((id) => used.has(id)),
+            `漢字 ${kinds} 種・seed ${seed}・${i + 1} 問目`,
+          ).toEqual([]);
+          for (const id of ids) used.add(id);
+        }
+        expect(used.size).toBe(ws.length);
+      }
+    }
   });
 
   it('復習のセットは、期日を迎えた語を古い順に設問にする', () => {

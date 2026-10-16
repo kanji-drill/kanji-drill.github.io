@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BottomBar, Button, CloseIcon, GearIcon, Hanamaru, Header, IconButton, Notice } from '../components/ui';
-import { hasUnverified, index } from '../data/master';
+import { hasUnverified, IS_PILOT, index } from '../data/master';
 import {
   DAILY_NEW_SETS,
   DAILY_REVIEW_WORDS,
@@ -77,10 +77,12 @@ export function Home({ onOpen, onSettings, updateReady, onUpdate }: Props) {
       />
 
       <main className="flex flex-1 flex-col gap-4 pb-4">
-        {hasUnverified && (
+        {hasUnverified ? (
           <Notice tone="shu">
             試作版：まだ確認が済んでいない問題を含みます。誤りに気づいたら先生に知らせてください。
           </Notice>
+        ) : (
+          IS_PILOT && <Notice tone="shu">試作版：誤りに気づいたら先生に知らせてください。</Notice>
         )}
         {updateReady && (
           <Notice>

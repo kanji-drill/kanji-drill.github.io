@@ -27,7 +27,7 @@ jobs:
       - run: npx biome check .
       - run: npm test
       - run: npm run simulate
-      # 試作運用の間は確認前の語も出題する。全語の確認が済んだら build に切り替える
+      # 試作運用の間は「試作版」と表示する（出題は確認済みの語だけ）。試作運用が終わったら build に切り替える
       - run: npm run build:pilot
         env:
           BASE_PATH: /${{ github.event.repository.name }}/

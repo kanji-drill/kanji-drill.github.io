@@ -4,8 +4,11 @@ import data from './words.json';
 
 const master = data as Master;
 
-/** 確認前の語も出題するか（開発中と、試作運用のビルドだけ） */
+/** 確認前の語も出題するか（開発中だけ。公開するビルドでは確認済みの語だけを出す） */
 export const INCLUDE_UNVERIFIED = import.meta.env.DEV || import.meta.env.VITE_INCLUDE_UNVERIFIED === '1';
+
+/** 試作運用のビルドか（ホームに「試作版」と表示する） */
+export const IS_PILOT = import.meta.env.VITE_PILOT === '1';
 
 const words: Word[] = master.words.filter((w) => INCLUDE_UNVERIFIED || w.verified);
 
