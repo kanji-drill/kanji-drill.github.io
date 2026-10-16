@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "./fonts.generated.css";
+
+/* 試験用紙×朱ペン。v1 はライトテーマのみ（ダークの値は計画書に記載） */
+@theme {
+  --color-paper: #f6f1e7;
+  --color-sheet: #fffdf8;
+  --color-ink: #1e1c19;
+  --color-ink-sub: #615b51;
+  --color-rule: #dcd3c3;
+  --color-line: #8a8172;
+  --color-shu: #b8361f;
+  --color-on-shu: #ffffff;
+  --color-shu-wash: #fbe9e4;
+
+  --font-mincho: "BIZ UDMincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-gothic: "BIZ UDPGothic", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-kyokasho: "Klee One", "BIZ UDMincho", serif;
+
+  --radius-paper: 6px;
+}
+
+:root {
+  color-scheme: light;
+  /* 問題文の大きさ。設定の「大」で 26px。画面の高さが足りなければ自動で縮める */
+  --q-base: 22px;
+}
+
+:root[data-size="large"] {
+  --q-base: 26px;
+}
+
+html,
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-gothic);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+}
+
+@layer components {
+  /* 問題文の大きさ。縦書きの 1 列（最大 14 字＋番号）が画面の高さに収まるように上限を設ける */
+  .q-text {
+    font-family: var(--font-mincho);
+    font-size: min(var(--q-base), calc((100svh - 250px) / 15.5));
+    line-height: 1.55;
+  }
+
+  /* 横書きでは、例文（最大 14 字＋番号）が 1 行に収まるよう、画面の幅からも上限を設ける */
+  .q-text.horizontal {
+    font-size: min(var(--q-base), calc((100vw - 100px) / 14.5), calc((100svh - 250px) / 11));
+  }
+
+  .vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* 傍線。縦書きでは右側、横書きでは下側に引く（iOS Safari でも位置がずれないよう border で描く） */
+  .bouten {
+    padding-inline: 0.04em;
+  }
+  .vertical .bouten {
+    border-right: 2px solid currentColor;
+    padding-right: 0.12em;
+  }
+  .horizontal .bouten {
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.08em;
+  }
+
+  .paper-card {
+    background: var(--color-sheet);
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-paper);
+    box-shadow:
+      0 1px 2px rgb(30 28 25 / 0.06),
+      0 4px 16px rgb(30 28 25 / 0.04);
+  }
+
+  ruby rt {
+    font-family: var(--font-gothic);
+    font-size: 14px;
+    color: var(--color-ink-sub);
+    letter-spacing: 0.05em;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-shu);
+    outline-offset: 2px;
+  }
+}
+
+/* ✕ を付けたときの朱の印 */
+@keyframes stamp {
+  from {
+    transform: scale(1.6) rotate(-12deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+.stamp-in {
+  animation: stamp 150ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-in {
+    animation: none;
+  }
+}

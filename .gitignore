@@ -1,0 +1,11 @@
+node_modules
+dist
+dev-dist
+test-results
+playwright-report
+*.local
+# 過去問から集めた語の一覧は公開リポジトリに置かない
+private/
+src/assets/fonts/
+src/styles/fonts.generated.css
+review.html

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>漢字ドリル</title>
+  <rect width="512" height="512" rx="96" fill="#F6F1E7"/>
+  <rect x="88" y="88" width="336" height="336" rx="28" fill="#B8361F"/>
+  <rect x="108" y="108" width="296" height="296" rx="16" fill="none" stroke="#FBE9E4" stroke-width="6"/>
+  <text x="256" y="262" text-anchor="middle" dominant-baseline="central" font-family="'BIZ UDMincho','Hiragino Mincho ProN','Yu Mincho',serif" font-weight="700" font-size="220" fill="#FFFDF8">漢</text>
+</svg>
