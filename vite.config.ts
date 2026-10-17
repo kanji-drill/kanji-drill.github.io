@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
-// GitHub Pages では /<リポジトリ名>/ の下で配信される。Actions から BASE_PATH で渡す
+// 公開先は https://kanji-drill.github.io/ の直下なので既定は /。別のパスの下で配信するときは BASE_PATH で渡す
 const base = process.env.BASE_PATH ?? '/';
 
 export default defineConfig({
