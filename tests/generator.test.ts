@@ -91,6 +91,21 @@ describe('訓読みの語', () => {
     expect(sharesChar('競う', '競技')).toBe(true);
   });
 
+  it('訓読みの設問の選択肢に訓読みの語があれば、検査で見つける', () => {
+    const index = buildIndex(words);
+    const kun = words.filter((w) => w.kun && index.groups.has(w.reading));
+    const target = kun.find((t) => kun.some((w) => w.reading === t.reading && w.key !== t.key)) as Word;
+    const other = kun.find((w) => w.reading === target.reading && w.key !== target.key) as Word;
+    const group = index.groups.get(target.reading);
+    const q =
+      group && buildQuestion(group, { rank: () => 0, exclude: new Set(), rng: mulberry32(1), targetId: target.id });
+    if (!q) throw new Error('問題を組めません');
+    expect(checkQuestion(q, index.byId)).toBeNull();
+    const wrong = q.options.findIndex((_, i) => i !== q.correct);
+    const broken = { ...q, options: q.options.map((id, i) => (i === wrong ? other.id : id)) };
+    expect(checkQuestion(broken, index.byId)).toContain('訓読み');
+  });
+
   it('訓読みの語を含む問題も、正解がちょうど 1 つになる', () => {
     const index = buildIndex(words);
     const isKun = (id: string) => index.byId.get(id)?.kun === true;
@@ -103,7 +118,11 @@ describe('訓読みの語', () => {
       const qs = buildNewSet(index, rankOf(p), rng, 5);
       for (const q of qs) {
         expect(checkQuestion(q, index.byId)).toBeNull();
-        if (isKun(q.target)) asTarget++;
+        if (isKun(q.target)) {
+          asTarget++;
+          // 訓読みの設問では、選択肢はすべて音読みの語
+          expect(q.options.filter(isKun)).toEqual([]);
+        }
         if (q.options.some(isKun)) asOption++;
       }
       p = advanceCycleIfExhausted(markUsed(p, qs.flatMap(questionWordIds)), index.usableIds);

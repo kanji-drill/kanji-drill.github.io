@@ -19,6 +19,19 @@ function ranked(words: readonly Word[], rank: Rank, rng: Rng): Word[] {
   return shuffle(words, rng).sort((a, b) => rank(a.id) - rank(b.id));
 }
 
+/**
+ * 選択肢に使えるか。訓読みの語が設問のときは、選択肢を音読みの語だけにする
+ * （訓読みどうしだと意味だけで選べてしまい、同音の字を書き分ける練習にならない）
+ */
+function fitsTarget(w: Word, target: Word): boolean {
+  return !(target.kun && w.kun);
+}
+
+/** 音読みの設問では、訓読みの語を誤りの選択肢に先に使う（訓読みの設問では使えないため） */
+function kunFirst(target: Word, a: Word, b: Word): number {
+  return target.kun ? 0 : Number(b.kun === true) - Number(a.kun === true);
+}
+
 /** 漢字ごとの、まだ使える未使用の語の数 */
 function unusedByKey(group: Group, opts: BuildOptions): Map<string, number> {
   const counts = new Map<string, number>();
@@ -33,9 +46,17 @@ function pickDistractors(group: Group, target: Word, opts: BuildOptions): Word[]
   // 漢字ごとの残りを均すと、次の問題でも「同じ漢字の 2 語」を組みやすい
   const remaining = unusedByKey(group, opts);
   const candidates = shuffle(
-    group.words.filter((w) => w.key !== target.key && !opts.exclude.has(w.id) && !sharesChar(w.word, target.word)),
+    group.words.filter(
+      (w) =>
+        w.key !== target.key && !opts.exclude.has(w.id) && !sharesChar(w.word, target.word) && fitsTarget(w, target),
+    ),
     opts.rng,
-  ).sort((a, b) => opts.rank(a.id) - opts.rank(b.id) || (remaining.get(b.key) ?? 0) - (remaining.get(a.key) ?? 0));
+  ).sort(
+    (a, b) =>
+      opts.rank(a.id) - opts.rank(b.id) ||
+      kunFirst(target, a, b) ||
+      (remaining.get(b.key) ?? 0) - (remaining.get(a.key) ?? 0),
+  );
   // ただし、未使用の語が 2 つ以上残る漢字は、この先の問題の「同じ漢字の 2 語」に要る。
   // 残りの問題数を q、そうした漢字の数を n2 とすると、誤りの選択肢に回せるのは n2 − q 字まで
   // （漢字 9 種以上のグループで、周回の最後の問題を組めなくなるのを防ぐ）
@@ -90,7 +111,9 @@ export function buildQuestion(group: Group, opts: BuildOptions): Question | null
     const target = group.words.find((w) => w.id === opts.targetId);
     if (!target) return null;
     const answers = ranked(
-      (group.byKey.get(target.key) ?? []).filter((w) => w.id !== target.id && !exclude.has(w.id)),
+      (group.byKey.get(target.key) ?? []).filter(
+        (w) => w.id !== target.id && !exclude.has(w.id) && fitsTarget(w, target),
+      ),
       rank,
       rng,
     );
@@ -110,11 +133,23 @@ export function buildQuestion(group: Group, opts: BuildOptions): Question | null
     .filter((k) => k.ws.length >= 2);
   const order = shuffle(keys, rng).sort((a, b) => b.unused - a.unused);
   for (const choice of order) {
-    const [first, second] = ranked(choice.ws, rank, rng);
+    const [first, ...rest] = ranked(choice.ws, rank, rng);
+    // 訓読みの語どうしは組にしない（どちらを設問にしても、もう一方を選択肢に使えない）
+    const second = first && rest.find((w) => fitsTarget(w, first));
     if (!first || !second) continue;
-    const [target, answer] = rng() < 0.5 ? [first, second] : [second, first];
-    const distractors = pickDistractors(group, target, opts);
-    if (distractors) return assemble(group, target, answer, distractors, rng);
+    // 設問にする語は半々で決める。ただし訓読みの語を設問にすると誤りの選択肢が音読みの語に限られるので、
+    // 未使用の語だけで組めないときは、逆の向き（もう一方を設問）でも試して、未使用の語で組めるほうを使う
+    const pairs: [Word, Word][] = rng() < 0.5 ? [[first, second]] : [[second, first]];
+    if (first.kun !== second.kun) pairs.push([pairs[0]?.[1] as Word, pairs[0]?.[0] as Word]);
+    let fallback: Question | null = null;
+    for (const [target, answer] of pairs) {
+      const distractors = pickDistractors(group, target, opts);
+      if (!distractors) continue;
+      const q = assemble(group, target, answer, distractors, rng);
+      if (distractors.every((w) => rank(w.id) === 0)) return q;
+      fallback ??= q;
+    }
+    if (fallback) return fallback;
   }
   return null;
 }
@@ -133,6 +168,7 @@ export function checkQuestion(q: Question, byId: ReadonlyMap<string, Word>): str
     const w = byId.get(id);
     if (!w) return `選択肢の語 ${id} がありません`;
     if (w.reading !== target.reading) return `${w.word} の音が設問と違います`;
+    if (!fitsTarget(w, target)) return `訓読みの設問 ${target.word} の選択肢に、訓読みの語 ${w.word} があります`;
     if (i === q.correct) {
       if (w.key !== target.key) return `正解の ${w.word} が ${target.key} を含みません`;
     } else {
