@@ -15,13 +15,18 @@ export type MasterIndex = {
   usableIds: string[];
 };
 
+/** 設問や正解の選択肢（同じ漢字の 2 語の組）に使えるか。選択肢専用の語は使えない */
+export function canPair(w: Word): boolean {
+  return !w.distractorOnly;
+}
+
 /**
  * 同音グループが出題に使えるか。
  * 正解の組（同じ漢字の 2 語）を作れる漢字が 1 つ以上あり、
  * 誤りの選択肢に回せる別の漢字が CHOICES - 1 種以上あること。
  */
 export function isGroupUsable(byKey: Map<string, Word[]>): boolean {
-  const pairable = [...byKey.values()].some((ws) => ws.length >= 2);
+  const pairable = [...byKey.values()].some((ws) => ws.filter(canPair).length >= 2);
   return pairable && byKey.size >= CHOICES;
 }
 

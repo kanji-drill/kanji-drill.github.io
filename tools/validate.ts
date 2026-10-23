@@ -1,6 +1,6 @@
 // 語彙マスタの検査。エラーが 1 件でもあれば終了コード 1 で終わる
 import { createRequire } from 'node:module';
-import { buildIndex, splitOkurigana } from '../src/domain/master';
+import { buildIndex, canPair, splitOkurigana } from '../src/domain/master';
 import { CHOICES, type Word } from '../src/domain/types';
 import { isMain, loadMaster } from './lib';
 
@@ -8,6 +8,7 @@ const require = createRequire(import.meta.url);
 const joyo = new Set<string>((require('joyo-kanji') as { kanji: string[] }).kanji);
 
 export const SENTENCE_MAX = 14;
+export const MEANING_MAX = 40;
 const KATAKANA = /^[ァ-ヶー]+$/;
 
 export function sentenceText(sentence: string): string {
@@ -29,7 +30,18 @@ export function validate(words: readonly Word[]) {
     surfaces.add(w.word);
 
     const [kanji, okuri] = splitOkurigana(w.word);
-    for (const ch of kanji) if (!joyo.has(ch)) err(w, `常用漢字表にない字「${ch}」が含まれています`);
+    // 常用漢字表にない字は、nonJoyo に挙げた字だけを例外として認める（例: 剽窃 の 剽）
+    for (const ch of kanji) {
+      if (!joyo.has(ch) && !w.nonJoyo?.includes(ch)) err(w, `常用漢字表にない字「${ch}」が含まれています`);
+    }
+    for (const ch of w.nonJoyo ?? []) {
+      if (joyo.has(ch)) err(w, `nonJoyo の「${ch}」は常用漢字です`);
+      if (!kanji.includes(ch)) err(w, `nonJoyo の「${ch}」が語にありません`);
+      if (ch === w.key) err(w, '問われる字（key）は常用漢字にしてください');
+    }
+    if (w.nonJoyo?.length && !w.meaning) err(w, '常用漢字表にない字を含む語には、meaning（語の意味）を入れてください');
+    if (w.meaning !== undefined && (w.meaning.trim() === '' || [...w.meaning].length > MEANING_MAX))
+      err(w, `語の意味は 1〜${MEANING_MAX} 字にしてください（答え合わせの画面に収めるため）`);
     for (const a of w.alt ?? []) {
       if (a === w.word) err(w, `別表記「${a}」が語と同じです`);
       for (const ch of splitOkurigana(a)[0])
@@ -68,16 +80,20 @@ export function validate(words: readonly Word[]) {
     const byKey = new Map<string, Word[]>();
     for (const w of ws) byKey.set(w.key, [...(byKey.get(w.key) ?? []), w]);
     for (const [key, kws] of byKey) {
-      if (kws.length < 2)
+      // 選択肢専用の語だけの漢字は 1 語でよい。それ以外の漢字は、正解の組を作れるよう 2 語以上
+      const pairable = kws.filter(canPair).length;
+      if (pairable === 1)
         errors.push(
-          `音「${reading}」の漢字「${key}」は 1 語しかありません（2 語以上必要。復習問題を組めなくなります）`,
+          `音「${reading}」の漢字「${key}」は 1 語しかありません（2 語以上必要。復習問題を組めなくなります。自然な語が 1 つしかない字なら distractorOnly にしてください）`,
         );
     }
-    // 1 問は「同じ漢字の 2 語」と「別の漢字 4 語」を使うので、1 漢字 2 語・漢字 3 の倍数種だと周回でちょうど使い切れる
-    const evenPairs = [...byKey.values()].every((kws) => kws.length === 2);
-    if (!evenPairs || byKey.size % 3 !== 0) {
+    // 1 問は「同じ漢字の 2 語」と「別の漢字 4 語」の 6 語を使うので、語数が 6 の倍数だと周回でちょうど使い切れる
+    // （1 漢字 2 語・漢字 3 の倍数種、または 3,3,2,2,2 の形。選択肢専用の語も 1 語として数える）
+    const shape = [...byKey.values()].map((k) => `${k.length}${k.some((w) => w.distractorOnly) ? '(選)' : ''}`);
+    const tooMany = [...byKey.values()].some((k) => k.filter(canPair).length > 3);
+    if (ws.length % (CHOICES + 1) !== 0 || tooMany) {
       warnings.push(
-        `音「${reading}」は漢字 ${byKey.size} 種・語数 ${[...byKey.values()].map((k) => k.length).join(',')}。1 漢字 2 語・漢字 3 の倍数種（6・9・12…）にすると、周回の終わりに使用済みの語で埋める問題が減ります`,
+        `音「${reading}」は漢字 ${byKey.size} 種・語数 ${ws.length}（${shape.join(',')}）。語数を 6 の倍数にし、1 漢字 2〜3 語にすると、周回の終わりに使用済みの語で埋める問題が減ります`,
       );
     }
     if (ws.length < CHOICES + 1 || byKey.size < CHOICES) {

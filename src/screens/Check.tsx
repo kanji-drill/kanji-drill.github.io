@@ -198,6 +198,12 @@ function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, onToggle }: R
             )}
           </span>
           {w.alt && w.alt.length > 0 && <span className="text-[12px] text-ink-sub">カッコ内の表記で書いても正解</span>}
+          {w.nonJoyo && w.nonJoyo.length > 0 && (
+            <span className="text-[12px] text-ink-sub">
+              「{w.nonJoyo.join('」「')}」は常用漢字表にない字。書けなくても、ほかの字が書けていれば○
+            </span>
+          )}
+          {w.meaning && <span className="text-[13px] leading-snug text-ink-sub">意味：{w.meaning}</span>}
           <span className="truncate font-mincho text-[13px] text-ink-sub" aria-hidden="true">
             {before}
             <span className="text-ink">{kanji}</span>

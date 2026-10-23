@@ -33,6 +33,8 @@ const kana = `${range(0x3041, 0x3096) + range(0x30a1, 0x30fa)}ー・、。「」
 const words = loadMaster().words;
 const ui = uiText();
 const sentences = words.map((w) => w.word + w.kana + w.sentence).join('');
+// 答え合わせで出す語の意味と、常用漢字表にない字の注意（UI の書体で表示する）
+const notes = words.map((w) => (w.meaning ?? '') + (w.nonJoyo ?? []).join('')).join('');
 
 /** 書体ごとに必要な字 */
 const FACES = [
@@ -46,13 +48,13 @@ const FACES = [
     family: 'BIZ UDPGothic',
     weight: 400,
     file: 'biz-udpgothic/400Regular/BIZUDPGothic_400Regular.ttf',
-    text: ascii + kana + ui,
+    text: ascii + kana + ui + notes,
   },
   {
     family: 'BIZ UDPGothic',
     weight: 700,
     file: 'biz-udpgothic/700Bold/BIZUDPGothic_700Bold.ttf',
-    text: ascii + kana + ui,
+    text: ascii + kana + ui + notes,
   },
   {
     family: 'Klee One',

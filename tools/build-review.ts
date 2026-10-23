@@ -15,10 +15,11 @@ const esc = (s: string) =>
 const byReading = new Map<string, Word[]>();
 for (const w of master.words) byReading.set(w.reading, [...(byReading.get(w.reading) ?? []), w]);
 
-// --since w0474 のように指定すると、その番号以降の語（新しく入れた語）を先頭にまとめて出す
+// --since w0474 のように指定すると、その番号以降の語（新しく入れた語）を先頭にまとめて出す。
+// 確認前の語（差し替えた語など、番号が古いものも含む）も、番号にかかわらず先頭に出す
 const sinceArg = process.argv.indexOf('--since');
 const since = sinceArg > 0 ? Number(process.argv[sinceArg + 1]?.replace(/^w/, '')) : null;
-const isNew = (w: Word) => since !== null && Number(w.id.slice(1)) >= since;
+const isNew = (w: Word) => (since !== null && Number(w.id.slice(1)) >= since) || !w.verified;
 
 const THEAD =
   '<thead><tr><th>番号</th><th>音</th><th>字</th><th>語</th><th>読み</th><th>例文（下は漢字にした文）</th><th>出典</th><th>状態</th></tr></thead>';
@@ -27,15 +28,25 @@ function row(w: Word): string {
   const [kanji] = splitOkurigana(w.word);
   const filled = esc(sentenceText(w.sentence)).replace(esc(w.kana), `<b>${esc(kanji)}</b>`);
   const cls = [w.verified ? 'ok' : '', isNew(w) ? 'new' : ''].join(' ').trim();
-  return `<tr class="${cls}"><td>${w.id}</td><td>${esc(w.reading)}</td><td class="key">${esc(w.key)}</td><td class="word">${esc(w.word)}${w.kun ? '<small>（訓）</small>' : ''}${w.alt?.length ? `<small>（${esc(w.alt.join('・'))} も可）</small>` : ''}</td><td>${esc(w.kana)}</td><td>${esc(sentenceText(w.sentence))}<br><small>${filled}</small></td><td>${w.source ? esc(w.source) : ''}</td><td>${w.verified ? '確認済み' : ''}</td></tr>`;
+  return `<tr class="${cls}"><td>${w.id}</td><td>${esc(w.reading)}</td><td class="key">${esc(w.key)}</td><td class="word">${esc(w.word)}${w.kun ? '<small>（訓）</small>' : ''}${w.alt?.length ? `<small>（${esc(w.alt.join('・'))} も可）</small>` : ''}${w.distractorOnly ? '<small>（選択肢専用）</small>' : ''}${w.nonJoyo?.length ? `<small>（${esc(w.nonJoyo.join('・'))} は常用外。書けなくてよい）</small>` : ''}${w.meaning ? `<br><small>意味：${esc(w.meaning)}</small>` : ''}</td><td>${esc(w.kana)}</td><td>${esc(sentenceText(w.sentence))}<br><small>${filled}</small></td><td>${w.source ? esc(w.source) : ''}</td><td>${w.verified ? '確認済み' : ''}</td></tr>`;
 }
 
 const fresh = master.words.filter(isNew);
 const freshSection =
   fresh.length > 0
-    ? `<section id="new"><h2>今回新しく入れた語 <small>${fresh.length} 語（${fresh[0] ? `w${String(since).padStart(4, '0')}` : ''} 以降）。下の音ごとの表では色付きで表示</small></h2>
+    ? `<section id="new"><h2>今回新しく入れた語・差し替えた語 <small>${fresh.length} 語（${since !== null ? `w${String(since).padStart(4, '0')} 以降と、` : ''}確認前の語）。下の音ごとの表では色付きで表示</small></h2>
 <table>${THEAD}<tbody>
 ${fresh.map(row).join('\n')}
+</tbody></table></section>`
+    : '';
+
+// --meanings を付けると、語の意味（答え合わせで表示）を付けた語だけの表を先頭に出す
+const withMeaning = process.argv.includes('--meanings') ? master.words.filter((w) => w.meaning) : [];
+const meaningSection =
+  withMeaning.length > 0
+    ? `<section id="meanings"><h2>語の意味 <small>${withMeaning.length} 語。答え合わせで表示します。誤りや分かりにくい説明があれば番号で伝えてください</small></h2>
+<table><thead><tr><th>番号</th><th>音</th><th>語</th><th>読み</th><th>意味</th></tr></thead><tbody>
+${withMeaning.map((w) => `<tr><td>${w.id}</td><td>${esc(w.reading)}</td><td class="word">${esc(w.word)}</td><td>${esc(w.kana)}</td><td>${esc(w.meaning ?? '')}</td></tr>`).join('\n')}
 </tbody></table></section>`
     : '';
 
@@ -71,6 +82,7 @@ tr.ok{background:#f3f7ef}tr.new{background:#fbf3df}td small{color:#615b51}td b{c
 ${errors.map((e) => `<p class="err">エラー：${esc(e)}</p>`).join('')}
 ${warnings.map((e) => `<p class="err">警告：${esc(e)}</p>`).join('')}
 </div>
+${meaningSection}
 ${freshSection}
 ${sections}
 </body></html>`;

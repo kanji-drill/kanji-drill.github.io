@@ -1,4 +1,4 @@
-import { type Group, type MasterIndex, sharesChar } from './master';
+import { canPair, type Group, type MasterIndex, sharesChar } from './master';
 import { type Rng, shuffle, weightedPick } from './rng';
 import { CHOICES, type Question, type Word } from './types';
 
@@ -12,6 +12,8 @@ type BuildOptions = {
   rng: Rng;
   /** 復習問題のときの設問の語 */
   targetId?: string;
+  /** 誤りの選択肢に必ず入れる語（期日を迎えた選択肢専用の語を復習するとき） */
+  mustInclude?: Word;
 };
 
 /** 乱数で混ぜてから優先度順に並べる（同じ優先度の中はランダム） */
@@ -27,18 +29,29 @@ function fitsTarget(w: Word, target: Word): boolean {
   return !(target.kun && w.kun);
 }
 
-/** 音読みの設問では、訓読みの語を誤りの選択肢に先に使う（訓読みの設問では使えないため） */
-function kunFirst(target: Word, a: Word, b: Word): number {
-  return target.kun ? 0 : Number(b.kun === true) - Number(a.kun === true);
+/**
+ * 誤りの選択肢に先に使う語ほど大きい値。使い道の少ない語から使うと、周回の終わりに語が取り残されにくい。
+ * 選択肢専用の語は誤りの選択肢にしか使えず、訓読みの語は訓読みの設問の選択肢に使えない
+ */
+function distractorFirst(target: Word, w: Word): number {
+  if (w.distractorOnly) return 2;
+  return !target.kun && w.kun ? 1 : 0;
 }
 
-/** 漢字ごとの、まだ使える未使用の語の数 */
+const isAvailableUnused = (w: Word, opts: BuildOptions) => !opts.exclude.has(w.id) && opts.rank(w.id) === 0;
+
+/** 漢字ごとの、正解の組（同じ漢字の 2 語）に使える未使用の語の数 */
 function unusedByKey(group: Group, opts: BuildOptions): Map<string, number> {
   const counts = new Map<string, number>();
   for (const w of group.words) {
-    if (!opts.exclude.has(w.id) && opts.rank(w.id) === 0) counts.set(w.key, (counts.get(w.key) ?? 0) + 1);
+    if (canPair(w) && isAvailableUnused(w, opts)) counts.set(w.key, (counts.get(w.key) ?? 0) + 1);
   }
   return counts;
+}
+
+/** 設問の語 target が、必ず入れる誤りの選択肢 m と両立するか */
+function allowsMustInclude(target: Word, m: Word | undefined): boolean {
+  return !m || (target.key !== m.key && !sharesChar(m.word, target.word) && fitsTarget(m, target));
 }
 
 function pickDistractors(group: Group, target: Word, opts: BuildOptions): Word[] | null {
@@ -48,31 +61,45 @@ function pickDistractors(group: Group, target: Word, opts: BuildOptions): Word[]
   const candidates = shuffle(
     group.words.filter(
       (w) =>
-        w.key !== target.key && !opts.exclude.has(w.id) && !sharesChar(w.word, target.word) && fitsTarget(w, target),
+        w !== opts.mustInclude &&
+        w.key !== target.key &&
+        !opts.exclude.has(w.id) &&
+        !sharesChar(w.word, target.word) &&
+        fitsTarget(w, target),
     ),
     opts.rng,
   ).sort(
     (a, b) =>
       opts.rank(a.id) - opts.rank(b.id) ||
-      kunFirst(target, a, b) ||
+      distractorFirst(target, b) - distractorFirst(target, a) ||
       (remaining.get(b.key) ?? 0) - (remaining.get(a.key) ?? 0),
   );
   // ただし、未使用の語が 2 つ以上残る漢字は、この先の問題の「同じ漢字の 2 語」に要る。
   // 残りの問題数を q、そうした漢字の数を n2 とすると、誤りの選択肢に回せるのは n2 − q 字まで
   // （漢字 9 種以上のグループで、周回の最後の問題を組めなくなるのを防ぐ）
-  const unusedTotal = [...remaining.values()].reduce((a, b) => a + b, 0);
+  const unusedTotal = group.words.filter((w) => isAvailableUnused(w, opts)).length;
   const pairKeys = [...remaining.values()].filter((n) => n >= 2).length;
-  let pairBudget = pairKeys - Math.floor(unusedTotal / (CHOICES + 1));
+  const questionsLeft = Math.max(1, Math.floor(unusedTotal / (CHOICES + 1)));
+  let pairBudget = pairKeys - questionsLeft;
+  // 選択肢専用の語は、残りの問題に均等に割り振る。1 問で使い切ると、後の問題で
+  // 「漢字の違う誤りの選択肢 4 つ」をそろえられなくなる（例: 2,2,2,2,2 の 5 字＋選択肢専用 2 語）
+  const onlyUnused = group.words.filter((w) => w.distractorOnly && isAvailableUnused(w, opts)).length;
+  let onlyBudget = Math.ceil(onlyUnused / questionsLeft);
   const picked: Word[] = [];
   const keys = new Set<string>();
   const pick = (w: Word) => {
     picked.push(w);
     keys.add(w.key);
   };
+  if (opts.mustInclude) pick(opts.mustInclude);
   // まず未使用の語から、漢字が重ならないように選ぶ
   for (const w of candidates) {
     if (picked.length === CHOICES - 1) break;
     if (keys.has(w.key) || opts.rank(w.id) !== 0) continue;
+    if (w.distractorOnly) {
+      if (onlyBudget <= 0) continue;
+      onlyBudget--;
+    }
     if ((remaining.get(w.key) ?? 0) >= 2) {
       if (pairBudget <= 0) continue;
       pairBudget--;
@@ -109,10 +136,10 @@ export function buildQuestion(group: Group, opts: BuildOptions): Question | null
 
   if (opts.targetId) {
     const target = group.words.find((w) => w.id === opts.targetId);
-    if (!target) return null;
+    if (!target || !canPair(target) || !allowsMustInclude(target, opts.mustInclude)) return null;
     const answers = ranked(
       (group.byKey.get(target.key) ?? []).filter(
-        (w) => w.id !== target.id && !exclude.has(w.id) && fitsTarget(w, target),
+        (w) => w.id !== target.id && canPair(w) && !exclude.has(w.id) && fitsTarget(w, target),
       ),
       rank,
       rng,
@@ -127,7 +154,7 @@ export function buildQuestion(group: Group, opts: BuildOptions): Question | null
   // 1 つしか残っていない漢字は誤りの選択肢に回したほうが、周回の終わりに語が取り残されにくい
   const keys = [...group.byKey.values()]
     .map((ws) => {
-      const avail = ws.filter((w) => !exclude.has(w.id));
+      const avail = ws.filter((w) => canPair(w) && !exclude.has(w.id));
       return { ws: avail, unused: avail.filter((w) => rank(w.id) === 0).length };
     })
     .filter((k) => k.ws.length >= 2);
@@ -140,9 +167,10 @@ export function buildQuestion(group: Group, opts: BuildOptions): Question | null
     // 設問にする語は半々で決める。ただし訓読みの語を設問にすると誤りの選択肢が音読みの語に限られるので、
     // 未使用の語だけで組めないときは、逆の向き（もう一方を設問）でも試して、未使用の語で組めるほうを使う
     const pairs: [Word, Word][] = rng() < 0.5 ? [[first, second]] : [[second, first]];
-    if (first.kun !== second.kun) pairs.push([pairs[0]?.[1] as Word, pairs[0]?.[0] as Word]);
+    if (first.kun !== second.kun || opts.mustInclude) pairs.push([pairs[0]?.[1] as Word, pairs[0]?.[0] as Word]);
     let fallback: Question | null = null;
     for (const [target, answer] of pairs) {
+      if (!allowsMustInclude(target, opts.mustInclude)) continue;
       const distractors = pickDistractors(group, target, opts);
       if (!distractors) continue;
       const q = assemble(group, target, answer, distractors, rng);
@@ -161,6 +189,7 @@ export function buildQuestion(group: Group, opts: BuildOptions): Question | null
 export function checkQuestion(q: Question, byId: ReadonlyMap<string, Word>): string | null {
   const target = byId.get(q.target);
   if (!target) return `設問の語 ${q.target} がありません`;
+  if (target.distractorOnly) return `選択肢専用の語 ${target.word} が設問になっています`;
   if (q.options.length !== CHOICES) return `選択肢が ${q.options.length} 個です`;
   const ids = new Set([q.target, ...q.options]);
   if (ids.size !== CHOICES + 1) return '同じ語が 2 回使われています';
@@ -168,6 +197,7 @@ export function checkQuestion(q: Question, byId: ReadonlyMap<string, Word>): str
     const w = byId.get(id);
     if (!w) return `選択肢の語 ${id} がありません`;
     if (w.reading !== target.reading) return `${w.word} の音が設問と違います`;
+    if (w.distractorOnly && i === q.correct) return `選択肢専用の語 ${w.word} が正解になっています`;
     if (!fitsTarget(w, target)) return `訓読みの設問 ${target.word} の選択肢に、訓読みの語 ${w.word} があります`;
     if (i === q.correct) {
       if (w.key !== target.key) return `正解の ${w.word} が ${target.key} を含みません`;
@@ -218,6 +248,7 @@ export function buildNewSet(index: MasterIndex, rank: Rank, rng: Rng, size: numb
  * 復習のセットを組む。dueIds は期日の古い順に並んでいること。
  * ほかの復習の語は、設問として出せるように選択肢にはなるべく使わない。
  * すでにこのセットの選択肢に使った語は、このセットでは設問にせず次の回に回す。
+ * 選択肢専用の語は設問にできないので、同じ音の問題の誤りの選択肢に入れて出し直す。
  */
 export function buildReviewSet(index: MasterIndex, dueIds: readonly string[], rng: Rng, size: number): Question[] {
   const planned = dueIds.filter((id) => {
@@ -234,8 +265,13 @@ export function buildReviewSet(index: MasterIndex, dueIds: readonly string[], rn
     if (exclude.has(id)) continue;
     const word = index.byId.get(id) as Word;
     const group = index.groups.get(word.reading) as Group;
-    const q = buildQuestion(group, { rank, exclude, rng, targetId: id });
+    const q = canPair(word)
+      ? buildQuestion(group, { rank, exclude, rng, targetId: id })
+      : buildQuestion(group, { rank, exclude, rng, mustInclude: word });
     if (!q) continue;
+    // 期日を迎えた選択肢専用の語が誤りの選択肢に入っていれば、その語の復習として数える
+    const reviewed = q.options.filter((o) => due.has(o) && index.byId.get(o)?.distractorOnly);
+    if (reviewed.length > 0) q.reviewed = reviewed;
     questions.push(q);
     for (const wid of questionWordIds(q)) exclude.add(wid);
   }

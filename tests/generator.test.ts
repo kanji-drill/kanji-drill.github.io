@@ -12,7 +12,8 @@ import {
   rankOf,
   unusedCount,
 } from '../src/domain/scheduler';
-import { CHOICES, type Word } from '../src/domain/types';
+import { createSession, outcomesOf } from '../src/domain/session';
+import { CHOICES, type Question, type Word } from '../src/domain/types';
 
 const words = master.words as Word[];
 
@@ -205,6 +206,94 @@ describe('generator', () => {
         expect(used.size).toBe(ws.length);
       }
     }
+  });
+
+  it('選択肢専用の語を含む、語数 6 の倍数のグループも、1 周を未使用の語だけで組み切れる', () => {
+    // [漢字ごとの語数]（選択肢専用の語は 1 語の漢字として、末尾の数だけ足す）
+    const shapes: [number[], number][] = [
+      [[2, 2, 2, 2, 2], 2],
+      [[3, 2, 2, 2, 2, 2, 2, 2], 1],
+      [[3, 3, 3, 2, 2, 2, 2, 2, 2, 2], 1],
+      [[2, 2, 2, 2, 2, 2, 2, 2, 2], 6],
+    ];
+    for (const [pairs, extra] of shapes) {
+      const ws: Word[] = [];
+      let code = 0x4e00;
+      const add = (key: string, distractorOnly: boolean) =>
+        ws.push({
+          id: `w${ws.length}`,
+          word: key + String.fromCodePoint(0x6000 + ws.length),
+          kana: 'ア',
+          key,
+          keyIndex: 0,
+          reading: 'R',
+          keyKana: 'ア',
+          sentence: '{ア}',
+          source: null,
+          verified: true,
+          ...(distractorOnly ? { distractorOnly } : {}),
+        });
+      for (const n of pairs) {
+        const key = String.fromCodePoint(code++);
+        for (let i = 0; i < n; i++) add(key, false);
+      }
+      for (let i = 0; i < extra; i++) add(String.fromCodePoint(code++), true);
+      const label = `形 ${pairs.join(',')}+選${extra}`;
+      expect(ws.length % (CHOICES + 1), label).toBe(0);
+      const index = buildIndex(ws);
+      const group = index.groups.get('R');
+      if (!group) throw new Error('グループがありません');
+      for (let seed = 1; seed <= 30; seed++) {
+        const rng = mulberry32(seed);
+        const used = new Set<string>();
+        for (let i = 0; i < ws.length / (CHOICES + 1); i++) {
+          const q = buildQuestion(group, { rank: (id) => (used.has(id) ? 1 : 0), exclude: new Set(), rng });
+          if (!q) throw new Error(`${label}・seed ${seed}: ${i + 1} 問目を組めません`);
+          expect(checkQuestion(q, index.byId)).toBeNull();
+          const ids = questionWordIds(q);
+          expect(
+            ids.filter((id) => used.has(id)),
+            `${label}・seed ${seed}・${i + 1} 問目`,
+          ).toEqual([]);
+          for (const id of ids) used.add(id);
+        }
+        expect(used.size).toBe(ws.length);
+      }
+    }
+  });
+
+  it('期日を迎えた選択肢専用の語は、同じ音の問題の誤りの選択肢に入れて復習する', () => {
+    const base = words.filter((w) => w.reading === 'シツ');
+    const only: Word = { ...(base[0] as Word), id: 'w9999', word: '嫉妬', kana: 'シット', key: '嫉', keyIndex: 0 };
+    only.distractorOnly = true;
+    delete only.kun;
+    const index = buildIndex([...words, only]);
+    for (let seed = 0; seed < 30; seed++) {
+      const qs = buildReviewSet(index, [only.id], mulberry32(seed), 5);
+      expect(qs.length).toBe(1);
+      const q = qs[0] as Question;
+      expect(checkQuestion(q, index.byId)).toBeNull();
+      expect(q.target).not.toBe(only.id);
+      expect(q.options.indexOf(only.id)).not.toBe(q.correct);
+      expect(q.options).toContain(only.id);
+      expect(q.reviewed).toEqual([only.id]);
+      // 自己採点は、設問の語と同じく復習の連続回数に数える
+      const outcomes = outcomesOf(createSession('review', seed, '2026-10-23', qs));
+      expect(outcomes.filter((o) => o.reviewTarget).map((o) => o.id)).toEqual([q.target, only.id]);
+    }
+    // 新しい問題では、設問にも正解にもならない
+    const rng = mulberry32(5);
+    let p = initialProgress();
+    let seen = 0;
+    while (p.cycle === 1) {
+      const qs = buildNewSet(index, rankOf(p), rng, 5);
+      for (const q of qs) {
+        expect(checkQuestion(q, index.byId)).toBeNull();
+        if (q.options.includes(only.id)) seen++;
+      }
+      p = advanceCycleIfExhausted(markUsed(p, qs.flatMap(questionWordIds)), index.usableIds);
+    }
+    expect(seen).toBeGreaterThan(0);
   });
 
   it('復習のセットは、期日を迎えた語を古い順に設問にする', () => {

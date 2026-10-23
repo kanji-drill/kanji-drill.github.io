@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-20.batch2",
+  "version": "2026-10-23.batch2c",
   "words": [
     {
       "id": "w0005",
@@ -51,7 +51,8 @@
       "sentence": "形式に{コウデイ}する",
       "source": "2024共通テスト追試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "必要以上にこだわること"
     },
     {
       "id": "w0390",
@@ -156,7 +157,8 @@
       "sentence": "{コウキュウテキ}な平和を願う",
       "source": "2011センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "いつまでも変わらずに続くようす"
     },
     {
       "id": "w0478",
@@ -169,7 +171,8 @@
       "sentence": "{ショウコウ}状態が続く",
       "source": "2020センター本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "病状などが一時落ち着いていること"
     },
     {
       "id": "w0479",
@@ -221,7 +224,8 @@
       "sentence": "{グンコウ}を立てた武将",
       "source": "2014センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "戦争での手柄"
     },
     {
       "id": "w0483",
@@ -234,7 +238,8 @@
       "sentence": "改革の{コウザイ}を論じる",
       "source": "2016センター追試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "よい点と悪い点"
     },
     {
       "id": "w0025",
@@ -277,16 +282,17 @@
     },
     {
       "id": "w0210",
-      "word": "基幹",
-      "kana": "キカン",
+      "word": "幹",
+      "kana": "ミキ",
       "key": "幹",
-      "keyIndex": 1,
+      "keyIndex": 0,
       "reading": "カン",
-      "keyKana": "カン",
-      "sentence": "{キカン}産業を育てる",
-      "source": "2026共通テスト本試験 第1問 問1(エ)",
+      "keyKana": "ミキ",
+      "sentence": "{ミキ}の太い木",
+      "source": "2001センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "kun": true
     },
     {
       "id": "w0211",
@@ -338,7 +344,8 @@
       "sentence": "初志を{カンテツ}する",
       "source": "2001センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "考えや行いを最後までやり通すこと"
     },
     {
       "id": "w0029",
@@ -424,16 +431,17 @@
     },
     {
       "id": "w0489",
-      "word": "簡単",
-      "kana": "カンタン",
+      "word": "書簡",
+      "kana": "ショカン",
       "key": "簡",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "カン",
       "keyKana": "カン",
-      "sentence": "{カンタン}な問題",
-      "source": "2001センター追試験 第1問 問1(ア)",
+      "sentence": "友人に{ショカン}を送る",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "手紙"
     },
     {
       "id": "w0490",
@@ -459,20 +467,22 @@
       "sentence": "{カンサン}とした商店街",
       "source": "2022共通テスト追試験 第1問 問1(イ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "人が少なく、ひっそりしていること"
     },
     {
       "id": "w0492",
-      "word": "閑静",
-      "kana": "カンセイ",
+      "word": "等閑",
+      "kana": "トウカン",
       "key": "閑",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "カン",
       "keyKana": "カン",
-      "sentence": "{カンセイ}な住宅地",
-      "source": "2006センター本試験 第1問 問1(ウ)",
+      "sentence": "問題を{トウカン}に付す",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "なおざりにすること。「等閑に付す」は、いいかげんにして放っておくこと"
     },
     {
       "id": "w0318",
@@ -485,7 +495,8 @@
       "sentence": "映画界の{キョショウ}",
       "source": "2026共通テスト追試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "芸術などの分野で、特にすぐれた大家"
     },
     {
       "id": "w0319",
@@ -498,7 +509,8 @@
       "sentence": "{イショウ}を凝らした建物",
       "source": "2026共通テスト追試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "工夫をこらした形や模様。デザイン"
     },
     {
       "id": "w0322",
@@ -511,7 +523,8 @@
       "sentence": "新説を{テイショウ}する",
       "source": "2024共通テスト追試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "新しい考えを示して主張すること"
     },
     {
       "id": "w0323",
@@ -537,7 +550,8 @@
       "sentence": "外交{セッショウ}を重ねる",
       "source": "2018センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "利害の異なる相手と、かけひきしながら交渉すること"
     },
     {
       "id": "w0494",
@@ -590,7 +604,8 @@
       "sentence": "危機を{ショウライ}する",
       "source": "2016センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ある結果を引き起こすこと"
     },
     {
       "id": "w0498",
@@ -671,7 +686,8 @@
       "sentence": "名演奏に{トウスイ}する",
       "source": "2026共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "うっとりと、その境地にひたること"
     },
     {
       "id": "w0194",
@@ -710,7 +726,8 @@
       "sentence": "株価が{キュウトウ}する",
       "source": "2018センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "物価などが急に大きく上がること"
     },
     {
       "id": "w0502",
@@ -737,7 +754,8 @@
       "sentence": "{ブトウ}会に招かれる",
       "source": "2008センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "踊り。ダンス"
     },
     {
       "id": "w0504",
@@ -750,20 +768,22 @@
       "sentence": "注文が{サットウ}する",
       "source": "2008センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "一度にどっと押し寄せること"
     },
     {
       "id": "w0505",
-      "word": "到来",
-      "kana": "トウライ",
+      "word": "周到",
+      "kana": "シュウトウ",
       "key": "到",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "トウ",
       "keyKana": "トウ",
-      "sentence": "好機が{トウライ}する",
-      "source": "2013センター追試験 第1問 問1(イ)",
+      "sentence": "用意{シュウトウ}な人",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "手落ちがなく、すみずみまで行き届いていること"
     },
     {
       "id": "w0506",
@@ -776,7 +796,8 @@
       "sentence": "部下を{トウギョ}する",
       "source": "2013センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "全体をまとめて思いどおりに動かすこと"
     },
     {
       "id": "w0507",
@@ -802,7 +823,8 @@
       "sentence": "宗教上の{キンキ}に触れる",
       "source": "2025共通テスト本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "避けるべきものとして禁じられていること。タブー"
     },
     {
       "id": "w0471",
@@ -842,7 +864,8 @@
       "sentence": "訴えが{キキャク}される",
       "source": "2013センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "申し立てを取り上げずに退けること"
     },
     {
       "id": "w0508",
@@ -881,7 +904,8 @@
       "sentence": "両者は{キ}を一にする",
       "source": "2004センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "車輪の跡。「軌を一にする」は、考えや方向が同じであること"
     },
     {
       "id": "w0511",
@@ -920,7 +944,8 @@
       "sentence": "改革の{キシュ}となる",
       "source": "2007センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "団体や運動の先頭に立つ人"
     },
     {
       "id": "w0514",
@@ -933,7 +958,8 @@
       "sentence": "平和を{キネン}する",
       "source": "2007センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "願いがかなうように祈ること"
     },
     {
       "id": "w0515",
@@ -985,7 +1011,8 @@
       "sentence": "名人に{ヒケン}する腕前",
       "source": "2026共通テスト本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "肩を並べること。同じくらいすぐれていること"
     },
     {
       "id": "w0470",
@@ -1051,7 +1078,8 @@
       "sentence": "{ケンアク}な雰囲気",
       "source": "2000センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "雰囲気などがとげとげしく、危うい感じであること"
     },
     {
       "id": "w0192",
@@ -1090,7 +1118,8 @@
       "sentence": "効果が{ケンチョ}に表れる",
       "source": "2020センター追試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "際立って目につくようす"
     },
     {
       "id": "w0519",
@@ -1116,7 +1145,8 @@
       "sentence": "不安を{イッソウ}する",
       "source": "2025共通テスト本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "すっかり取り除くこと"
     },
     {
       "id": "w0257",
@@ -1194,7 +1224,8 @@
       "sentence": "{ソウゴン}な儀式",
       "source": "2025共通テスト本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "重々しく、おごそかなようす"
     },
     {
       "id": "w0520",
@@ -1220,20 +1251,22 @@
       "sentence": "{カツダンソウ}を調べる",
       "source": "2002センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "今後も動く可能性のある断層"
     },
     {
       "id": "w0522",
-      "word": "地層",
-      "kana": "チソウ",
+      "word": "階層",
+      "kana": "カイソウ",
       "key": "層",
       "keyIndex": 1,
       "reading": "ソウ",
       "keyKana": "ソウ",
-      "sentence": "{チソウ}から化石が出る",
-      "source": "2008センター本試験 第1問 問1(ア)",
+      "sentence": "社会の{カイソウ}",
+      "source": "2003センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "社会の中で、地位や収入などで分かれた層"
     },
     {
       "id": "w0523",
@@ -1246,7 +1279,8 @@
       "sentence": "{ソウセイジ}の兄弟",
       "source": "2002センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ふたご"
     },
     {
       "id": "w0524",
@@ -1259,7 +1293,8 @@
       "sentence": "天下{ムソウ}の力持ち",
       "source": "2002センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "並ぶものがないほどすぐれていること"
     },
     {
       "id": "w0134",
@@ -1285,7 +1320,8 @@
       "sentence": "蚊が病気を{バイカイ}する",
       "source": "2007センター本試験 第1問 問1(オ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "両者の間に立って、とりもつこと"
     },
     {
       "id": "w0526",
@@ -1298,7 +1334,8 @@
       "sentence": "荒れ地を{カイコン}する",
       "source": "2000センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "山林や原野を切り開いて田畑にすること"
     },
     {
       "id": "w0527",
@@ -1311,7 +1348,8 @@
       "sentence": "持論を{カイチン}する",
       "source": "2016センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "考えなどを人前で述べること"
     },
     {
       "id": "w0528",
@@ -1350,7 +1388,8 @@
       "sentence": "病気が{カイユ}する",
       "source": "2000センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "病気やけががすっかり治ること"
     },
     {
       "id": "w0531",
@@ -1442,7 +1481,8 @@
       "sentence": "綿と麻の{コンボウ}",
       "source": "2002センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "種類の違う繊維をまぜて糸を紡ぐこと"
     },
     {
       "id": "w0538",
@@ -1455,7 +1495,8 @@
       "sentence": "{シンショウボウダイ}に言う",
       "source": "2002センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "小さなことを大げさに言うこと"
     },
     {
       "id": "w0539",
@@ -1468,7 +1509,8 @@
       "sentence": "{ツウボウ}を食らう",
       "source": "2014センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "厳しい叱責や批判"
     },
     {
       "id": "w0540",
@@ -1481,7 +1523,8 @@
       "sentence": "{カンボウ}薬を飲む",
       "source": "2023共通テスト本試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "かぜ"
     },
     {
       "id": "w0541",
@@ -1507,7 +1550,8 @@
       "sentence": "{ボウギャク}の限りを尽くす",
       "source": "2005センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "むごい乱暴を働くこと"
     },
     {
       "id": "w0543",
@@ -1572,7 +1616,8 @@
       "sentence": "生活が{キュウボウ}する",
       "source": "2014センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ひどく貧しくて苦しむこと"
     },
     {
       "id": "w0548",
@@ -1639,7 +1684,8 @@
       "sentence": "選手{センセイ}をする",
       "source": "2004センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "誓いの言葉を述べること"
     },
     {
       "id": "w0553",
@@ -1669,16 +1715,17 @@
     },
     {
       "id": "w0555",
-      "word": "旋風",
-      "kana": "センプウ",
+      "word": "旋律",
+      "kana": "センリツ",
       "key": "旋",
       "keyIndex": 0,
       "reading": "セン",
       "keyKana": "セン",
-      "sentence": "政界に{センプウ}を起こす",
-      "source": "2014センター本試験 第1問 問1(イ)",
+      "sentence": "美しい{センリツ}",
+      "source": "2018センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "音の高低や長短が連なった流れ。メロディー"
     },
     {
       "id": "w0556",
@@ -1718,7 +1765,8 @@
       "sentence": "{センレン}された文章",
       "source": "2018センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "磨きをかけて、上品であか抜けたものにすること"
     },
     {
       "id": "w0559",
@@ -1758,7 +1806,8 @@
       "sentence": "自由を{カツボウ}する",
       "source": "2015センター追試験 第1問 問1(オ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "のどが渇いて水を欲するように、心から強く望むこと"
     },
     {
       "id": "w0562",
@@ -1771,7 +1820,8 @@
       "sentence": "{キョウカツ}の容疑",
       "source": "2003センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "おどして金品を取ること"
     },
     {
       "id": "w0563",
@@ -1784,7 +1834,8 @@
       "sentence": "大声で{イッカツ}する",
       "source": "2010センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "大声でしかりつけること"
     },
     {
       "id": "w0564",
@@ -1824,7 +1875,8 @@
       "sentence": "新天地に{カツロ}を見いだす",
       "source": "2003センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "苦しい状況から生き延びる道"
     },
     {
       "id": "w0567",
@@ -1850,7 +1902,8 @@
       "sentence": "議論を{ガイカツ}する",
       "source": "2003センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "要点をまとめること"
     },
     {
       "id": "w0569",
@@ -1863,7 +1916,8 @@
       "sentence": "{ホウカツ}的な議論",
       "source": "2010センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ひっくるめて一つにまとめること"
     },
     {
       "id": "w0570",
@@ -1876,7 +1930,8 @@
       "sentence": "説明を{カツアイ}する",
       "source": "2010センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "惜しいと思いながら省くこと"
     },
     {
       "id": "w0571",
@@ -1889,7 +1944,8 @@
       "sentence": "領土を{カツジョウ}する",
       "source": "2015センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "領土などの一部を分けて他に譲ること"
     },
     {
       "id": "w0572",
@@ -1916,7 +1972,8 @@
       "sentence": "{オクソク}で物を言う",
       "source": "2003センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "確かな根拠なしに推し量ること"
     },
     {
       "id": "w0574",
@@ -1929,7 +1986,8 @@
       "sentence": "{ニソクサンモン}で売る",
       "source": "2003センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "数が多くても、値段が非常に安いこと"
     },
     {
       "id": "w0575",
@@ -1942,7 +2000,8 @@
       "sentence": "混乱が{シュウソク}する",
       "source": "2016センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "混乱などがおさまること"
     },
     {
       "id": "w0576",
@@ -1981,7 +2040,8 @@
       "sentence": "{ヘンソク}的な日程",
       "source": "2003センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "普通のやり方や規則から外れていること"
     },
     {
       "id": "w0579",
@@ -2007,20 +2067,22 @@
       "sentence": "{イッショクソクハツ}の状態",
       "source": "2016センター本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "少し触れればすぐ爆発しそうな、危険な状態"
     },
     {
       "id": "w0581",
-      "word": "即座",
-      "kana": "ソクザ",
+      "word": "即位",
+      "kana": "ソクイ",
       "key": "即",
       "keyIndex": 0,
       "reading": "ソク",
       "keyKana": "ソク",
-      "sentence": "{ソクザ}に答える",
-      "source": "2006センター本試験 第1問 問1(オ)",
+      "sentence": "新しい王が{ソクイ}する",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "天皇や国王が位につくこと"
     },
     {
       "id": "w0582",
@@ -2059,7 +2121,8 @@
       "sentence": "職務{タイマン}",
       "source": "2003センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "なまけて、すべきことをしないこと"
     },
     {
       "id": "w0462",
@@ -2086,7 +2149,8 @@
       "sentence": "書類が{タイリュウ}する",
       "source": "2025共通テスト追試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "一か所にとどまって先へ進まないこと"
     },
     {
       "id": "w0461",
@@ -2181,7 +2245,8 @@
       "sentence": "{ダイタイ}案を出す",
       "source": "2003センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ほかのもので代えること"
     },
     {
       "id": "w0465",
@@ -2208,7 +2273,8 @@
       "sentence": "制服を{タイヨ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "貸し与えること"
     },
     {
       "id": "w0236",
@@ -2221,7 +2287,8 @@
       "sentence": "公園を{サンサク}する",
       "source": "2025共通テスト本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ぶらぶら歩くこと"
     },
     {
       "id": "w0237",
@@ -2234,7 +2301,8 @@
       "sentence": "{サクボウ}を巡らす",
       "source": "2025共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "はかりごと"
     },
     {
       "id": "w0238",
@@ -2247,7 +2315,8 @@
       "sentence": "{アッサク}空気で動かす",
       "source": "2025共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "圧力を加えてしぼること"
     },
     {
       "id": "w0239",
@@ -2260,7 +2329,8 @@
       "sentence": "労働者から{サクシュ}する",
       "source": "2017センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "しぼり取ること。特に、働きに見合う報酬を払わずに利益を得ること"
     },
     {
       "id": "w0240",
@@ -2273,7 +2343,8 @@
       "sentence": "作文を{テンサク}する",
       "source": "2025共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "他人の文章などを書き加えたり削ったりして直すこと"
     },
     {
       "id": "w0241",
@@ -2299,7 +2370,8 @@
       "sentence": "解決の糸口を{モサク}する",
       "source": "2025共通テスト本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "手探りで探し求めること"
     },
     {
       "id": "w0243",
@@ -2312,7 +2384,8 @@
       "sentence": "{サクイン}で語を探す",
       "source": "2012センター追試験 第1問 問1(オ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "本の中の語句を探しやすいように並べた表"
     },
     {
       "id": "w0244",
@@ -2338,7 +2411,8 @@
       "sentence": "期待と不安が{コウサク}する",
       "source": "2017センター追試験 第1問 問1(ア) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "いくつかのものが入りまじること"
     },
     {
       "id": "w0423",
@@ -2364,7 +2438,8 @@
       "sentence": "{サクイ}的な文章",
       "source": "2012センター追試験 第1問 問1(オ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "わざと手を加えること"
     },
     {
       "id": "w0248",
@@ -2403,7 +2478,8 @@
       "sentence": "{セケンテイ}を気にする",
       "source": "2025共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "世間に対する体裁や見え"
     },
     {
       "id": "w0251",
@@ -2416,7 +2492,8 @@
       "sentence": "{テイサイ}を整える",
       "source": "2023共通テスト追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "外から見た形や様子。見かけ"
     },
     {
       "id": "w0246",
@@ -2433,16 +2510,17 @@
     },
     {
       "id": "w0589",
-      "word": "進呈",
-      "kana": "シンテイ",
+      "word": "露呈",
+      "kana": "ロテイ",
       "key": "呈",
       "keyIndex": 1,
       "reading": "テイ",
       "keyKana": "テイ",
-      "sentence": "粗品を{シンテイ}する",
-      "source": "2014センター追試験 第1問 問1(オ)",
+      "sentence": "弱点が{ロテイ}する",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "隠れていたことが表に出ること"
     },
     {
       "id": "w0590",
@@ -2455,7 +2533,8 @@
       "sentence": "敵の動きを{テイサツ}する",
       "source": "2014センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "相手の様子をひそかに探ること"
     },
     {
       "id": "w0591",
@@ -2533,7 +2612,8 @@
       "sentence": "会議が{フンキュウ}する",
       "source": "2024共通テスト本試験 第1問 問1(オ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "意見などがもつれて混乱すること"
     },
     {
       "id": "w0473",
@@ -2586,7 +2666,8 @@
       "sentence": "不正に{フンガイ}する",
       "source": "2012センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ひどく腹を立てること"
     },
     {
       "id": "w0317",
@@ -2599,7 +2680,8 @@
       "sentence": "{ギフン}に駆られる",
       "source": "2018センター追試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "不正に対する、正義感からの怒り"
     },
     {
       "id": "w0314",
@@ -2612,7 +2694,8 @@
       "sentence": "{フンショク}決算が発覚する",
       "source": "2024共通テスト本試験 第1問 問1(オ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "うわべをとりつくろうこと"
     },
     {
       "id": "w0594",
@@ -2664,7 +2747,8 @@
       "sentence": "{フンベツ}のある行動",
       "source": "2024共通テスト本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "物事の道理をわきまえること"
     },
     {
       "id": "w0313",
@@ -2677,7 +2761,8 @@
       "sentence": "天びんの{フンドウ}",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "てんびんで重さを量るときに使うおもり"
     },
     {
       "id": "w0356",
@@ -2690,7 +2775,8 @@
       "sentence": "先行研究に{イキョ}する",
       "source": "2025共通テスト追試験 第1問 問1(ア) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "よりどころとすること"
     },
     {
       "id": "w0357",
@@ -2703,7 +2789,8 @@
       "sentence": "{キュウタイイゼン}の制度",
       "source": "2025共通テスト追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "昔のままで少しも進歩がないこと"
     },
     {
       "id": "w0364",
@@ -2755,7 +2842,8 @@
       "sentence": "台風が{モウイ}を振るう",
       "source": "2002センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "すさまじい勢い"
     },
     {
       "id": "w0598",
@@ -2807,7 +2895,8 @@
       "sentence": "{イシツブツ}を届ける",
       "source": "2002センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "落とし物"
     },
     {
       "id": "w0358",
@@ -2820,7 +2909,8 @@
       "sentence": "{テンイムホウ}な性格",
       "source": "2025共通テスト追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "飾り気がなく、自然で美しいこと。また、無邪気なこと"
     },
     {
       "id": "w0359",
@@ -2859,7 +2949,8 @@
       "sentence": "最新技術の{スイ}を集める",
       "source": "2024共通テスト追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "洗練されていて、あか抜けていること"
     },
     {
       "id": "w0382",
@@ -2885,7 +2976,8 @@
       "sentence": "鉄棒で{ケンスイ}をする",
       "source": "2020センター追試験 第1問 問1(エ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "鉄棒にぶら下がり、腕の力で体を上げ下げする運動"
     },
     {
       "id": "w0443",
@@ -2911,7 +3003,8 @@
       "sentence": "師に{シンスイ}する",
       "source": "2015センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "心から尊敬し、夢中になること"
     },
     {
       "id": "w0380",
@@ -2928,16 +3021,16 @@
     },
     {
       "id": "w0602",
-      "word": "類推",
-      "kana": "ルイスイ",
+      "word": "推薦",
+      "kana": "スイセン",
       "key": "推",
-      "keyIndex": 1,
+      "keyIndex": 0,
       "reading": "スイ",
       "keyKana": "スイ",
-      "sentence": "前例から{ルイスイ}する",
-      "source": "2022共通テスト本試験 第1問 問1(ウ)",
+      "sentence": "委員に{スイセン}する",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard"
     },
     {
       "id": "w0385",
@@ -2950,7 +3043,8 @@
       "sentence": "計画を{カンスイ}する",
       "source": "2022共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "最後までやりとげること"
     },
     {
       "id": "w0603",
@@ -2977,7 +3071,8 @@
       "sentence": "国家の{セイスイ}",
       "source": "2024共通テスト追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "盛んになることと衰えること"
     },
     {
       "id": "w0379",
@@ -3069,7 +3164,8 @@
       "kun": true,
       "source": "2017センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "仕事などを引き受ける"
     },
     {
       "id": "w0344",
@@ -3096,7 +3192,8 @@
       "kun": true,
       "source": "2017センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "自分の行いを振り返って考える"
     },
     {
       "id": "w0607",
@@ -3122,7 +3219,8 @@
       "sentence": "{セイゴウセイ}を保つ",
       "source": "2017センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "矛盾がなく、整っていること"
     },
     {
       "id": "w0037",
@@ -3152,16 +3250,17 @@
     },
     {
       "id": "w0404",
-      "word": "薄明",
-      "kana": "ハクメイ",
+      "word": "肉薄",
+      "kana": "ニクハク",
       "key": "薄",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ハク",
       "keyKana": "ハク",
-      "sentence": "{ハクメイ}の空",
-      "source": "2024共通テスト追試験 第1問 問1(オ)",
+      "sentence": "首位に{ニクハク}する",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "すぐそばまで迫ること"
     },
     {
       "id": "w0405",
@@ -3174,7 +3273,8 @@
       "sentence": "意志が{ハクジャク}だ",
       "source": "2024共通テスト追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "意志などが弱く、しっかりしていないこと"
     },
     {
       "id": "w0408",
@@ -3187,7 +3287,8 @@
       "sentence": "改革に{ハクシャ}をかける",
       "source": "2024共通テスト追試験 第1問 問1(オ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "「拍車をかける」は、物事の進み方を一段と速めること"
     },
     {
       "id": "w0409",
@@ -3213,7 +3314,8 @@
       "sentence": "{ハクシン}の演技",
       "source": "2024共通テスト追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "本物そっくりで、真に迫っていること"
     },
     {
       "id": "w0411",
@@ -3243,16 +3345,17 @@
     },
     {
       "id": "w0610",
-      "word": "白状",
-      "kana": "ハクジョウ",
+      "word": "潔白",
+      "kana": "ケッパク",
       "key": "白",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ハク",
-      "keyKana": "ハク",
-      "sentence": "真相を{ハクジョウ}する",
-      "source": "2021共通テスト第3日程 第1問 問1(イ) ほか1回",
+      "keyKana": "パク",
+      "sentence": "身の{ケッパク}を示す",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "心や行いが清く、後ろ暗いところがないこと"
     },
     {
       "id": "w0406",
@@ -3265,20 +3368,22 @@
       "sentence": "{ハクシキ}な人",
       "source": "2024共通テスト追試験 第1問 問1(オ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "広く物事を知っていること"
     },
     {
       "id": "w0407",
-      "word": "博覧",
-      "kana": "ハクラン",
+      "word": "賭博",
+      "kana": "トバク",
       "key": "博",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ハク",
-      "keyKana": "ハク",
-      "sentence": "{ハクラン}会に行く",
+      "keyKana": "バク",
+      "sentence": "{トバク}を禁じる",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "金品をかけて勝負を争うこと。ばくち"
     },
     {
       "id": "w0412",
@@ -3291,7 +3396,8 @@
       "sentence": "{ハクライ}の品",
       "source": "2005センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "外国から運ばれてきたこと。また、その品"
     },
     {
       "id": "w0413",
@@ -3317,7 +3423,8 @@
       "sentence": "変化の{ケイキ}となる",
       "source": "2024共通テスト本試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "きっかけ"
     },
     {
       "id": "w0274",
@@ -3356,20 +3463,22 @@
       "sentence": "ポスターを{ケイシュツ}する",
       "source": "2024共通テスト本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "人目につくように掲げて示すこと"
     },
     {
       "id": "w0275",
-      "word": "系図",
-      "kana": "ケイズ",
+      "word": "体系",
+      "kana": "タイケイ",
       "key": "系",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ケイ",
       "keyKana": "ケイ",
-      "sentence": "一族の{ケイズ}をたどる",
-      "source": "2024共通テスト本試験 第1問 問1(ア)",
+      "sentence": "知識の{タイケイ}",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "個々のものを筋道立ててまとめた全体"
     },
     {
       "id": "w0611",
@@ -3382,7 +3491,8 @@
       "sentence": "文学の{ケイフ}をたどる",
       "source": "2021共通テスト第2日程 第1問 問1(オ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "血筋や、物事のつながり"
     },
     {
       "id": "w0151",
@@ -3395,7 +3505,8 @@
       "sentence": "意識を{ケイハツ}する",
       "source": "2024共通テスト本試験 第1問 問1(ア) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "知識を広め、理解を深めさせること"
     },
     {
       "id": "w0152",
@@ -3408,7 +3519,8 @@
       "sentence": "{ハイケイ}で始まる手紙",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "手紙の書き出しのあいさつの言葉"
     },
     {
       "id": "w0153",
@@ -3460,7 +3572,8 @@
       "sentence": "事件の{ケイイ}を説明する",
       "source": "2014センター本試験 第1問 問1(エ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "物事のいきさつ"
     },
     {
       "id": "w0449",
@@ -3500,7 +3613,8 @@
       "sentence": "{キョウジュン}の意を示す",
       "source": "2018センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "つつしんで命令に従うこと"
     },
     {
       "id": "w0456",
@@ -3514,7 +3628,8 @@
       "kun": true,
       "source": "2026共通テスト追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "礼儀正しく、つつしみ深い"
     },
     {
       "id": "w0613",
@@ -3527,7 +3642,8 @@
       "sentence": "自由を{キョウジュ}する",
       "source": "2018センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "受け入れて味わい楽しむこと"
     },
     {
       "id": "w0614",
@@ -3540,7 +3656,8 @@
       "sentence": "{キョウラク}的な生活",
       "source": "2018センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "快楽を味わい楽しむこと"
     },
     {
       "id": "w0451",
@@ -3553,7 +3670,8 @@
       "sentence": "敵を{キョウゲキ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "はさみうちにすること"
     },
     {
       "id": "w0452",
@@ -3580,7 +3698,8 @@
       "sentence": "{キョウリョウ}な人物",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "心が狭く、人を受け入れないこと"
     },
     {
       "id": "w0454",
@@ -3634,7 +3753,8 @@
       "sentence": "{ヨクヨウ}をつけて読む",
       "source": "2021共通テスト第3日程 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "声や調子の上げ下げ"
     },
     {
       "id": "w0130",
@@ -3647,7 +3767,8 @@
       "sentence": "気分が{コウヨウ}する",
       "source": "2012センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "気分などが高まること"
     },
     {
       "id": "w0615",
@@ -3701,7 +3822,8 @@
       "sentence": "{スイヨウ}性の物質",
       "source": "2021共通テスト第3日程 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "水に溶けること"
     },
     {
       "id": "w0125",
@@ -3862,13 +3984,13 @@
     },
     {
       "id": "w0230",
-      "word": "華美",
-      "kana": "カビ",
+      "word": "中華",
+      "kana": "チュウカ",
       "key": "華",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "カ",
       "keyKana": "カ",
-      "sentence": "{カビ}な服装を避ける",
+      "sentence": "{チュウカ}料理の店",
       "source": null,
       "verified": true,
       "tier": "standard"
@@ -3910,7 +4032,8 @@
       "sentence": "両国の{カキョウ}となる",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "橋をかけること"
     },
     {
       "id": "w0232",
@@ -3927,16 +4050,16 @@
     },
     {
       "id": "w0623",
-      "word": "過分",
-      "kana": "カブン",
+      "word": "過程",
+      "kana": "カテイ",
       "key": "過",
       "keyIndex": 0,
       "reading": "カ",
       "keyKana": "カ",
-      "sentence": "{カブン}なお言葉",
-      "source": "2009センター本試験 第1問 問1(ウ)",
+      "sentence": "成長の{カテイ}",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard"
     },
     {
       "id": "w0277",
@@ -3962,7 +4085,8 @@
       "sentence": "名人の{メンモクヤクジョ}だ",
       "source": "2024共通テスト本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "世間の評価にふさわしい活躍をして、生き生きしているようす"
     },
     {
       "id": "w0427",
@@ -3975,7 +4099,8 @@
       "sentence": "{ヤッカイ}な問題",
       "source": "2017センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "面倒で扱いに困ること"
     },
     {
       "id": "w0624",
@@ -3988,7 +4113,8 @@
       "sentence": "{ヤクドシ}を迎える",
       "source": "2017センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "災難にあいやすいとされる年齢"
     },
     {
       "id": "w0280",
@@ -4031,16 +4157,17 @@
     },
     {
       "id": "w0283",
-      "word": "役員",
-      "kana": "ヤクイン",
+      "word": "配役",
+      "kana": "ハイヤク",
       "key": "役",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ヤク",
       "keyKana": "ヤク",
-      "sentence": "会社の{ヤクイン}になる",
+      "sentence": "ドラマの{ハイヤク}",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "劇や映画で、役を役者に割り当てること"
     },
     {
       "id": "w0284",
@@ -4057,16 +4184,17 @@
     },
     {
       "id": "w0285",
-      "word": "通訳",
-      "kana": "ツウヤク",
+      "word": "訳",
+      "kana": "ワケ",
       "key": "訳",
-      "keyIndex": 1,
+      "keyIndex": 0,
       "reading": "ヤク",
-      "keyKana": "ヤク",
-      "sentence": "会議で{ツウヤク}する",
-      "source": "2017センター本試験 第1問 問1(ウ)",
+      "keyKana": "ワケ",
+      "sentence": "遅れた{ワケ}を話す",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "kun": true
     },
     {
       "id": "w0286",
@@ -4092,7 +4220,8 @@
       "sentence": "{ヤッコウ}が表れる",
       "source": "2017センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "薬の効き目"
     },
     {
       "id": "w0331",
@@ -4105,7 +4234,8 @@
       "sentence": "最新技術を{クシ}する",
       "source": "2026共通テスト追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "自由自在に使いこなすこと"
     },
     {
       "id": "w0332",
@@ -4118,7 +4248,8 @@
       "sentence": "{センク}的な研究",
       "source": "2026共通テスト追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "他に先がけること"
     },
     {
       "id": "w0333",
@@ -4131,7 +4262,8 @@
       "sentence": "先祖を{クヨウ}する",
       "source": "2026共通テスト追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "死者の霊に物を供えて、その幸せを祈ること"
     },
     {
       "id": "w0334",
@@ -4144,7 +4276,8 @@
       "sentence": "仏前の{クモツ}",
       "source": "2002センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "神仏に供える物"
     },
     {
       "id": "w0335",
@@ -4157,7 +4290,8 @@
       "sentence": "手の込んだ{サイク}",
       "source": "2026共通テスト追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "細かい物を作ること。また、たくらみ"
     },
     {
       "id": "w0626",
@@ -4170,7 +4304,8 @@
       "sentence": "資金を{クメン}する",
       "source": "2002センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "お金などをやりくりして用意すること"
     },
     {
       "id": "w0337",
@@ -4183,7 +4318,8 @@
       "sentence": "{クデン}で伝わる秘技",
       "source": "2026共通テスト追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "口で言い伝えること"
     },
     {
       "id": "w0338",
@@ -4313,7 +4449,8 @@
       "sentence": "{シンショク}を忘れる",
       "source": "2025共通テスト追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "寝ることと食べること。日常の生活"
     },
     {
       "id": "w0628",
@@ -4339,7 +4476,8 @@
       "sentence": "{ショクタク}職員として働く",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "仕事を頼んで任せること。また、その人"
     },
     {
       "id": "w0442",
@@ -4352,7 +4490,8 @@
       "sentence": "委員を{イショク}する",
       "source": "2022共通テスト追試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "仕事を外部の人に頼んで任せること"
     },
     {
       "id": "w0372",
@@ -4378,7 +4517,8 @@
       "sentence": "{ショクセキ}を果たす",
       "source": "2013センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "職務の上での責任"
     },
     {
       "id": "w0374",
@@ -4404,7 +4544,8 @@
       "sentence": "友人に{ショクハツ}される",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "刺激を受けて、意欲などが起こること"
     },
     {
       "id": "w0199",
@@ -4430,7 +4571,8 @@
       "sentence": "患部に軟こうを{トフ}する",
       "source": "2026共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "薬などを塗りつけること"
     },
     {
       "id": "w0201",
@@ -4443,7 +4585,8 @@
       "sentence": "本心を{トロ}する",
       "source": "2026共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "心に思っていることを隠さずに述べること"
     },
     {
       "id": "w0202",
@@ -4495,7 +4638,8 @@
       "sentence": "大陸から{トライ}した文化",
       "source": "2026共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "外国から海を渡って来ること"
     },
     {
       "id": "w0206",
@@ -4508,7 +4652,8 @@
       "sentence": "権利を{ジョウト}する",
       "source": "2003センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "権利や財産を他人に譲り渡すこと"
     },
     {
       "id": "w0207",
@@ -4534,7 +4679,8 @@
       "sentence": "努力が{トロウ}に終わる",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "むだな骨折り"
     },
     {
       "id": "w0417",
@@ -4573,7 +4719,8 @@
       "sentence": "評価の{シャクド}が違う",
       "source": "2026共通テスト本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "評価や判断の基準"
     },
     {
       "id": "w0217",
@@ -4612,7 +4759,8 @@
       "sentence": "お知恵を{ハイシャク}したい",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "借りることをへりくだって言う言葉"
     },
     {
       "id": "w0220",
@@ -4625,7 +4773,8 @@
       "sentence": "遅刻の理由を{シャクメイ}する",
       "source": "2026共通テスト本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "誤解などを解くために事情を説明すること"
     },
     {
       "id": "w0221",
@@ -4664,7 +4813,8 @@
       "sentence": "{バンジャク}の構えを築く",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "大きな岩のように、どっしりして揺るがないこと"
     },
     {
       "id": "w0224",
@@ -4677,7 +4827,8 @@
       "sentence": "父の{バンシャク}に付き合う",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "夕食のときに酒を飲むこと"
     },
     {
       "id": "w0225",
@@ -4690,7 +4841,8 @@
       "sentence": "情状{シャクリョウ}の余地がある",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "事情をくみ取って手加減すること"
     },
     {
       "id": "w0419",
@@ -4703,7 +4855,8 @@
       "sentence": "{シャクイ}を授かる",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "貴族の階級"
     },
     {
       "id": "w0420",
@@ -4756,7 +4909,8 @@
       "sentence": "決議を{サイタク}する",
       "source": "2024共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "いくつかの中から選んで採り上げること"
     },
     {
       "id": "w0291",
@@ -4782,7 +4936,8 @@
       "sentence": "観客の{カッサイ}を浴びる",
       "source": "2024共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "声を上げてほめそやすこと"
     },
     {
       "id": "w0293",
@@ -4795,7 +4950,8 @@
       "sentence": "監督が{サイハイ}を振る",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "指図すること。「采配を振る」"
     },
     {
       "id": "w0294",
@@ -4886,7 +5042,8 @@
       "sentence": "{アクヘイ}を断ち切る",
       "source": "2024共通テスト本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "悪い習慣"
     },
     {
       "id": "w0299",
@@ -4899,7 +5056,8 @@
       "sentence": "地方経済が{ヒヘイ}する",
       "source": "2024共通テスト本試験 第1問 問1(エ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "疲れ弱ること"
     },
     {
       "id": "w0300",
@@ -4938,7 +5096,8 @@
       "sentence": "塔に{ユウヘイ}される",
       "source": "2024共通テスト本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "人を閉じ込めて外に出さないこと"
     },
     {
       "id": "w0303",
@@ -5056,7 +5215,8 @@
       "sentence": "相手の事情を{コリョ}する",
       "source": "2016センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "気を配って考えること"
     },
     {
       "id": "w0632",
@@ -5069,7 +5229,8 @@
       "sentence": "権力を{コジ}する",
       "source": "2021共通テスト第2日程 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "得意げに見せびらかすこと"
     },
     {
       "id": "w0633",
@@ -5108,7 +5269,8 @@
       "sentence": "{ココウ}を貫く",
       "source": "2021共通テスト第2日程 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "世間から離れて、ひとり志を高く持つこと"
     },
     {
       "id": "w0636",
@@ -5135,7 +5297,8 @@
       "sentence": "{コショウ}の生態系",
       "source": "2003センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "湖と沼"
     },
     {
       "id": "w0638",
@@ -5148,7 +5311,8 @@
       "sentence": "士気を{コブ}する",
       "source": "2016センター本試験 第1問 問1(ウ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "励まして奮い立たせること"
     },
     {
       "id": "w0639",
@@ -5187,7 +5351,8 @@
       "sentence": "自説に{コシツ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "自分の考えを曲げずにこだわること"
     },
     {
       "id": "w0642",
@@ -5200,7 +5365,8 @@
       "sentence": "友人と{ソエン}になる",
       "source": "2013センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "付き合いが途絶えて、親しくなくなること"
     },
     {
       "id": "w0643",
@@ -5213,7 +5379,8 @@
       "sentence": "{カソ}化が進む村",
       "source": "2023共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "人口が極端に少ないこと"
     },
     {
       "id": "w0644",
@@ -5252,7 +5419,8 @@
       "sentence": "{ソボク}な疑問を抱く",
       "source": "2008センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "飾り気がなく、自然なこと"
     },
     {
       "id": "w0647",
@@ -5265,7 +5433,8 @@
       "sentence": "{ヘイソ}の努力が実る",
       "source": "2022共通テスト追試験 第1問 問1(ウ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ふだん"
     },
     {
       "id": "w0648",
@@ -5278,7 +5447,8 @@
       "sentence": "{ソゼイ}を課す",
       "source": "2013センター本試験 第1問 問1(エ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "税金"
     },
     {
       "id": "w0649",
@@ -5291,7 +5461,8 @@
       "sentence": "港を{ソシャク}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "ある国の領土を、一定の期間借りること"
     },
     {
       "id": "w0650",
@@ -5343,7 +5514,8 @@
       "sentence": "宗派の{カイソ}",
       "source": "2022共通テスト追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ある宗派や流派を始めた人"
     },
     {
       "id": "w0654",
@@ -5369,7 +5541,8 @@
       "sentence": "繁栄の{ソセキ}を築く",
       "source": "2002センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "建物の土台となる石。物事の基礎"
     },
     {
       "id": "w0656",
@@ -5382,7 +5555,8 @@
       "sentence": "{ソシナ}を配る",
       "source": "2023共通テスト本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "粗末な品。贈り物をへりくだって言う言葉"
     },
     {
       "id": "w0657",
@@ -5408,7 +5582,8 @@
       "sentence": "粘土で{ソゾウ}を作る",
       "source": "2013センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "粘土などで作った像"
     },
     {
       "id": "w0659",
@@ -5421,7 +5596,8 @@
       "sentence": "{カソセイ}のある素材",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "力を加えると形が変わり、そのまま元に戻らない性質"
     },
     {
       "id": "w0660",
@@ -5460,7 +5636,8 @@
       "sentence": "筆跡が{コクジ}している",
       "source": "2017センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "非常によく似ていること"
     },
     {
       "id": "w0663",
@@ -5487,7 +5664,8 @@
       "sentence": "{コクメイ}に記録する",
       "source": "2017センター本試験 第1問 問1(エ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "細かいところまで丁寧なようす"
     },
     {
       "id": "w0665",
@@ -5526,7 +5704,8 @@
       "sentence": "選挙の期日を{コクジ}する",
       "source": "2006センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "国などの機関が、広く知らせること"
     },
     {
       "id": "w0668",
@@ -5539,7 +5718,8 @@
       "sentence": "{コクソウ}地帯",
       "source": "2017センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "穀物をしまう倉。穀物を多く産する地域"
     },
     {
       "id": "w0669",
@@ -5552,7 +5732,8 @@
       "sentence": "稲を{ダッコク}する",
       "source": "2006センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "穂から穀物の粒を取り離すこと"
     },
     {
       "id": "w0670",
@@ -5591,7 +5772,8 @@
       "sentence": "{チョウボウ}のよい部屋",
       "source": "2003センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "見晴らし"
     },
     {
       "id": "w0673",
@@ -5618,7 +5800,8 @@
       "sentence": "{セイチョウ}な山の空気",
       "source": "2014センター追試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "清く澄んでいること"
     },
     {
       "id": "w0675",
@@ -5645,7 +5828,8 @@
       "sentence": "{チョウバツ}を科す",
       "source": "2014センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "不正をこらしめるために罰すること"
     },
     {
       "id": "w0677",
@@ -5658,7 +5842,8 @@
       "sentence": "{チョウカイ}処分を受ける",
       "source": "2018センター追試験 第1問 問1(ウ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "不正をこらしめ、戒めること"
     },
     {
       "id": "w0678",
@@ -5751,7 +5936,8 @@
       "sentence": "常識を{チョウエツ}する",
       "source": "2018センター追試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "普通の程度や枠をはるかに超えること"
     },
     {
       "id": "w0685",
@@ -5817,7 +6003,8 @@
       "sentence": "{ケイチョウ}に値する意見",
       "source": "2002センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "熱心に耳を傾けること"
     },
     {
       "id": "w0690",
@@ -5883,7 +6070,8 @@
       "sentence": "{ヒキン}な例を挙げる",
       "source": "2023共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "身近でありふれていること"
     },
     {
       "id": "w0695",
@@ -5896,7 +6084,8 @@
       "sentence": "自分を{ヒゲ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "自分を劣ったものとして、へりくだること"
     },
     {
       "id": "w0696",
@@ -5909,7 +6098,8 @@
       "sentence": "徴兵を{キヒ}する",
       "source": "2013センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "嫌って避けること"
     },
     {
       "id": "w0697",
@@ -5936,7 +6126,8 @@
       "sentence": "条約を{ヒジュン}する",
       "source": "2013センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "条約を国として最終的に認めること"
     },
     {
       "id": "w0699",
@@ -5975,7 +6166,8 @@
       "sentence": "{ヒケン}する価値のある書状",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "手紙などを開いて見ること"
     },
     {
       "id": "w0702",
@@ -5988,7 +6180,8 @@
       "sentence": "容疑者が{モクヒ}する",
       "source": "2012センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "黙って何も言わないこと"
     },
     {
       "id": "w0703",
@@ -6014,7 +6207,8 @@
       "sentence": "{ヒルイ}のない才能",
       "source": "2012センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "比べられるもの。「比類ない」は、並ぶものがないこと"
     },
     {
       "id": "w0705",
@@ -6066,7 +6260,8 @@
       "sentence": "{カクゼツ}した山村",
       "source": "2021共通テスト第1日程 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "かけ離れていること"
     },
     {
       "id": "w0709",
@@ -6093,7 +6288,8 @@
       "sentence": "{カクシキ}の高い旅館",
       "source": "2006センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "身分や家柄に伴う決まりや作法"
     },
     {
       "id": "w0711",
@@ -6149,16 +6345,17 @@
     },
     {
       "id": "w0715",
-      "word": "革新",
-      "kana": "カクシン",
+      "word": "革",
+      "kana": "カワ",
       "key": "革",
       "keyIndex": 0,
       "reading": "カク",
-      "keyKana": "カク",
-      "sentence": "技術{カクシン}が進む",
+      "keyKana": "カワ",
+      "sentence": "{カワ}の財布",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "kun": true
     },
     {
       "id": "w0716",
@@ -6171,7 +6368,8 @@
       "sentence": "{トウカク}を現す",
       "source": "2020センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "「頭角を現す」は、才能が目立ってすぐれてくること"
     },
     {
       "id": "w0717",
@@ -6197,7 +6395,8 @@
       "sentence": "{カクギ}で決定する",
       "source": "2020センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "内閣の会議"
     },
     {
       "id": "w0719",
@@ -6223,7 +6422,8 @@
       "sentence": "設備を{カクジュウ}する",
       "source": "2021共通テスト第1日程 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "規模を広げて、内容を充実させること"
     },
     {
       "id": "w0721",
@@ -6249,7 +6449,8 @@
       "sentence": "{チカク}変動が起こる",
       "source": "2021共通テスト第1日程 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "地球の表面をおおう岩石の層"
     },
     {
       "id": "w0723",
@@ -6315,7 +6516,8 @@
       "sentence": "{キジョウ}に振る舞う",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "気持ちがしっかりしていること"
     },
     {
       "id": "w0728",
@@ -6328,7 +6530,8 @@
       "sentence": "{ジョウキ}を逸する",
       "source": "2022共通テスト本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "普通のやり方。「常軌を逸する」は、普通では考えられないことをすること"
     },
     {
       "id": "w0729",
@@ -6367,7 +6570,8 @@
       "sentence": "{ジョウチョウ}な文章",
       "source": "2022共通テスト本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "文章などが、むだに長いこと"
     },
     {
       "id": "w0732",
@@ -6380,7 +6584,8 @@
       "sentence": "門を{セジョウ}する",
       "source": "2003センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "鍵をかけること"
     },
     {
       "id": "w0733",
@@ -6406,7 +6611,8 @@
       "sentence": "互いに{ジョウホ}する",
       "source": "2021共通テスト第3日程 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "自分の主張を抑えて、相手に譲ること"
     },
     {
       "id": "w0735",
@@ -6446,7 +6652,8 @@
       "sentence": "極楽{ジョウド}",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "仏のいる清らかな世界"
     },
     {
       "id": "w0738",
@@ -6459,7 +6666,8 @@
       "sentence": "{ジョウヨ}金を積み立てる",
       "source": "2022共通テスト本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "余り"
     },
     {
       "id": "w0739",
@@ -6472,7 +6680,8 @@
       "sentence": "{ヨジョウ}人員を減らす",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "必要な分を除いた余り"
     },
     {
       "id": "w0740",
@@ -6485,20 +6694,22 @@
       "sentence": "{キュウジョウ}を訴える",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "困り苦しんでいるありさま"
     },
     {
       "id": "w0741",
-      "word": "状況",
-      "kana": "ジョウキョウ",
+      "word": "書状",
+      "kana": "ショジョウ",
       "key": "状",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ジョウ",
       "keyKana": "ジョウ",
-      "sentence": "現在の{ジョウキョウ}を説明する",
+      "sentence": "{ショジョウ}を送る",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "手紙"
     },
     {
       "id": "w0742",
@@ -6524,7 +6735,8 @@
       "sentence": "機運を{ジョウセイ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "雰囲気や気運を、しだいにつくり出すこと"
     },
     {
       "id": "w0744",
@@ -6537,7 +6749,8 @@
       "sentence": "害虫を{クチク}する",
       "source": "2012センター本試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "追い払うこと"
     },
     {
       "id": "w0745",
@@ -6550,7 +6763,8 @@
       "sentence": "{チクイチ}報告する",
       "source": "2004センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "一つ一つ順を追って"
     },
     {
       "id": "w0746",
@@ -6563,7 +6777,8 @@
       "sentence": "{チクジ}対応する",
       "source": "2012センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "順を追って次々に"
     },
     {
       "id": "w0747",
@@ -6602,7 +6817,8 @@
       "sentence": "{ガンチク}のある言葉",
       "source": "2010センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "言葉などが深い意味を内に含んでいること"
     },
     {
       "id": "w0750",
@@ -6667,7 +6883,8 @@
       "sentence": "{チクバ}の友",
       "source": "2012センター本試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "竹の棒に足を乗せる遊び道具。「竹馬の友」は、幼なじみ"
     },
     {
       "id": "w0755",
@@ -6680,7 +6897,8 @@
       "sentence": "{ハチク}の勢い",
       "source": "2004センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "「破竹の勢い」は、止めようのない激しい勢い"
     },
     {
       "id": "w0756",
@@ -6693,7 +6911,8 @@
       "sentence": "資金集めに{フシン}する",
       "source": "2005センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "あることを成し遂げようと心を砕くこと"
     },
     {
       "id": "w0757",
@@ -6719,7 +6938,8 @@
       "sentence": "{フオン}な空気が漂う",
       "source": "2005センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "穏やかでなく、何か起こりそうなようす"
     },
     {
       "id": "w0759",
@@ -6732,7 +6952,8 @@
       "sentence": "{フリョ}の事故",
       "source": "2021共通テスト第2日程 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "思いがけないこと"
     },
     {
       "id": "w0760",
@@ -6745,7 +6966,8 @@
       "sentence": "海外に{フニン}する",
       "source": "2020センター追試験 第1問 問1(ア) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "任地へ行くこと"
     },
     {
       "id": "w0761",
@@ -6785,7 +7007,8 @@
       "sentence": "相互{フジョ}の精神",
       "source": "2010センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "力を貸して助けること"
     },
     {
       "id": "w0764",
@@ -6802,16 +7025,16 @@
     },
     {
       "id": "w0765",
-      "word": "給付",
-      "kana": "キュウフ",
+      "word": "付近",
+      "kana": "フキン",
       "key": "付",
-      "keyIndex": 1,
+      "keyIndex": 0,
       "reading": "フ",
       "keyKana": "フ",
-      "sentence": "{キュウフ}金を受け取る",
-      "source": "2005センター本試験 第1問 問1(オ)",
+      "sentence": "駅の{フキン}",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard"
     },
     {
       "id": "w0766",
@@ -6824,7 +7047,8 @@
       "sentence": "二人の証言が{フゴウ}する",
       "source": "2021共通テスト第2日程 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "二つの物事がぴったり合うこと"
     },
     {
       "id": "w0767",
@@ -6876,7 +7100,8 @@
       "sentence": "将来への{フセキ}を打つ",
       "source": "2010センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "将来に備えて打っておく手配り"
     },
     {
       "id": "w0771",
@@ -6915,7 +7140,8 @@
       "sentence": "{フヘン}的な真理",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "すべてのものに当てはまること"
     },
     {
       "id": "w0774",
@@ -6928,7 +7154,8 @@
       "sentence": "{ダミン}をむさぼる",
       "source": "2016センター追試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "なまけて眠ってばかりいること"
     },
     {
       "id": "w0775",
@@ -6980,7 +7207,8 @@
       "sentence": "川が{ダコウ}する",
       "source": "2001センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "蛇のように曲がりくねって進むこと"
     },
     {
       "id": "w0779",
@@ -6993,7 +7221,8 @@
       "sentence": "{チョウダ}の列",
       "source": "2023共通テスト追試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "長く大きな蛇。「長蛇の列」は、長く続く行列"
     },
     {
       "id": "w0780",
@@ -7032,7 +7261,8 @@
       "sentence": "{ダサン}的な考え",
       "source": "2016センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "損得を見積もること"
     },
     {
       "id": "w0783",
@@ -7071,7 +7301,8 @@
       "sentence": "{ダキ}すべき行為",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "激しく軽蔑して嫌うこと"
     },
     {
       "id": "w0786",
@@ -7097,7 +7328,8 @@
       "sentence": "犯人を{ホバク}する",
       "source": "2002センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "捕らえて縛ること"
     },
     {
       "id": "w0788",
@@ -7150,7 +7382,8 @@
       "sentence": "{クウバク}とした荒野",
       "source": "2013センター本試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "とりとめがなく、つかみどころのないこと"
     },
     {
       "id": "w0792",
@@ -7176,7 +7409,8 @@
       "sentence": "{キバク}装置",
       "source": "2002センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "爆発を起こさせること"
     },
     {
       "id": "w0794",
@@ -7298,16 +7532,16 @@
     },
     {
       "id": "w0803",
-      "word": "縦横",
-      "kana": "ジュウオウ",
+      "word": "操縦",
+      "kana": "ソウジュウ",
       "key": "縦",
-      "keyIndex": 0,
+      "keyIndex": 1,
       "reading": "ジュウ",
       "keyKana": "ジュウ",
-      "sentence": "{ジュウオウ}に駆け回る",
-      "source": "2011センター本試験 第1問 問1(エ)",
+      "sentence": "飛行機を{ソウジュウ}する",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard"
     },
     {
       "id": "w0804",
@@ -7333,7 +7567,8 @@
       "sentence": "{ユウジュウフダン}な性格",
       "source": "2010センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ぐずぐずして決断できないこと"
     },
     {
       "id": "w0806",
@@ -7385,7 +7620,8 @@
       "sentence": "{クジュウ}の決断",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "苦しみ悩むこと"
     },
     {
       "id": "w0810",
@@ -7398,7 +7634,8 @@
       "sentence": "{タンテキ}に言えば",
       "source": "2015センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "要点をはっきり示すようす"
     },
     {
       "id": "w0811",
@@ -7411,7 +7648,8 @@
       "sentence": "事件の{ホッタン}",
       "source": "2015センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "物事の始まり"
     },
     {
       "id": "w0812",
@@ -7424,7 +7662,8 @@
       "sentence": "{タンネン}に調べる",
       "source": "2003センター追試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "心をこめて丁寧にすること"
     },
     {
       "id": "w0813",
@@ -7437,7 +7676,8 @@
       "sentence": "{タンセイ}込めて育てる",
       "source": "2015センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "心をこめて物事をすること"
     },
     {
       "id": "w0814",
@@ -7450,7 +7690,8 @@
       "sentence": "心身を{タンレン}する",
       "source": "2000センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "心や体をきたえること"
     },
     {
       "id": "w0815",
@@ -7505,7 +7746,8 @@
       "sentence": "{セイタン}百年を祝う",
       "source": "2003センター追試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "（偉人などが）生まれること"
     },
     {
       "id": "w0819",
@@ -7557,7 +7799,8 @@
       "sentence": "深く{タンソク}する",
       "source": "2003センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "嘆いてため息をつくこと"
     },
     {
       "id": "w0823",
@@ -7583,7 +7826,8 @@
       "sentence": "{コタン}の境地",
       "source": "2015センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "俗っぽさがなく、あっさりした中に深い味わいがあること"
     },
     {
       "id": "w0825",
@@ -7609,7 +7853,8 @@
       "sentence": "経営が{ハタン}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "物事がうまくいかなくなること"
     },
     {
       "id": "w0827",
@@ -7650,7 +7895,8 @@
       "source": "2000センター本試験 第1問 問1(イ)",
       "verified": true,
       "tier": "past",
-      "kun": true
+      "kun": true,
+      "meaning": "（仕事や指揮などを）行う"
     },
     {
       "id": "w0830",
@@ -7730,7 +7976,8 @@
       "sentence": "心臓の{シッカン}",
       "source": "2015センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "病気"
     },
     {
       "id": "w0836",
@@ -7827,16 +8074,17 @@
     },
     {
       "id": "w0843",
-      "word": "暴挙",
-      "kana": "ボウキョ",
+      "word": "列挙",
+      "kana": "レッキョ",
       "key": "挙",
       "keyIndex": 1,
       "reading": "キョ",
       "keyKana": "キョ",
-      "sentence": "前代未聞の{ボウキョ}",
-      "source": "2011センター本試験 第1問 問1(ア)",
+      "sentence": "理由を{レッキョ}する",
+      "source": null,
       "verified": true,
-      "tier": "past"
+      "tier": "standard",
+      "meaning": "一つ一つ並べ挙げること"
     },
     {
       "id": "w0844",
@@ -7849,7 +8097,8 @@
       "sentence": "著作者の{キョダク}を得る",
       "source": "2001センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "願いを聞き入れて許すこと"
     },
     {
       "id": "w0845",
@@ -7875,7 +8124,8 @@
       "sentence": "大臣の{キョシュウ}が注目される",
       "source": "2011センター本試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "今の地位を去るか、とどまるかという身の振り方"
     },
     {
       "id": "w0847",
@@ -7901,7 +8151,8 @@
       "sentence": "{キョマン}の富を築く",
       "source": "2001センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "数や量が非常に多いこと"
     },
     {
       "id": "w0849",
@@ -7927,7 +8178,8 @@
       "sentence": "教科書に{ジュンキョ}した問題集",
       "source": "2011センター本試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "よりどころとして従うこと"
     },
     {
       "id": "w0851",
@@ -7953,7 +8205,8 @@
       "sentence": "データの{ゾクセイ}",
       "source": "2005センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "そのものが持つ性質や特徴"
     },
     {
       "id": "w0853",
@@ -7993,7 +8246,8 @@
       "sentence": "古い{シュウゾク}が残る村",
       "source": "2005センター追試験 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "昔からの習慣や風俗"
     },
     {
       "id": "w0856",
@@ -8006,7 +8260,8 @@
       "sentence": "公序{リョウゾク}に反する",
       "source": "2021共通テスト第1日程 第1問 問1(ア)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "よい風俗や習慣。「公序良俗」"
     },
     {
       "id": "w0857",
@@ -8019,7 +8274,8 @@
       "sentence": "{セゾク}を離れて暮らす",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "世の中のならわし。また、俗世間"
     },
     {
       "id": "w0858",
@@ -8189,20 +8445,22 @@
       "sentence": "{エンコ}採用",
       "source": "2002センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "血縁や人のつながり"
     },
     {
       "id": "w0871",
-      "word": "血縁",
-      "kana": "ケツエン",
+      "word": "周縁",
+      "kana": "シュウエン",
       "key": "縁",
       "keyIndex": 1,
       "reading": "エン",
       "keyKana": "エン",
-      "sentence": "{ケツエン}関係にある",
+      "sentence": "都市の{シュウエン}部",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "まわり。ふち"
     },
     {
       "id": "w0872",
@@ -8215,7 +8473,8 @@
       "sentence": "{コウエン}な理想を掲げる",
       "source": "2002センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "志などが高く、遠大なこと"
     },
     {
       "id": "w0873",
@@ -8228,7 +8487,8 @@
       "sentence": "打者を{ケイエン}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "敬うふりをして、実際は近づかないようにすること"
     },
     {
       "id": "w0874",
@@ -8241,7 +8501,8 @@
       "sentence": "学説を{エンヨウ}する",
       "source": "2021共通テスト第1日程 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "自分の説を補うために、他の説を引用すること"
     },
     {
       "id": "w0875",
@@ -8293,7 +8554,8 @@
       "sentence": "{エンジュク}した演技",
       "source": "2021共通テスト第1日程 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "人格や技術が十分に発達して豊かになること"
     },
     {
       "id": "w0879",
@@ -8358,7 +8620,8 @@
       "sentence": "自然の{セツリ}",
       "source": "2018センター本試験 第1問 問1(エ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "自然界を支配している法則"
     },
     {
       "id": "w0884",
@@ -8384,7 +8647,8 @@
       "sentence": "和洋{セッチュウ}の家",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "異なる考えのよいところを取り合わせること"
     },
     {
       "id": "w0886",
@@ -8423,7 +8687,8 @@
       "sentence": "{セツレツ}な文章",
       "source": "2012センター本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "へたで劣っていること"
     },
     {
       "id": "w0889",
@@ -8436,7 +8701,8 @@
       "sentence": "{セッソク}な判断は避ける",
       "source": "2014センター追試験 第1問 問1(イ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "できはまずいが、仕上がりが速いこと"
     },
     {
       "id": "w0890",
@@ -8475,7 +8741,8 @@
       "sentence": "{セツジョク}を果たす",
       "source": "2018センター本試験 第1問 問1(エ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "前に負けた相手に勝って、恥をすすぐこと"
     },
     {
       "id": "w0893",
@@ -8592,7 +8859,8 @@
       "sentence": "{インジュン}な旧習を改める",
       "source": "2005センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "古い習慣にとらわれ、改めようとしないこと"
     },
     {
       "id": "w0902",
@@ -8618,7 +8886,8 @@
       "sentence": "相撲の地方{ジュンギョウ}",
       "source": "2005センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "各地を回って興行すること"
     },
     {
       "id": "w0904",
@@ -8631,7 +8900,8 @@
       "sentence": "{ジュンタク}な資金",
       "source": "2015センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "物が豊富にあること"
     },
     {
       "id": "w0905",
@@ -8644,7 +8914,8 @@
       "sentence": "{シツジュン}な気候",
       "source": "2015センター本試験 第1問 問1(ウ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "しめりけが多いこと"
     },
     {
       "id": "w0906",
@@ -8683,7 +8954,8 @@
       "sentence": "{ジュンキョウ}した聖人",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "信仰のために命を捨てること"
     },
     {
       "id": "w0909",
@@ -8696,7 +8968,8 @@
       "sentence": "消防士が{ジュンショク}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "職務のために命を落とすこと"
     },
     {
       "id": "w0910",
@@ -8761,7 +9034,8 @@
       "sentence": "心の{キンセン}に触れる",
       "source": "2023共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "心の奥にある、物事に感動する気持ち"
     },
     {
       "id": "w0915",
@@ -8787,7 +9061,8 @@
       "sentence": "{キンサ}で勝つ",
       "source": "2017センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "わずかな差"
     },
     {
       "id": "w0917",
@@ -8814,7 +9089,8 @@
       "sentence": "{カイキン}賞をもらう",
       "source": "2017センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "一日も休まずに出席・出勤すること"
     },
     {
       "id": "w0919",
@@ -8840,7 +9116,8 @@
       "sentence": "{キョウキン}を開いて話す",
       "source": "2017センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "胸の内。「胸襟を開く」は、思っていることを打ち明けること"
     },
     {
       "id": "w0921",
@@ -8893,7 +9170,8 @@
       "sentence": "{キンシュク}財政",
       "source": "2023共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "支出を切り詰めること"
     },
     {
       "id": "w0925",
@@ -8919,7 +9197,8 @@
       "sentence": "自宅{キンシン}を命じる",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "罰として、家で行いを慎むこと"
     },
     {
       "id": "w0927",
@@ -8998,7 +9277,8 @@
       "sentence": "{バイシン}員制度",
       "source": "2017センター本試験 第1問 問1(ア) ほか1回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "一般の人が裁判の審理に加わること"
     },
     {
       "id": "w0933",
@@ -9011,7 +9291,8 @@
       "sentence": "会議に{バイセキ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "身分の高い人と同席すること"
     },
     {
       "id": "w0934",
@@ -9037,7 +9318,8 @@
       "sentence": "化学反応の{ショクバイ}",
       "source": "2007センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "自分は変化せずに、化学反応を速めたり遅くしたりする物質"
     },
     {
       "id": "w0936",
@@ -9141,7 +9423,8 @@
       "sentence": "{ボケツ}を掘る",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "墓の穴。「墓穴を掘る」は、自分で自分の失敗の原因を作ること"
     },
     {
       "id": "w0946",
@@ -9154,7 +9437,8 @@
       "sentence": "故郷への{シボ}",
       "source": "2011センター本試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "恋しく思うこと"
     },
     {
       "id": "w0947",
@@ -9181,7 +9465,8 @@
       "sentence": "お{セイボ}を贈る",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "年の暮れ。また、年末の贈り物"
     },
     {
       "id": "w0949",
@@ -9194,7 +9479,8 @@
       "sentence": "{ハクボ}の空",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "夕暮れ"
     },
     {
       "id": "w0950",
@@ -9298,7 +9584,8 @@
       "sentence": "{モウゲン}を吐く",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "根拠のない、でたらめな言葉"
     },
     {
       "id": "w0958",
@@ -9337,7 +9624,8 @@
       "sentence": "勝てれば{ホンモウ}だ",
       "source": "2009センター本試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "もとからの望み。望みがかなって満足なこと"
     },
     {
       "id": "w0961",
@@ -9350,7 +9638,8 @@
       "sentence": "お茶を{ショモウ}する",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "ほしいと望むこと"
     },
     {
       "id": "w0962",
@@ -9377,7 +9666,8 @@
       "source": null,
       "verified": true,
       "tier": "standard",
-      "alt": ["磨耗"]
+      "alt": ["磨耗"],
+      "meaning": "すり減ること"
     },
     {
       "id": "w0964",
@@ -9416,7 +9706,8 @@
       "sentence": "光に{ゲンワク}される",
       "source": "2005センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "目先をまどわすこと"
     },
     {
       "id": "w0967",
@@ -9429,7 +9720,8 @@
       "sentence": "{ヘンゲン}自在",
       "source": "2005センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "姿をすばやく変えること。「変幻自在」"
     },
     {
       "id": "w0968",
@@ -9468,7 +9760,8 @@
       "sentence": "{ジョウゲン}の月",
       "source": "2005センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "新月から満月までの間に見える半月"
     },
     {
       "id": "w0971",
@@ -9494,7 +9787,8 @@
       "sentence": "能の{ユウゲン}の美",
       "source": "2005センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "奥深く、味わいの深いこと"
     },
     {
       "id": "w0973",
@@ -9520,7 +9814,8 @@
       "sentence": "{ゲンセイ}な審査",
       "source": "2005センター本試験 第1問 問1(ウ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "きびしく公正なこと"
     },
     {
       "id": "w0975",
@@ -9624,7 +9919,8 @@
       "sentence": "{チジョク}を受ける",
       "source": "2002センター追試験 第1問 問1(オ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "はずかしめ"
     },
     {
       "id": "w0983",
@@ -9742,7 +10038,8 @@
       "sentence": "{ジバイセキ}保険に入る",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "自動車損害賠償責任保険の略。車の持ち主に加入が義務づけられた保険"
     },
     {
       "id": "w0992",
@@ -9755,7 +10052,8 @@
       "sentence": "大臣を{コウテツ}する",
       "source": "2020センター本試験 第1問 問1(イ) ほか2回",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "ある地位の人を、ほかの人に替えること"
     },
     {
       "id": "w0993",
@@ -9768,7 +10066,8 @@
       "sentence": "鎌倉後期の{リョウトウテツリツ}",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "鎌倉時代の後期、皇室の二つの系統から交互に天皇を立てたこと"
     },
     {
       "id": "w0994",
@@ -9794,7 +10093,8 @@
       "sentence": "何の{ヘンテツ}もない",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "「何の変哲もない」は、ありふれていて変わったところがないこと"
     },
     {
       "id": "w0996",
@@ -9820,7 +10120,8 @@
       "sentence": "商売の{テッソク}",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "変えることのできない、厳しい決まり"
     },
     {
       "id": "w0998",
@@ -9846,7 +10147,8 @@
       "sentence": "{レイテツ}な判断",
       "source": "2016センター追試験 第1問 問1(エ)",
       "verified": true,
-      "tier": "past"
+      "tier": "past",
+      "meaning": "冷静で、物事を鋭く見通すこと"
     },
     {
       "id": "w1000",
@@ -9859,7 +10161,8 @@
       "sentence": "頑固{イッテツ}な職人",
       "source": null,
       "verified": true,
-      "tier": "standard"
+      "tier": "standard",
+      "meaning": "思い込んだら押し通す性質"
     },
     {
       "id": "w1001",
@@ -9896,6 +10199,251 @@
       "reading": "テツ",
       "keyKana": "テッ",
       "sentence": "市場から{テッタイ}する",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1004",
+      "word": "嫉妬",
+      "kana": "シット",
+      "key": "嫉",
+      "keyIndex": 0,
+      "reading": "シツ",
+      "keyKana": "シッ",
+      "sentence": "友人の成功に{シット}する",
+      "source": "2015センター追試験 第1問 問1(エ)",
+      "verified": true,
+      "tier": "past",
+      "distractorOnly": true,
+      "meaning": "うらやんでねたむこと"
+    },
+    {
+      "id": "w1005",
+      "word": "室内",
+      "kana": "シツナイ",
+      "key": "室",
+      "keyIndex": 0,
+      "reading": "シツ",
+      "keyKana": "シツ",
+      "sentence": "{シツナイ}で過ごす",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1006",
+      "word": "正室",
+      "kana": "セイシツ",
+      "key": "室",
+      "keyIndex": 1,
+      "reading": "シツ",
+      "keyKana": "シツ",
+      "sentence": "将軍の{セイシツ}となる",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "meaning": "身分の高い人の正式な妻"
+    },
+    {
+      "id": "w1007",
+      "word": "質素",
+      "kana": "シッソ",
+      "key": "質",
+      "keyIndex": 0,
+      "reading": "シツ",
+      "keyKana": "シッ",
+      "sentence": "{シッソ}な暮らし",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1008",
+      "word": "質疑",
+      "kana": "シツギ",
+      "key": "質",
+      "keyIndex": 0,
+      "reading": "シツ",
+      "keyKana": "シツ",
+      "sentence": "{シツギ}応答",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "meaning": "疑問点を問いただすこと"
+    },
+    {
+      "id": "w1009",
+      "word": "過失",
+      "kana": "カシツ",
+      "key": "失",
+      "keyIndex": 1,
+      "reading": "シツ",
+      "keyKana": "シツ",
+      "sentence": "自らの{カシツ}を認める",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1010",
+      "word": "距離",
+      "kana": "キョリ",
+      "key": "距",
+      "keyIndex": 0,
+      "reading": "キョ",
+      "keyKana": "キョ",
+      "sentence": "駅までの{キョリ}",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "distractorOnly": true
+    },
+    {
+      "id": "w1011",
+      "word": "居住",
+      "kana": "キョジュウ",
+      "key": "居",
+      "keyIndex": 0,
+      "reading": "キョ",
+      "keyKana": "キョ",
+      "sentence": "海外に{キョジュウ}する",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1012",
+      "word": "隠居",
+      "kana": "インキョ",
+      "key": "居",
+      "keyIndex": 1,
+      "reading": "キョ",
+      "keyKana": "キョ",
+      "sentence": "{インキョ}して暮らす",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "meaning": "仕事から退いて、のんびり暮らすこと"
+    },
+    {
+      "id": "w1013",
+      "word": "拒否",
+      "kana": "キョヒ",
+      "key": "拒",
+      "keyIndex": 0,
+      "reading": "キョ",
+      "keyKana": "キョ",
+      "sentence": "要求を{キョヒ}する",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1014",
+      "word": "拒む",
+      "kana": "コバ",
+      "key": "拒",
+      "keyIndex": 0,
+      "reading": "キョ",
+      "keyKana": "コバ",
+      "sentence": "誘いを{コバ}む",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "kun": true
+    },
+    {
+      "id": "w1015",
+      "word": "虚弱",
+      "kana": "キョジャク",
+      "key": "虚",
+      "keyIndex": 0,
+      "reading": "キョ",
+      "keyKana": "キョ",
+      "sentence": "{キョジャク}な体質",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1016",
+      "word": "窃盗",
+      "kana": "セットウ",
+      "key": "窃",
+      "keyIndex": 0,
+      "reading": "セツ",
+      "keyKana": "セッ",
+      "sentence": "{セットウ}の罪に問われる",
+      "source": "2018センター本試験 第1問 問1(エ)",
+      "verified": true,
+      "tier": "past"
+    },
+    {
+      "id": "w1017",
+      "word": "剽窃",
+      "kana": "ヒョウセツ",
+      "key": "窃",
+      "keyIndex": 1,
+      "reading": "セツ",
+      "keyKana": "セツ",
+      "sentence": "論文を{ヒョウセツ}する",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "nonJoyo": ["剽"],
+      "meaning": "他人の文章や学説などを盗み、自分のものとして発表すること"
+    },
+    {
+      "id": "w1018",
+      "word": "刹那",
+      "kana": "セツナ",
+      "key": "刹",
+      "keyIndex": 0,
+      "reading": "セツ",
+      "keyKana": "セツ",
+      "sentence": "{セツナ}的な生き方",
+      "source": null,
+      "verified": true,
+      "tier": "standard",
+      "distractorOnly": true,
+      "meaning": "きわめて短い時間。一瞬"
+    },
+    {
+      "id": "w1019",
+      "word": "挫折",
+      "kana": "ザセツ",
+      "key": "折",
+      "keyIndex": 1,
+      "reading": "セツ",
+      "keyKana": "セツ",
+      "sentence": "{ザセツ}を味わう",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1020",
+      "word": "隣接",
+      "kana": "リンセツ",
+      "key": "接",
+      "keyIndex": 1,
+      "reading": "セツ",
+      "keyKana": "セツ",
+      "sentence": "公園に{リンセツ}する家",
+      "source": null,
+      "verified": true,
+      "tier": "standard"
+    },
+    {
+      "id": "w1021",
+      "word": "季節",
+      "kana": "キセツ",
+      "key": "節",
+      "keyIndex": 1,
+      "reading": "セツ",
+      "keyKana": "セツ",
+      "sentence": "{キセツ}の変わり目",
       "source": null,
       "verified": true,
       "tier": "standard"
