@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-26.batch3",
+  "version": "2026-10-28.batch3b",
   "words": [
     {
       "id": "w0005",
@@ -302,7 +302,7 @@
       "keyIndex": 0,
       "reading": "カン",
       "keyKana": "カン",
-      "sentence": "{カンデンチ}を交換する",
+      "sentence": "時計の{カンデンチ}が切れる",
       "source": "2026共通テスト本試験 第1問 問1(エ) ほか1回",
       "verified": true,
       "tier": "past"
@@ -2341,7 +2341,7 @@
       "keyIndex": 1,
       "reading": "サク",
       "keyKana": "サク",
-      "sentence": "作文を{テンサク}する",
+      "sentence": "答案を{テンサク}する",
       "source": "2025共通テスト本試験 第1問 問1(イ) ほか1回",
       "verified": true,
       "tier": "past",
@@ -3925,7 +3925,7 @@
       "keyIndex": 1,
       "reading": "カ",
       "keyKana": "カ",
-      "sentence": "{ガイカ}を稼ぐ",
+      "sentence": "円を{ガイカ}に両替する",
       "source": "2025共通テスト本試験 第1問 問1(ア)",
       "verified": true,
       "tier": "past"
@@ -4474,7 +4474,7 @@
       "keyIndex": 0,
       "reading": "ショク",
       "keyKana": "ショク",
-      "sentence": "{ショクタク}職員として働く",
+      "sentence": "{ショクタク}として働く",
       "source": null,
       "verified": true,
       "tier": "standard",
@@ -5594,7 +5594,7 @@
       "keyIndex": 1,
       "reading": "ソ",
       "keyKana": "ソ",
-      "sentence": "{カソセイ}のある素材",
+      "sentence": "{カソセイ}に富む粘土",
       "source": null,
       "verified": true,
       "tier": "standard",

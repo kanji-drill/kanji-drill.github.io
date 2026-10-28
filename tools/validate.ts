@@ -79,6 +79,15 @@ export function validate(words: readonly Word[]) {
   for (const [reading, ws] of byReading) {
     const byKey = new Map<string, Word[]>();
     for (const w of ws) byKey.set(w.key, [...(byKey.get(w.key) ?? []), w]);
+    // 例文の傍線の外に同じ音の問われる字があると、選択肢の書き方が見えてしまう（例: 外貨 の「{ガイカ}を稼ぐ」と 稼ぐ）
+    for (const w of ws) {
+      const shown = [...new Set([...w.sentence.replace(/\{[^}]*\}/, '')].filter((ch) => byKey.has(ch)))];
+      if (shown.length > 0)
+        err(
+          w,
+          `例文に同じ音「${reading}」の問われる字「${shown.join('')}」があります（選択肢の書き方が見えてしまいます）`,
+        );
+    }
     for (const [key, kws] of byKey) {
       // 選択肢専用の語だけの漢字は 1 語でよい。それ以外の漢字は、正解の組を作れるよう 2 語以上
       const pairable = kws.filter(canPair).length;
