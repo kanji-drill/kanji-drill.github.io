@@ -157,7 +157,7 @@
       "keyKana": "コウ",
       "sentence": "{コウキュウテキ}な平和を望む",
       "source": "2011センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "いつまでも変わらずに続くようす"
     },
@@ -238,7 +238,7 @@
       "keyKana": "コウ",
       "sentence": "新制度の{コウザイ}を論じる",
       "source": "2016センター追試験 第1問 問1(イ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "よい点と悪い点"
     },
@@ -331,7 +331,7 @@
       "keyKana": "カン",
       "sentence": "トンネルが{カンツウ}する",
       "source": "2026共通テスト本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -372,7 +372,7 @@
       "sentence": "言葉を言い{カ}える",
       "kun": true,
       "source": "2021共通テスト第3日程 第1問 問1(オ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "alt": ["替える"]
     },
@@ -755,7 +755,7 @@
       "keyKana": "トウ",
       "sentence": "{ブトウ}会で踊る",
       "source": "2008センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "踊り。ダンス"
     },
@@ -945,7 +945,7 @@
       "keyKana": "キ",
       "sentence": "新しい芸術の{キシュ}",
       "source": "2007センター本試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "団体や運動の先頭に立つ人"
     },
@@ -1079,7 +1079,7 @@
       "keyKana": "ケン",
       "sentence": "{ケンアク}な空気になる",
       "source": "2000センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "雰囲気などがとげとげしく、危うい感じであること"
     },
@@ -1119,7 +1119,7 @@
       "keyKana": "ケン",
       "sentence": "{ケンチョ}な効果がある",
       "source": "2020センター追試験 第1問 問1(エ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "際立って目につくようす"
     },
@@ -1226,7 +1226,7 @@
       "keyKana": "ソウ",
       "sentence": "{ソウゴン}な寺院",
       "source": "2025共通テスト本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "重々しく、おごそかなようす"
     },
@@ -1240,7 +1240,7 @@
       "keyKana": "ソウ",
       "sentence": "高原の{サンソウ}に泊まる",
       "source": "2002センター追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -1404,7 +1404,7 @@
       "keyKana": "ココロヨ",
       "sentence": "{ココロヨ}く承知する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -1554,7 +1554,7 @@
       "keyKana": "ボウ",
       "sentence": "{ボウギャク}な君主",
       "source": "2005センター本試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "むごい乱暴を働くこと"
     },
@@ -1675,7 +1675,7 @@
       "keyKana": "セン",
       "sentence": "{センザイ}能力を伸ばす",
       "source": "2014センター本試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -1743,7 +1743,7 @@
       "sentence": "議席の大半を{シ}める",
       "kun": true,
       "source": "2014センター本試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -1810,7 +1810,7 @@
       "keyKana": "カツ",
       "sentence": "平和を{カツボウ}する",
       "source": "2015センター追試験 第1問 問1(オ) ほか2回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "のどが渇いて水を欲するように、心から強く望むこと"
     },
@@ -1893,7 +1893,7 @@
       "keyKana": "カツ",
       "sentence": "町に{カツリョク}を与える",
       "source": "2010センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -1963,7 +1963,7 @@
       "sentence": "長さを{ハカ}る",
       "kun": true,
       "source": "2003センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -1990,7 +1990,7 @@
       "keyKana": "ソク",
       "sentence": "{ニソクサンモン}で手放す",
       "source": "2003センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "数が多くても、値段が非常に安いこと"
     },
@@ -2032,7 +2032,7 @@
       "keyKana": "ソク",
       "sentence": "支払いを{サイソク}する",
       "source": "2020センター本試験 第1問 問1(ア) ほか2回",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -2045,7 +2045,7 @@
       "keyKana": "ソク",
       "sentence": "{ヘンソク}的な時間割",
       "source": "2003センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "普通のやり方や規則から外れていること"
     },
@@ -2141,7 +2141,7 @@
       "sentence": "注意を{オコタ}る",
       "kun": true,
       "source": "2025共通テスト追試験 第1問 問1(エ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -2389,7 +2389,7 @@
       "keyKana": "サク",
       "sentence": "巻末の{サクイン}",
       "source": "2012センター追試験 第1問 問1(オ) ほか2回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "本の中の語句を探しやすいように並べた表"
     },
@@ -2430,7 +2430,7 @@
       "keyKana": "サク",
       "sentence": "新しい{サクヒン}を展示する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -2713,7 +2713,7 @@
       "keyKana": "フン",
       "sentence": "石を{フンサイ}する",
       "source": "2012センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -2809,7 +2809,7 @@
       "keyKana": "イ",
       "sentence": "現状を{イジ}する",
       "source": "2021共通テスト第2日程 第1問 問1(イ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -2835,7 +2835,7 @@
       "keyKana": "イ",
       "sentence": "台風の{イリョク}",
       "source": "2001センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -3200,7 +3200,7 @@
       "sentence": "自らの行いを{カエリ}みる",
       "kun": true,
       "source": "2017センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "自分の行いを振り返って考える"
     },
@@ -3214,7 +3214,7 @@
       "keyKana": "セイ",
       "sentence": "予定を{チョウセイ}する",
       "source": "2007センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -3241,7 +3241,7 @@
       "keyKana": "セイ",
       "sentence": "新{セイヒン}を開発する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -3295,7 +3295,7 @@
       "keyKana": "ハク",
       "sentence": "人気に{ハクシャ}がかかる",
       "source": "2024共通テスト追試験 第1問 問1(オ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "「拍車をかける」は、物事の進み方を一段と速めること"
     },
@@ -3652,7 +3652,7 @@
       "keyKana": "キョウ",
       "sentence": "恩恵を{キョウジュ}する",
       "source": "2018センター追試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "受け入れて味わい楽しむこと"
     },
@@ -3992,7 +3992,7 @@
       "keyKana": "カ",
       "sentence": "論文を高く{ヒョウカ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -4058,7 +4058,7 @@
       "keyKana": "カ",
       "sentence": "{カジョウ}な期待をかける",
       "source": "2022共通テスト本試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -4234,7 +4234,7 @@
       "keyKana": "ヤッ",
       "sentence": "{ヤッコウ}が現れる",
       "source": "2017センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "薬の効き目"
     },
@@ -4479,7 +4479,7 @@
       "keyKana": "ショク",
       "sentence": "友人と{カイショク}する",
       "source": "2013センター追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -4615,7 +4615,7 @@
       "keyKana": "ト",
       "sentence": "急に{トケツ}して倒れる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -4735,7 +4735,7 @@
       "keyKana": "シャク",
       "sentence": "判定の{シャクド}が違う",
       "source": "2026共通テスト本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "評価や判断の基準"
     },
@@ -4789,7 +4789,7 @@
       "keyKana": "シャク",
       "sentence": "遅れたわけを{シャクメイ}する",
       "source": "2026共通テスト本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "誤解などを解くために事情を説明すること"
     },
@@ -4816,7 +4816,7 @@
       "keyKana": "シャク",
       "sentence": "{ジシャク}が北を指す",
       "source": "2026共通テスト本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -4981,7 +4981,7 @@
       "keyKana": "サイ",
       "sentence": "多額の{フサイ}を背負う",
       "source": "2024共通テスト本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -4994,7 +4994,7 @@
       "keyKana": "サイ",
       "sentence": "{サイム}を整理する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -5060,7 +5060,7 @@
       "keyKana": "ヘイ",
       "sentence": "長年の{アクヘイ}",
       "source": "2024共通テスト本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "悪い習慣"
     },
@@ -5074,7 +5074,7 @@
       "keyKana": "ヘイ",
       "sentence": "地方が{ヒヘイ}する",
       "source": "2024共通テスト本試験 第1問 問1(エ) ほか2回",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "疲れ弱ること"
     },
@@ -5221,7 +5221,7 @@
       "sentence": "昔の出来事を{カエリ}みる",
       "kun": true,
       "source": "2016センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -5440,7 +5440,7 @@
       "keyKana": "ソ",
       "sentence": "{ソボク}な疑問を持つ",
       "source": "2008センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "飾り気がなく、自然なこと"
     },
@@ -5701,7 +5701,7 @@
       "keyKana": "コク",
       "sentence": "弱点を{コクフク}する",
       "source": "2006センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -6013,7 +6013,7 @@
       "keyKana": "チョウ",
       "sentence": "{チョウシュウ}が沸く",
       "source": "2003センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -6122,7 +6122,7 @@
       "keyKana": "ヒ",
       "sentence": "兵役を{キヒ}する",
       "source": "2013センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "嫌って避けること"
     },
@@ -6190,7 +6190,7 @@
       "keyKana": "ヒ",
       "sentence": "{ヒケン}する価値のある文書",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "手紙などを開いて見ること"
     },
@@ -6540,7 +6540,7 @@
       "keyKana": "タケ",
       "sentence": "思いの{タケ}を打ち明ける",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "「思いの丈」で、心に思っていることのすべて",
       "kun": true
@@ -6636,7 +6636,7 @@
       "keyKana": "ジョウ",
       "sentence": "両者が{ジョウホ}する",
       "source": "2021共通テスト第3日程 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "自分の主張を抑えて、相手に譲ること"
     },
@@ -6965,7 +6965,7 @@
       "keyKana": "フ",
       "sentence": "{フオン}な空気が流れる",
       "source": "2005センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "穏やかでなく、何か起こりそうなようす"
     },
@@ -7034,7 +7034,7 @@
       "keyKana": "フ",
       "sentence": "生活の{フジョ}を受ける",
       "source": "2010センター本試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "力を貸して助けること"
     },
@@ -7088,7 +7088,7 @@
       "keyKana": "プ",
       "sentence": "電車の{キップ}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -7101,7 +7101,7 @@
       "keyKana": "フ",
       "sentence": "{フメン}を見て演奏する",
       "source": "2021共通テスト第2日程 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -7275,7 +7275,7 @@
       "keyKana": "ダ",
       "sentence": "{ダトウ}な結論",
       "source": "2016センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -7342,7 +7342,7 @@
       "keyKana": "バク",
       "sentence": "行動を{ソクバク}する",
       "source": "2016センター本試験 第1問 問1(イ) ほか1回",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -7436,7 +7436,7 @@
       "keyKana": "バク",
       "sentence": "{キバク}剤となる",
       "source": "2002センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "爆発を起こさせること"
     },
@@ -7516,7 +7516,7 @@
       "keyKana": "ジュウ",
       "sentence": "上官に{フクジュウ}する",
       "source": "2010センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -7648,7 +7648,7 @@
       "keyKana": "ジュウ",
       "sentence": "{クジュウ}の選択",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "苦しみ悩むこと"
     },
@@ -7881,7 +7881,7 @@
       "keyKana": "タン",
       "sentence": "計画が{ハタン}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "物事がうまくいかなくなること"
     },
@@ -7922,7 +7922,7 @@
       "keyKana": "ト",
       "sentence": "事務を{ト}る",
       "source": "2000センター本試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true,
       "meaning": "（仕事や指揮などを）行う"
@@ -8111,7 +8111,7 @@
       "keyKana": "キョ",
       "sentence": "問題点を{レッキョ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "一つ一つ並べ挙げること"
     },
@@ -8193,7 +8193,7 @@
       "keyKana": "キョ",
       "sentence": "{キョダイ}な建物",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -8220,7 +8220,7 @@
       "keyKana": "キョ",
       "sentence": "主張の{コンキョ}を示す",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -8394,7 +8394,7 @@
       "keyKana": "エン",
       "sentence": "{アエン}が多い食品",
       "source": "2002センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -8473,7 +8473,7 @@
       "keyKana": "エン",
       "sentence": "{エンコ}を頼る",
       "source": "2002センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "血縁や人のつながり"
     },
@@ -8487,7 +8487,7 @@
       "keyKana": "エン",
       "sentence": "町の{シュウエン}部",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "まわり。ふち"
     },
@@ -8623,7 +8623,7 @@
       "keyKana": "エン",
       "sentence": "{キツエン}は体に悪い",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -8636,7 +8636,7 @@
       "keyKana": "セッ",
       "sentence": "水分を{セッシュ}する",
       "source": "2018センター本試験 第1問 問1(エ) ほか2回",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -8730,7 +8730,7 @@
       "keyKana": "セッ",
       "sentence": "{セッソク}な対応を戒める",
       "source": "2014センター追試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "できはまずいが、仕上がりが速いこと"
     },
@@ -8889,7 +8889,7 @@
       "keyKana": "ジュン",
       "sentence": "{インジュン}な旧習",
       "source": "2005センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "古い習慣にとらわれ、改めようとしないこと"
     },
@@ -9442,7 +9442,7 @@
       "keyKana": "ボ",
       "sentence": "{ボチ}に花を手向ける",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -9483,7 +9483,7 @@
       "keyKana": "シタ",
       "sentence": "恩師を{シタ}う",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -9779,7 +9779,7 @@
       "keyKana": "ゲン",
       "sentence": "人員を{サクゲン}する",
       "source": "2012センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -9806,7 +9806,7 @@
       "keyKana": "ゲン",
       "sentence": "{ゲンガッキ}を奏でる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -9860,7 +9860,7 @@
       "keyKana": "オゴソ",
       "sentence": "{オゴソ}かな式典",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -10154,7 +10154,7 @@
       "keyKana": "テッ",
       "sentence": "商いの{テッソク}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "変えることのできない、厳しい決まり"
     },
@@ -10181,7 +10181,7 @@
       "keyKana": "テツ",
       "sentence": "{レイテツ}な目",
       "source": "2016センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "冷静で、物事を鋭く見通すこと"
     },
@@ -10263,7 +10263,7 @@
       "keyKana": "シツ",
       "sentence": "{シツナイ}で遊ぶ",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -10371,7 +10371,7 @@
       "keyKana": "キョ",
       "sentence": "申し出を{キョヒ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -10707,7 +10707,7 @@
       "keyKana": "キュウ",
       "sentence": "難民を{キュウサイ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -10842,7 +10842,7 @@
       "keyKana": "ガイ",
       "sentence": "{サイガイ}に強い町",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -10962,7 +10962,7 @@
       "keyKana": "ハン",
       "sentence": "{ハンガ}を刷る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -10975,7 +10975,7 @@
       "keyKana": "ハン",
       "sentence": "ルールに{イハン}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -11056,7 +11056,7 @@
       "keyKana": "イン",
       "sentence": "事故の{ヨウイン}を調べる",
       "source": "2017センター本試験 第1問 問1(イ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -11151,7 +11151,7 @@
       "keyKana": "イン",
       "sentence": "{インブン}と散文",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "一定のリズムや韻をもつ文。詩など"
     },
@@ -11408,7 +11408,7 @@
       "keyKana": "ジン",
       "sentence": "{ジンダイ}な損害",
       "source": "2012センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -11421,7 +11421,7 @@
       "keyKana": "ハナハ",
       "sentence": "勘違いも{ハナハ}だしい",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -11517,7 +11517,7 @@
       "keyKana": "ハ",
       "sentence": "ナイフの{ハ}が欠ける",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -11559,7 +11559,7 @@
       "keyKana": "ツクロ",
       "sentence": "ほころびを{ツクロ}う",
       "source": "2016センター本試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -11586,7 +11586,7 @@
       "keyKana": "ゼン",
       "sentence": "{バンゼン}を期す",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -11734,7 +11734,7 @@
       "keyKana": "ビ",
       "sentence": "全作中の{ハクビ}",
       "source": "2015センター追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "多くの中で最もすぐれているもの"
     },
@@ -11828,7 +11828,7 @@
       "keyKana": "ビ",
       "sentence": "心の{キビ}に触れる",
       "source": "2015センター追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "表面からはわかりにくい、微妙な心の動きや事情"
     },
@@ -11882,7 +11882,7 @@
       "keyKana": "アヤマ",
       "sentence": "選択を{アヤマ}る",
       "source": "2001センター追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -11923,7 +11923,7 @@
       "keyKana": "ゴ",
       "sentence": "負けは{カクゴ}の上だ",
       "source": "2001センター追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -11950,7 +11950,7 @@
       "keyKana": "ゴ",
       "sentence": "{ゴイ}が豊かだ",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -11990,7 +11990,7 @@
       "keyKana": "ゴ",
       "sentence": "{ゴジツ}伺います",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -12031,7 +12031,7 @@
       "keyKana": "カタヨ",
       "sentence": "食事が{カタヨ}る",
       "source": "2020センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -12271,7 +12271,7 @@
       "keyKana": "リン",
       "sentence": "月の{リンカク}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -12694,7 +12694,7 @@
       "keyKana": "トウ",
       "sentence": "故人に{アイトウ}の意を示す",
       "source": "2026共通テスト本試験 第1問 問1(イ) ほか2回",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -12762,7 +12762,7 @@
       "keyKana": "トボ",
       "sentence": "知識に{トボ}しい",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13010,7 +13010,7 @@
       "keyKana": "コ",
       "sentence": "すっかり{コ}りる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13024,7 +13024,7 @@
       "keyKana": "チョウ",
       "sentence": "世間の{チョウショウ}を浴びる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13174,7 +13174,7 @@
       "keyKana": "ガン",
       "sentence": "{ガンケン}な体",
       "source": "2020センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13187,7 +13187,7 @@
       "keyKana": "ガン",
       "sentence": "{ガンキョウ}に抵抗する",
       "source": "2020センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13200,7 +13200,7 @@
       "keyKana": "ガン",
       "sentence": "{タイガン}の火事",
       "source": "2020センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "「対岸の火事」で、自分には関係がなく、痛くもかゆくもないこと"
     },
@@ -13214,7 +13214,7 @@
       "keyKana": "キシ",
       "sentence": "舟を{キシ}に寄せる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13228,7 +13228,7 @@
       "keyKana": "ガン",
       "sentence": "固い{ガンバン}を掘る",
       "source": "2020センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13239,9 +13239,9 @@
       "keyIndex": 0,
       "reading": "ガン",
       "keyKana": "イワ",
-      "sentence": "{イワ}手県",
+      "sentence": "{イワ}手県を旅する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13255,7 +13255,7 @@
       "keyKana": "ガン",
       "sentence": "安全に{シュガン}を置く",
       "source": "2020センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "最も大切なところ。主な目的"
     },
@@ -13269,7 +13269,7 @@
       "keyKana": "マナコ",
       "sentence": "寝ぼけ{マナコ}をこする",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13283,7 +13283,7 @@
       "keyKana": "ガン",
       "sentence": "鉄分を{ガンユウ}した鉱石",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13296,7 +13296,7 @@
       "keyKana": "フク",
       "sentence": "口に水を{フク}む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13310,7 +13310,7 @@
       "keyKana": "ガン",
       "sentence": "名文を{ガンミ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "言葉や文章の意味を、よく考えて味わうこと"
     },
@@ -13324,7 +13324,7 @@
       "keyKana": "ガン",
       "sentence": "{アイガン}動物を飼う",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13337,7 +13337,7 @@
       "keyKana": "ガン",
       "sentence": "長年の{ヒガン}を果たす",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13350,7 +13350,7 @@
       "keyKana": "ネガ",
       "sentence": "平和を{ネガ}う",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13364,7 +13364,7 @@
       "keyKana": "ガン",
       "sentence": "{ガンヤク}を飲む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13377,7 +13377,7 @@
       "keyKana": "マル",
       "sentence": "紙を{マル}める",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13391,7 +13391,7 @@
       "keyKana": "ガン",
       "sentence": "{ドウガン}の青年",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13404,7 +13404,7 @@
       "keyKana": "カオ",
       "sentence": "町内で{カオ}が広い",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13418,7 +13418,7 @@
       "keyKana": "サ",
       "sentence": "{レンサ}反応が起きる",
       "source": "2012センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13431,7 +13431,7 @@
       "keyKana": "サ",
       "sentence": "道路を{フウサ}する",
       "source": "2012センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13444,7 +13444,7 @@
       "keyKana": "サ",
       "sentence": "為替の{サエキ}を得る",
       "source": "2012センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "売り値と買い値の差などから生じる利益"
     },
@@ -13458,7 +13458,7 @@
       "keyKana": "サ",
       "sentence": "線路と道路が{コウサ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13471,7 +13471,7 @@
       "keyKana": "サ",
       "sentence": "社長を{ホサ}する",
       "source": "2012センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13484,7 +13484,7 @@
       "keyKana": "サ",
       "sentence": "陸軍の{タイサ}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13497,7 +13497,7 @@
       "keyKana": "サ",
       "sentence": "紅茶に{サトウ}を入れる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13510,7 +13510,7 @@
       "keyKana": "スナ",
       "sentence": "{スナ}をかむような思い",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "「砂をかむよう」で、味わいがなく、つまらないこと"
@@ -13525,7 +13525,7 @@
       "keyKana": "サ",
       "sentence": "解決の糸口を{シサ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "それとなく示すこと"
     },
@@ -13539,7 +13539,7 @@
       "keyKana": "ソソノカ",
       "sentence": "仲間を{ソソノカ}す",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13553,7 +13553,7 @@
       "keyKana": "サ",
       "sentence": "学歴を{サショウ}する",
       "source": "2012センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true
     },
@@ -13567,7 +13567,7 @@
       "keyKana": "サ",
       "sentence": "中古車を{サテイ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     },
@@ -13581,7 +13581,7 @@
       "keyKana": "ダン",
       "sentence": "{サイダン}にろうそくをともす",
       "source": "2015センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13594,7 +13594,7 @@
       "keyKana": "ダン",
       "sentence": "作家として{ブンダン}に登場する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "作家や評論家たちがつくる社会"
     },
@@ -13608,7 +13608,7 @@
       "keyKana": "ダン",
       "sentence": "{カンダン}なく雨が降る",
       "source": "2015センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "「間断なく」で、絶え間なく続くさま"
     },
@@ -13622,7 +13622,7 @@
       "keyKana": "コトワ",
       "sentence": "誘いを{コトワ}る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13636,7 +13636,7 @@
       "keyKana": "ダン",
       "sentence": "友と{カンダン}する",
       "source": "2015センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true,
       "meaning": "打ち解けて楽しく語り合うこと"
@@ -13651,7 +13651,7 @@
       "keyKana": "ダン",
       "sentence": "{ダイダンエン}を迎える",
       "source": "2015センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "物語などで、すべてがめでたく収まる最後の場面"
     },
@@ -13665,7 +13665,7 @@
       "keyKana": "ダン",
       "sentence": "{シュウダン}で登校する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13678,7 +13678,7 @@
       "keyKana": "ダン",
       "sentence": "{カンダン}の差が激しい",
       "source": "2015センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13691,7 +13691,7 @@
       "keyKana": "アタタ",
       "sentence": "部屋を{アタタ}める",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "部屋や空気など、気温を上げるときは「暖」。物や体は「温める」"
@@ -13706,7 +13706,7 @@
       "keyKana": "ダン",
       "sentence": "言論を{ダンアツ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13719,7 +13719,7 @@
       "keyKana": "ハズ",
       "sentence": "ボールが{ハズ}む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13733,7 +13733,7 @@
       "keyKana": "ヒ",
       "sentence": "ピアノを{ヒ}く",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13747,7 +13747,7 @@
       "keyKana": "ホウ",
       "sentence": "新年の{ホウフ}を述べる",
       "source": "2021共通テスト第2日程 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -13760,7 +13760,7 @@
       "keyKana": "イダ",
       "sentence": "大きな夢を{イダ}く",
       "source": "2021共通テスト第2日程 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -13774,7 +13774,7 @@
       "keyKana": "カカ",
       "sentence": "多くの悩みを{カカ}える",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13788,7 +13788,7 @@
       "keyKana": "ホウ",
       "sentence": "異なる意見を{ホウガン}する",
       "source": "2021共通テスト第2日程 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "内に包み込んで含んでいること"
     },
@@ -13802,7 +13802,7 @@
       "keyKana": "ツツ",
       "sentence": "荷物を布で{ツツ}む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13816,7 +13816,7 @@
       "keyKana": "ホウ",
       "sentence": "市場が{ホウワ}状態になる",
       "source": "2021共通テスト第2日程 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "これ以上は入らないほど、いっぱいになること"
     },
@@ -13830,7 +13830,7 @@
       "keyKana": "ア",
       "sentence": "同じ遊びに{ア}きる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -13844,7 +13844,7 @@
       "keyKana": "ホウ",
       "sentence": "海辺の{ホウダイ}跡",
       "source": "2021共通テスト第2日程 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true
     },
@@ -13858,7 +13858,7 @@
       "keyKana": "ホウ",
       "sentence": "バラの{ホウコウ}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13871,7 +13871,7 @@
       "keyKana": "カンバ",
       "sentence": "結果が{カンバ}しくない",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "「芳しくない」で、よくない、思わしくない"
@@ -13886,7 +13886,7 @@
       "keyKana": "ホウ",
       "sentence": "名画を{モホウ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13899,7 +13899,7 @@
       "keyKana": "ナラ",
       "sentence": "先例に{ナラ}う",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "手本としてまねる"
@@ -13914,7 +13914,7 @@
       "keyKana": "ホウ",
       "sentence": "地域社会に{ホウシ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13927,7 +13927,7 @@
       "keyKana": "タテマツ",
       "sentence": "神前に酒を{タテマツ}る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "「与える」「差し上げる」のへりくだった言い方"
@@ -13942,7 +13942,7 @@
       "keyKana": "ホウ",
       "sentence": "事件を{ホウドウ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13955,7 +13955,7 @@
       "keyKana": "ムク",
       "sentence": "恩に{ムク}いる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "受けた恩などに見合うお返しをする"
@@ -13970,7 +13970,7 @@
       "keyKana": "ホウ",
       "sentence": "{サイホウ}道具をそろえる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -13983,7 +13983,7 @@
       "keyKana": "ホウ",
       "sentence": "{ビホウ}策でしのぐ",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "失敗や欠点を、一時的に取りつくろうこと"
     },
@@ -13997,7 +13997,7 @@
       "keyKana": "イ",
       "sentence": "疲れた心を{イ}やす",
       "source": "2017センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -14011,7 +14011,7 @@
       "keyKana": "ユ",
       "sentence": "政財界の{ユチャク}",
       "source": "2017センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "好ましくない形で、深く結びつくこと"
     },
@@ -14025,7 +14025,7 @@
       "keyKana": "ユ",
       "sentence": "物資を{クウユ}する",
       "source": "2017センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true
     },
@@ -14039,7 +14039,7 @@
       "keyKana": "ユ",
       "sentence": "{ユエツ}に浸る",
       "source": "2017センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true,
       "meaning": "心から楽しみ、喜ぶこと"
@@ -14054,7 +14054,7 @@
       "keyKana": "ユ",
       "sentence": "高校の{キョウユ}になる",
       "source": "2017センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14067,7 +14067,7 @@
       "keyKana": "サト",
       "sentence": "子を優しく{サト}す",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14081,7 +14081,7 @@
       "keyKana": "ユ",
       "sentence": "地名の{ユライ}を調べる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14094,7 +14094,7 @@
       "keyKana": "ユ",
       "sentence": "大阪を{ケイユ}して帰る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14107,7 +14107,7 @@
       "keyKana": "ヨシ",
       "sentence": "知る{ヨシ}もない",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "「知る由もない」で、知る手だてがない"
@@ -14122,7 +14122,7 @@
       "keyKana": "ユ",
       "sentence": "{ユダン}は禁物だ",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14135,7 +14135,7 @@
       "keyKana": "アブラ",
       "sentence": "火に{アブラ}を注ぐ",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14149,7 +14149,7 @@
       "keyKana": "ユ",
       "sentence": "詩に{インユ}を用いる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true,
       "meaning": "「ような」などを使わずに、物事をたとえる表現"
@@ -14164,7 +14164,7 @@
       "keyKana": "ゾウ",
       "sentence": "激しい{ゾウオ}の念",
       "source": "2005センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14177,7 +14177,7 @@
       "keyKana": "ニク",
       "sentence": "不正を{ニク}む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14191,7 +14191,7 @@
       "keyKana": "ゾウ",
       "sentence": "粗製{ランゾウ}の品",
       "source": "2005センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "「粗製乱造」で、質の悪い品をむやみに多く作ること"
     },
@@ -14205,7 +14205,7 @@
       "keyKana": "ゾウ",
       "sentence": "古典に{ゾウケイ}が深い",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "学問や芸術について、深い知識や理解があること"
     },
@@ -14219,7 +14219,7 @@
       "keyKana": "ゾウ",
       "sentence": "褒められて{ゾウチョウ}する",
       "source": "2005センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "調子に乗って、つけあがること"
     },
@@ -14233,7 +14233,7 @@
       "keyKana": "マ",
       "sentence": "川の水かさが{マ}す",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14247,7 +14247,7 @@
       "keyKana": "ゾウ",
       "sentence": "{マイゾウ}金を掘り当てる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14260,7 +14260,7 @@
       "keyKana": "クラ",
       "sentence": "古い{クラ}が並ぶ町",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14274,7 +14274,7 @@
       "keyKana": "ゾウ",
       "sentence": "図書館に本を{キゾウ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     },
@@ -14288,7 +14288,7 @@
       "keyKana": "ゾウ",
       "sentence": "鍋の後に{ゾウスイ}を作る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14301,7 +14301,7 @@
       "keyKana": "ゾウ",
       "sentence": "悪口{ゾウゴン}を浴びる",
       "source": "2005センター追試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "いろいろな悪口"
     },
@@ -14315,7 +14315,7 @@
       "keyKana": "ゾウ",
       "sentence": "{ナイゾウ}の検査",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     },
@@ -14329,7 +14329,7 @@
       "keyKana": "シュク",
       "sentence": "予算を{シュクゲン}する",
       "source": "2016センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14342,7 +14342,7 @@
       "keyKana": "チヂ",
       "sentence": "洗った服が{チヂ}む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14356,7 +14356,7 @@
       "keyKana": "シュク",
       "sentence": "{シュクガ}会を開く",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14369,7 +14369,7 @@
       "keyKana": "シュク",
       "sentence": "{シュクジ}を述べる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14382,7 +14382,7 @@
       "keyKana": "シュク",
       "sentence": "{シュクテキ}を倒す",
       "source": "2016センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14395,7 +14395,7 @@
       "keyKana": "ヤド",
       "sentence": "草の葉に露が{ヤド}る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14409,7 +14409,7 @@
       "keyKana": "シュク",
       "sentence": "大学の近くに{ゲシュク}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14422,7 +14422,7 @@
       "keyKana": "シュク",
       "sentence": "紳士{シュクジョ}の皆様",
       "source": "2016センター本試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14435,7 +14435,7 @@
       "keyKana": "シュク",
       "sentence": "ある作家に{シシュク}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "直接教わらないが、ひそかにその人を師として学ぶこと"
     },
@@ -14449,7 +14449,7 @@
       "keyKana": "シュク",
       "sentence": "外出を{ジシュク}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14462,7 +14462,7 @@
       "keyKana": "シュク",
       "sentence": "{ゲンシュク}な式典",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14475,7 +14475,7 @@
       "keyKana": "シュク",
       "sentence": "反対派を{シュクセイ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "組織の中の反対者を、厳しく取り除くこと"
     },
@@ -14489,7 +14489,7 @@
       "keyKana": "ハ",
       "sentence": "{ハメツ}への道を歩む",
       "source": "2026共通テスト追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14502,7 +14502,7 @@
       "keyKana": "ハ",
       "sentence": "全集を{ドクハ}する",
       "source": "2026共通テスト追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14515,7 +14515,7 @@
       "keyKana": "ヤブ",
       "sentence": "約束を{ヤブ}る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14529,7 +14529,7 @@
       "keyKana": "ハ",
       "sentence": "{ボウハテイ}で釣りをする",
       "source": "2026共通テスト追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14542,7 +14542,7 @@
       "keyKana": "ハ",
       "sentence": "発言が{ハモン}を呼ぶ",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14555,7 +14555,7 @@
       "keyKana": "ナミ",
       "sentence": "時代の{ナミ}に乗る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14569,7 +14569,7 @@
       "keyKana": "ハ",
       "sentence": "駅前の{ハシュツジョ}",
       "source": "2026共通テスト追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14582,7 +14582,7 @@
       "keyKana": "ハ",
       "sentence": "党内の{ハバツ}争い",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14595,7 +14595,7 @@
       "keyKana": "ハ",
       "sentence": "世界の{ハケン}を争う",
       "source": "2026共通テスト追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "ある分野で、ほかを従えて支配する力"
     },
@@ -14609,7 +14609,7 @@
       "keyKana": "ハ",
       "sentence": "{ハキ}のない声",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "物事に積極的に取り組もうとする意気込み"
     },
@@ -14623,7 +14623,7 @@
       "keyKana": "ハ",
       "sentence": "状況を{ハアク}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     },
@@ -14637,7 +14637,7 @@
       "keyKana": "ハ",
       "sentence": "ハンドルを{ハジ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true,
       "meaning": "しっかりと握って持つこと"
@@ -14652,7 +14652,7 @@
       "keyKana": "ハイ",
       "sentence": "異分子を{ハイセキ}する",
       "source": "2008センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "受け入れず、押しのけること"
     },
@@ -14666,7 +14666,7 @@
       "keyKana": "ハイ",
       "sentence": "ガスを{ハイシュツ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14679,7 +14679,7 @@
       "keyKana": "ハイ",
       "sentence": "多くの名医を{ハイシュツ}する",
       "source": "2008センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "すぐれた人が次々と世に出ること"
     },
@@ -14693,7 +14693,7 @@
       "keyKana": "パイ",
       "sentence": "部活の{センパイ}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14706,7 +14706,7 @@
       "keyKana": "ハイ",
       "sentence": "{ハイシン}行為を責める",
       "source": "2008センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "信頼や約束を裏切ること"
     },
@@ -14720,7 +14720,7 @@
       "keyKana": "ハイ",
       "sentence": "{シハイ}に徹する読み方",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "「眼光紙背に徹す」で、文章の奥にある深い意味まで読み取る"
     },
@@ -14734,7 +14734,7 @@
       "keyKana": "ハイ",
       "sentence": "{シュクハイ}を挙げる",
       "source": "2008センター本試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14747,7 +14747,7 @@
       "keyKana": "サカズキ",
       "sentence": "{サカズキ}を交わす",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14761,7 +14761,7 @@
       "keyKana": "ハイ",
       "sentence": "お手紙を{ハイケン}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14774,7 +14774,7 @@
       "keyKana": "オガ",
       "sentence": "初日の出を{オガ}む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14788,7 +14788,7 @@
       "keyKana": "パイ",
       "sentence": "規制を{テッパイ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14801,7 +14801,7 @@
       "keyKana": "スタ",
       "sentence": "古い風習が{スタ}れる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14815,7 +14815,7 @@
       "keyKana": "ヒョウ",
       "sentence": "{モクヒョウ}を達成する",
       "source": "2020センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14828,7 +14828,7 @@
       "keyKana": "ヒョウ",
       "sentence": "道路{ヒョウシキ}を守る",
       "source": "2020センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14841,7 +14841,7 @@
       "keyKana": "ヒョウ",
       "sentence": "布を{ヒョウハク}する",
       "source": "2020センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14854,7 +14854,7 @@
       "keyKana": "タダヨ",
       "sentence": "甘い香りが{タダヨ}う",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14868,7 +14868,7 @@
       "keyKana": "ヒョウ",
       "sentence": "味に{テイヒョウ}のある店",
       "source": "2020センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true
     },
@@ -14882,7 +14882,7 @@
       "keyKana": "ヒョウ",
       "sentence": "{ジヒョウ}を出す",
       "source": "2020センター追試験 第1問 問1(オ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -14895,7 +14895,7 @@
       "keyKana": "アラワ",
       "sentence": "感謝の念を{アラワ}す",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14909,7 +14909,7 @@
       "keyKana": "ヒョウ",
       "sentence": "{ヒョウザン}の一角",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14922,7 +14922,7 @@
       "keyKana": "ヒョウ",
       "sentence": "長年の疑問が{ヒョウカイ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "氷がとけるように、疑いや問題がすっかりなくなること"
     },
@@ -14936,7 +14936,7 @@
       "keyKana": "ヒョウ",
       "sentence": "{ドヒョウ}際で粘る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -14949,7 +14949,7 @@
       "keyKana": "タワラ",
       "sentence": "米の{タワラ}を積む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -14963,7 +14963,7 @@
       "keyKana": "ヒョウ",
       "sentence": "選挙で{トウヒョウ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     },
@@ -14977,7 +14977,7 @@
       "keyKana": "アザム",
       "sentence": "敵を{アザム}く",
       "source": "2005センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -14991,7 +14991,7 @@
       "keyKana": "ギ",
       "sentence": "{サギ}の手口",
       "source": "2005センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15004,7 +15004,7 @@
       "keyKana": "ギ",
       "sentence": "{ギシンアンキ}に陥る",
       "source": "2005センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "meaning": "疑い始めると、何でもないことまで疑わしく思えること"
     },
@@ -15018,7 +15018,7 @@
       "keyKana": "ギ",
       "sentence": "{シツギオウトウ}の時間",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15031,7 +15031,7 @@
       "keyKana": "ギ",
       "sentence": "{ギゼン}的な態度",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15044,7 +15044,7 @@
       "keyKana": "イツワ",
       "sentence": "年齢を{イツワ}る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -15058,7 +15058,7 @@
       "keyKana": "ギ",
       "sentence": "神聖な{ギシキ}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15071,7 +15071,7 @@
       "keyKana": "ギ",
       "sentence": "変更を{ヨギ}なくされる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "「余儀なく」で、ほかに方法がなく、やむをえず"
     },
@@ -15085,7 +15085,7 @@
       "keyKana": "ギ",
       "sentence": "{ギキョク}を上演する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15098,7 +15098,7 @@
       "keyKana": "タワム",
       "sentence": "子犬と{タワム}れる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -15112,7 +15112,7 @@
       "keyKana": "ギ",
       "sentence": "虫が枝に{ギタイ}する",
       "source": "2005センター本試験 第1問 問1(エ)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true,
       "meaning": "ほかの物や動物に、色や形を似せること"
@@ -15127,7 +15127,7 @@
       "keyKana": "ギ",
       "sentence": "{ベンギ}を図る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true,
       "meaning": "都合のよいこと。特別な取り計らい"
@@ -15142,7 +15142,7 @@
       "keyKana": "マカ",
       "sentence": "仕事を部下に{マカ}せる",
       "source": "2020センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "kun": true
     },
@@ -15156,7 +15156,7 @@
       "keyKana": "ニン",
       "sentence": "{ニンイ}の保険に入る",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15169,7 +15169,7 @@
       "keyKana": "ニン",
       "sentence": "社長に{シュウニン}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15182,7 +15182,7 @@
       "keyKana": "ニン",
       "sentence": "{カンニン}袋の緒が切れる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "「堪忍袋の緒が切れる」で、もう我慢ができなくなる"
     },
@@ -15196,7 +15196,7 @@
       "keyKana": "シノ",
       "sentence": "世を{シノ}ぶ仮の姿",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true
     },
@@ -15210,7 +15210,7 @@
       "keyKana": "ニン",
       "sentence": "{ザンニン}な犯行",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15223,7 +15223,7 @@
       "keyKana": "ニン",
       "sentence": "資格を{ニンテイ}する",
       "source": "2020センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15236,7 +15236,7 @@
       "keyKana": "ニン",
       "sentence": "{ニンピ}を明らかにする",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "認めるか、認めないか"
     },
@@ -15250,7 +15250,7 @@
       "keyKana": "ニン",
       "sentence": "怪しい{ニンソウ}の男",
       "source": "2020センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15263,7 +15263,7 @@
       "keyKana": "ニン",
       "sentence": "{ニンジョウ}に厚い土地柄",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15276,7 +15276,7 @@
       "keyKana": "ニン",
       "sentence": "{ニンシン}中の母",
       "source": "2020センター追試験 第1問 問1(ア)",
-      "verified": false,
+      "verified": true,
       "tier": "past",
       "distractorOnly": true
     },
@@ -15290,7 +15290,7 @@
       "keyKana": "ニン",
       "sentence": "{ニンプ}健診を受ける",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     },
@@ -15304,7 +15304,7 @@
       "keyKana": "リュウ",
       "sentence": "文化が{リュウセイ}を極める",
       "source": "2024共通テスト追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15317,7 +15317,7 @@
       "keyKana": "リュウ",
       "sentence": "地面が{リュウキ}する",
       "source": "2024共通テスト追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15330,7 +15330,7 @@
       "keyKana": "リュウ",
       "sentence": "{ジリュウ}に乗る",
       "source": "2024共通テスト追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15343,7 +15343,7 @@
       "keyKana": "リュウ",
       "sentence": "独自の{リュウギ}を貫く",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15356,7 +15356,7 @@
       "keyKana": "リュウ",
       "sentence": "体調に{リュウイ}する",
       "source": "2024共通テスト追試験 第1問 問1(ウ)",
-      "verified": false,
+      "verified": true,
       "tier": "past"
     },
     {
@@ -15369,7 +15369,7 @@
       "keyKana": "リュウ",
       "sentence": "辞める社員を{イリュウ}する",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "meaning": "なだめて、辞めるのを思いとどまらせること"
     },
@@ -15383,7 +15383,7 @@
       "keyKana": "リュウ",
       "sentence": "光の{リュウシ}",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15396,7 +15396,7 @@
       "keyKana": "ツブ",
       "sentence": "{ツブ}ぞろいの選手たち",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "集まった人や物が、どれもすぐれていること"
@@ -15411,7 +15411,7 @@
       "keyKana": "リュウ",
       "sentence": "{センリュウ}を詠む",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard"
     },
     {
@@ -15424,7 +15424,7 @@
       "keyKana": "ヤナギ",
       "sentence": "{ヤナギ}に雪折れなし",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "kun": true,
       "meaning": "「柳に雪折れなし」で、しなやかなものは、かたいものより強いこと"
@@ -15439,7 +15439,7 @@
       "keyKana": "リュウ",
       "sentence": "{リュウトウダビ}に終わる",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true,
       "meaning": "初めは勢いがよいが、終わりはふるわないこと"
@@ -15454,7 +15454,7 @@
       "keyKana": "リュウ",
       "sentence": "{リュウサン}を薄める",
       "source": null,
-      "verified": false,
+      "verified": true,
       "tier": "standard",
       "distractorOnly": true
     }
