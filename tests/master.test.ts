@@ -17,6 +17,12 @@ describe('語彙マスタ', () => {
     expect(errors).toContainEqual(expect.stringContaining('外貨: 例文に同じ音「カ」の問われる字「稼」'));
   });
 
+  it('例文に別の語の書き方が見えると、エラーにする', () => {
+    const bochi = words.find((w) => w.word === '墓地') as Word;
+    const errors = validate(words.map((w) => (w === bochi ? { ...w, sentence: '{ボチ}に花を供える' } : w))).errors;
+    expect(errors).toContainEqual(expect.stringContaining('墓地: 例文に別の語「供える」の書き方が見えています'));
+  });
+
   it(`数周させても、使用済みの語で埋める割合が ${FILL_THRESHOLD * 100}% 以下`, () => {
     const r = simulate(words, 10, 3);
     expect(r.invalid).toBe(0);

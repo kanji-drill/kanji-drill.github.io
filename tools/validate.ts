@@ -112,6 +112,19 @@ export function validate(words: readonly Word[]) {
     }
   }
 
+  // 例文の傍線の外に別の語の書き方がそのまま見えると、同じセットでその語が出たときの手がかりになる
+  // （例: 墓地 の「{ボチ}に花を供える」と 供える）。訓読みの語は活用するので、送り仮名の最後の 1 字を除いて比べる
+  const forms = words.map((w) => {
+    const [kanji, okuri] = splitOkurigana(w.word);
+    return { w, form: w.kun ? kanji + okuri.slice(0, -1) : w.word };
+  });
+  for (const w of words) {
+    const outside = w.sentence.replace(/\{[^}]*\}/, '／');
+    const shown = forms.filter((f) => f.w.id !== w.id && outside.includes(f.form)).map((f) => f.w.word);
+    if (shown.length > 0)
+      err(w, `例文に別の語「${shown.join('」「')}」の書き方が見えています（同じセットで出ると手がかりになります）`);
+  }
+
   const index = buildIndex(words);
   return {
     errors,
