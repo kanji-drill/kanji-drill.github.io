@@ -97,6 +97,34 @@ test('新しい問題 → 答え合わせ → 結果 → 翌日の復習', async
   await expectQuestionFits(page);
 });
 
+test('選び間違えても見出し語は○に直せる・答え合わせ中に問題を見直せる', async ({ page }) => {
+  await startNew(page);
+  const { questions } = await session(page);
+  await solveAll(page, questions.length);
+
+  // 誤った番号を選ぶ: 見出し語は✕から始まり、○に直せる。選んだ選択肢は✕のまま
+  const wrong = ((questions[0]?.correct ?? 0) + 1) % 5;
+  await page.getByRole('button', { name: `${wrong + 1}番` }).click();
+  await expect(rows(page).nth(0)).toHaveAttribute('aria-pressed', 'true');
+  await rows(page).nth(0).click();
+  await expect(rows(page).nth(0)).toHaveAttribute('aria-pressed', 'false');
+  await expect(rows(page).nth(wrong + 1)).toBeDisabled();
+  await expect(rows(page).nth(wrong + 1)).toHaveAttribute('aria-pressed', 'true');
+
+  // 問題と答えを切り替える
+  await page.getByRole('button', { name: '問題', exact: true }).click();
+  await expect(page.getByTestId('question-card')).toBeVisible();
+  await expect(rows(page)).toHaveCount(0);
+  await page.getByRole('button', { name: '答え', exact: true }).click();
+  await expect(rows(page)).toHaveCount(6);
+
+  // 上の点で別の問へ移る
+  await page.getByRole('button', { name: '（ウ）へ' }).click();
+  await expect(page.getByText('答え合わせ　3 / 5')).toBeVisible();
+  await page.getByRole('button', { name: '（ア）へ' }).click();
+  await expect(rows(page).nth(0)).toHaveAttribute('aria-pressed', 'false');
+});
+
 test('途中で中断しても続きから解ける', async ({ page }) => {
   await startNew(page);
   await page.getByRole('button', { name: '次へ' }).click();

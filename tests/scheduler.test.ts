@@ -11,7 +11,7 @@ import {
   rollDaily,
   today,
 } from '../src/domain/scheduler';
-import { createSession, outcomesOf, summaryOf } from '../src/domain/session';
+import { createSession, NO_PICK, outcomesOf, summaryOf } from '../src/domain/session';
 
 const miss = (id: string, reviewTarget = false) => ({ id, ok: false, reviewTarget });
 const hit = (id: string, reviewTarget = false) => ({ id, ok: true, reviewTarget });
@@ -92,13 +92,29 @@ describe('周回', () => {
 describe('セッションの採点', () => {
   const q = { reading: 'R', key: 'K', target: 't', options: ['o0', 'o1', 'o2', 'o3', 'o4'], correct: 2 };
 
-  it('選んだ番号が誤りなら、自己採点にかかわらず設問の語と選んだ語を✕にする', () => {
-    const s = createSession('new', 1, '2026-10-16', [q]);
-    s.picks[0] = 4;
-    const missed = outcomesOf(s)
+  const missedOf = (s: ReturnType<typeof createSession>) =>
+    outcomesOf(s)
       .filter((o) => !o.ok)
       .map((o) => o.id);
-    expect(missed).toEqual(['t', 'o4']);
+
+  it('選んだ番号が誤りなら、設問の語と選んだ語を✕から始める', () => {
+    const s = createSession('new', 1, '2026-10-16', [q]);
+    s.picks[0] = 4;
+    expect(missedOf(s)).toEqual(['t', 'o4']);
+  });
+
+  it('選び間違えても、設問の語は○に直せる。選んだ語は✕のまま', () => {
+    const s = createSession('new', 1, '2026-10-16', [q]);
+    s.picks[0] = 4;
+    s.marks[0] = [true, false, false, false, false, true];
+    expect(missedOf(s)).toEqual(['o4']);
+  });
+
+  it('選べなかったときは、設問の語を✕にする', () => {
+    const s = createSession('new', 1, '2026-10-16', [q]);
+    s.picks[0] = NO_PICK;
+    s.marks[0] = [true, false, false, false, false, false];
+    expect(missedOf(s)).toEqual(['t']);
   });
 
   it('自己採点の✕と選んだ番号の正誤を集計する', () => {

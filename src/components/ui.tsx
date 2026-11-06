@@ -109,24 +109,44 @@ export function CloseIcon() {
   );
 }
 
-/** 進み具合の点 */
+/** 進み具合の点。onSelect を渡すと、点をタップしてその問へ移れる */
 export function ProgressDots({
   total,
   current,
   done,
+  onSelect,
+  labelOf,
 }: {
   total: number;
   current: number;
   done?: (i: number) => boolean;
+  onSelect?: (i: number) => void;
+  labelOf?: (i: number) => string;
 }) {
+  const dot = (i: number) =>
+    `block size-2.5 rounded-full ${i === current ? 'bg-shu' : done?.(i) ? 'bg-line' : 'border border-line'}`;
   return (
-    <ol className="flex justify-center gap-2" aria-label={`${total} 問中 ${current + 1} 問目`}>
+    <ol
+      className={`m-0 flex list-none justify-center p-0 ${onSelect ? '-my-3' : 'gap-2'}`}
+      aria-label={`${total} 問中 ${current + 1} 問目`}
+    >
       {Array.from({ length: total }, (_, i) => (
-        <li
-          // biome-ignore lint/suspicious/noArrayIndexKey: 位置そのものが識別子
-          key={i}
-          className={`size-2.5 rounded-full ${i === current ? 'bg-shu' : done?.(i) ? 'bg-line' : 'border border-line'}`}
-        />
+        // biome-ignore lint/suspicious/noArrayIndexKey: 位置そのものが識別子
+        <li key={i}>
+          {onSelect ? (
+            <button
+              type="button"
+              onClick={() => onSelect(i)}
+              aria-label={`${labelOf?.(i) ?? i + 1}へ`}
+              aria-current={i === current ? 'step' : undefined}
+              className="inline-flex size-12 items-center justify-center"
+            >
+              <span className={dot(i)} />
+            </button>
+          ) : (
+            <span className={dot(i)} />
+          )}
+        </li>
       ))}
     </ol>
   );

@@ -107,9 +107,13 @@ export function commitSession() {
 export const goTo = (index: number) => updateSession((s) => ({ ...s, index }));
 export const setPhase = (phase: Phase, index = 0) => updateSession((s) => ({ ...s, phase, index }));
 
-/** 選んだ番号を記録する。null で選び直し */
+/** 選んだ番号を記録する。null で選び直し。番号が変わると、設問の語の行は初めの状態（✕からか○からか）に戻す */
 export function pick(qi: number, choice: number | null) {
-  updateSession((s) => ({ ...s, picks: s.picks.map((p, i) => (i === qi ? choice : p)) }));
+  updateSession((s) => ({
+    ...s,
+    picks: s.picks.map((p, i) => (i === qi ? choice : p)),
+    marks: s.marks.map((m, i) => (i === qi ? m.map((v, r) => (r === 0 ? false : v)) : m)),
+  }));
 }
 
 export function toggleMark(qi: number, row: number) {

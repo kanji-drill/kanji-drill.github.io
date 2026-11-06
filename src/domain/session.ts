@@ -15,7 +15,10 @@ export type Session = {
   index: number;
   /** 各問で生徒が選んだ選択肢の位置。未選択は null */
   picks: (number | null)[];
-  /** marks[問][行] が true なら「書けなかった」。行 0 が設問の語、行 1〜 が選択肢 */
+  /**
+   * marks[問][行] が true なら、その行の初めの状態（ふつうは「書けた」）を生徒が切り替えた。
+   * 行 0 が設問の語、行 1〜 が選択肢
+   */
   marks: boolean[][];
 };
 
@@ -37,18 +40,29 @@ export const NO_PICK = -1;
 
 /**
  * 選んだ番号が誤りのとき、自己採点にかかわらず✕にする行。
- * 設問の語と、選んでしまった選択肢の語（選べなかったときは設問の語だけ）。
+ * 選んでしまった選択肢の語（選べなかったときは設問の語）。
  */
 export function forcedRows(q: Question, pick: number | null): Set<number> {
   if (pick === null || pick === q.correct) return new Set();
   if (pick === NO_PICK) return new Set([0]);
-  return new Set([0, pick + 1]);
+  return new Set([pick + 1]);
+}
+
+/**
+ * 選んだ番号が誤りのとき、✕から始める行（設問の語）。
+ * 選択肢の語が書けずに選び間違えることもあるので、設問の語が書けていれば○に直せる
+ */
+export function presumedRows(q: Question, pick: number | null): Set<number> {
+  if (pick === null || pick === q.correct || pick === NO_PICK) return new Set();
+  return new Set([0]);
 }
 
 export function isMissed(s: Session, qi: number, row: number): boolean {
   const q = s.questions[qi];
   if (!q) return false;
-  return (s.marks[qi]?.[row] ?? false) || forcedRows(q, s.picks[qi] ?? null).has(row);
+  const pick = s.picks[qi] ?? null;
+  if (forcedRows(q, pick).has(row)) return true;
+  return (s.marks[qi]?.[row] ?? false) !== presumedRows(q, pick).has(row);
 }
 
 export function outcomesOf(s: Session): Outcome[] {

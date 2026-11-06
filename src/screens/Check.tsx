@@ -1,13 +1,20 @@
-import { CIRCLED, filledSentence, QUESTION_LABELS, SentenceWithBouten } from '../components/QuestionCard';
+import { useState } from 'react';
+import { CIRCLED, filledSentence, QUESTION_LABELS, QuestionCard, SentenceWithBouten } from '../components/QuestionCard';
 import { BottomBar, Button, CloseIcon, Header, IconButton, ProgressDots } from '../components/ui';
 import { wordOf } from '../data/master';
 import { questionWordIds } from '../domain/generator';
 import { splitOkurigana } from '../domain/master';
-import { forcedRows, isMissed, NO_PICK, type Session } from '../domain/session';
+import { forcedRows, isMissed, NO_PICK, presumedRows, type Session } from '../domain/session';
 import { useKeys } from '../hooks';
 import { goTo, pick, setPhase, toggleMark } from '../store/actions';
+import { useSettings } from '../store/stores';
+
+type View = 'answer' | 'question';
 
 export function Check({ session, onExit }: { session: Session; onExit: () => void }) {
+  const writing = useSettings((s) => s.writing);
+  // 答え合わせの途中で、同じ問の問題（選択肢の例文）を見直せるようにする
+  const [view, setView] = useState<View>('answer');
   const { index, questions } = session;
   const question = questions[index];
   const chosen = session.picks[index] ?? null;
@@ -29,6 +36,7 @@ export function Check({ session, onExit }: { session: Session; onExit: () => voi
   const label = QUESTION_LABELS[index] ?? String(index + 1);
   const target = wordOf(question.target);
   const forced = forcedRows(question, chosen);
+  const presumed = presumedRows(question, chosen);
 
   return (
     <div className="flex min-h-svh flex-col px-4">
@@ -44,15 +52,31 @@ export function Check({ session, onExit }: { session: Session; onExit: () => voi
           </span>
         }
       />
-      <ProgressDots total={questions.length} current={index} done={(i) => session.picks[i] !== null} />
+      <ProgressDots
+        total={questions.length}
+        current={index}
+        done={(i) => session.picks[i] !== null}
+        onSelect={goTo}
+        labelOf={(i) => `（${QUESTION_LABELS[i] ?? i + 1}）`}
+      />
 
       <main className="flex flex-1 flex-col gap-4 py-4">
-        <p className="paper-card horizontal m-0 px-4 py-3 font-mincho text-[18px] leading-relaxed">
-          <span className="mr-1 font-gothic text-[14px] font-bold">（{label}）</span>
-          <SentenceWithBouten sentence={target.sentence} />
-        </p>
+        <ViewSwitch view={view} onChange={setView} />
 
-        {chosen === null ? (
+        {view === 'question' ? (
+          <div className={writing === 'vertical' ? 'flex flex-1' : ''}>
+            <div className="w-full">
+              <QuestionCard question={question} label={label} writing={writing} />
+            </div>
+          </div>
+        ) : (
+          <p className="paper-card horizontal m-0 px-4 py-3 font-mincho text-[18px] leading-relaxed">
+            <span className="mr-1 font-gothic text-[14px] font-bold">（{label}）</span>
+            <SentenceWithBouten sentence={target.sentence} />
+          </p>
+        )}
+
+        {view === 'question' ? null : chosen === null ? (
           <section aria-labelledby="pick-title" className="flex flex-col gap-3">
             <h2 id="pick-title" className="m-0 text-center text-[18px] font-bold">
               あなたが選んだ番号は？
@@ -89,6 +113,7 @@ export function Check({ session, onExit }: { session: Session; onExit: () => voi
                   isChosen={row > 0 && row - 1 === chosen}
                   missed={isMissed(session, index, row)}
                   locked={forced.has(row)}
+                  presumed={presumed.has(row)}
                   onToggle={() => toggleMark(index, row)}
                 />
               ))}
@@ -106,6 +131,29 @@ export function Check({ session, onExit }: { session: Session; onExit: () => voi
         </Button>
       </BottomBar>
     </div>
+  );
+}
+
+function ViewSwitch({ view, onChange }: { view: View; onChange: (v: View) => void }) {
+  const tabs: [View, string][] = [
+    ['question', '問題'],
+    ['answer', '答え'],
+  ];
+  return (
+    <fieldset className="m-0 grid grid-cols-2 rounded-[var(--radius-paper)] border-2 border-line p-0">
+      <legend className="sr-only">表示の切り替え</legend>
+      {tabs.map(([v, text]) => (
+        <button
+          key={v}
+          type="button"
+          onClick={() => onChange(v)}
+          aria-pressed={view === v}
+          className={`min-h-12 text-[16px] font-bold ${view === v ? 'bg-ink text-sheet' : 'text-ink-sub'}`}
+        >
+          {text}
+        </button>
+      ))}
+    </fieldset>
   );
 }
 
@@ -158,10 +206,11 @@ type RowProps = {
   isChosen: boolean;
   missed: boolean;
   locked: boolean;
+  presumed: boolean;
   onToggle: () => void;
 };
 
-function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, onToggle }: RowProps) {
+function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, presumed, onToggle }: RowProps) {
   const w = wordOf(id);
   // 訓読みの語は、ルビを漢字の部分だけに付け、送り仮名はその後ろに置く（例: 競〔キソ〕う）
   const [kanji, okuri] = splitOkurigana(w.word);
@@ -213,6 +262,9 @@ function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, onToggle }: R
             {isAnswer && <span className="font-bold text-shu">正解</span>}
             {isChosen && <span className="text-ink-sub">あなたの選択</span>}
             {locked && <span className="text-shu">選び間違えたので復習へ</span>}
+            {presumed && (
+              <span className="whitespace-normal text-shu">選び間違えたので✕から。書けていたらタップで○に</span>
+            )}
           </span>
         </span>
         <span
