@@ -16737,17 +16737,17 @@
     },
     {
       "id": "w1481",
-      "word": "投棄",
+      "word": "騰貴",
       "kana": "トウキ",
-      "key": "投",
+      "key": "騰",
       "keyIndex": 0,
       "reading": "トウ",
       "keyKana": "トウ",
-      "sentence": "ごみの不法{トウキ}",
+      "sentence": "物価が{トウキ}する",
       "source": null,
       "verified": true,
       "tier": "standard",
-      "meaning": "投げ捨てること"
+      "meaning": "物の値段が上がること"
     },
     {
       "id": "w1482",
