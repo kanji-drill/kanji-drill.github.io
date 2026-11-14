@@ -117,12 +117,21 @@ describe('セッションの採点', () => {
     expect(missedOf(s)).toEqual(['t']);
   });
 
-  it('自己採点の✕と選んだ番号の正誤を集計する', () => {
-    const s = createSession('review', 1, '2026-10-16', [q]);
+  it('自己採点の✕と選んだ番号の正誤を集計する。新しい問題の語は復習の連続回数に数えない', () => {
+    const s = createSession('new', 1, '2026-10-16', [q]);
     s.picks[0] = 2;
     s.marks[0] = [false, true, false, false, false, false];
     const sum = summaryOf(s);
     expect(sum).toMatchObject({ written: 5, total: 6, pickedRight: 1, missedIds: ['o0'] });
-    expect(outcomesOf(s)[0]).toEqual({ id: 't', ok: true, reviewTarget: true });
+    expect(outcomesOf(s)[0]).toEqual({ id: 't', ok: true, reviewTarget: false });
+  });
+
+  it('復習（D29）は書けなかった語だけを出し、番号を選ばずに自己採点する', () => {
+    const r = (target: string) => ({ reading: 'R', key: 'K', target, options: [], correct: -1 });
+    const s = createSession('review', 1, '2026-10-16', [r('a'), r('b'), r('c')]);
+    expect(s.marks).toEqual([[false], [false], [false]]);
+    s.marks[1] = [true];
+    expect(outcomesOf(s)).toEqual([hit('a', true), miss('b', true), hit('c', true)]);
+    expect(summaryOf(s)).toMatchObject({ written: 2, total: 3, missedIds: ['b'] });
   });
 });

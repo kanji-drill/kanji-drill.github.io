@@ -106,7 +106,7 @@ export function Settings({ onBack, onAbout }: { onBack: () => void; onAbout: () 
             onChange={(size) => set({ size })}
           />
           <Segmented
-            label="1 セットの問題数"
+            label="新しい問題の 1 セットの問題数"
             value={s.setSize}
             options={[
               { value: 3, label: '3 問' },

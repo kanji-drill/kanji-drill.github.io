@@ -11,7 +11,9 @@ function formatDay(day: string): string {
 
 export function Result({ session, onHome }: { session: Session; onHome: () => void }) {
   const sum = summaryOf(session);
-  const perfect = sum.written === sum.total && sum.pickedRight === sum.questions;
+  // 復習（D29）は番号を選ばないので、書けた語だけで判定する
+  const isNew = session.kind === 'new';
+  const perfect = sum.written === sum.total && (!isNew || sum.pickedRight === sum.questions);
   const nextReview = addDays(currentProgress().day, REVIEW_INTERVALS[0]);
   const again = canStart(session.kind);
 
@@ -26,7 +28,7 @@ export function Result({ session, onHome }: { session: Session; onHome: () => vo
 
   return (
     <div className="flex min-h-svh flex-col px-4">
-      <Header title={session.kind === 'new' ? '新しい問題の結果' : '復習の結果'} />
+      <Header title={isNew ? '新しい問題の結果' : '復習の結果'} />
       <main className="flex flex-1 flex-col gap-5 py-4">
         <section className="paper-card flex items-center gap-5 px-5 py-5" aria-label="結果">
           {perfect && <Hanamaru />}
@@ -36,11 +38,15 @@ export function Result({ session, onHome }: { session: Session; onHome: () => vo
               {sum.written}
               <span className="text-[18px] text-ink-sub"> / {sum.total}</span>
             </dd>
-            <dt className="text-[15px] text-ink-sub">選択の正解</dt>
-            <dd className="m-0 font-mincho text-[24px] font-bold">
-              {sum.pickedRight}
-              <span className="text-[16px] text-ink-sub"> / {sum.questions} 問</span>
-            </dd>
+            {isNew && (
+              <>
+                <dt className="text-[15px] text-ink-sub">選択の正解</dt>
+                <dd className="m-0 font-mincho text-[24px] font-bold">
+                  {sum.pickedRight}
+                  <span className="text-[16px] text-ink-sub"> / {sum.questions} 問</span>
+                </dd>
+              </>
+            )}
           </dl>
         </section>
 
@@ -74,7 +80,7 @@ export function Result({ session, onHome }: { session: Session; onHome: () => vo
           </section>
         )}
 
-        <Button variant="ghost" onClick={() => setPhase('check', session.questions.length - 1)}>
+        <Button variant="ghost" onClick={() => setPhase('check', isNew ? session.questions.length - 1 : 0)}>
           答え合わせに戻って採点を直す
         </Button>
 

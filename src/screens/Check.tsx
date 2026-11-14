@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CIRCLED, filledSentence, QUESTION_LABELS, QuestionCard, SentenceWithBouten } from '../components/QuestionCard';
+import { reviewLabel } from '../components/ReviewSheet';
 import { BottomBar, Button, CloseIcon, Header, IconButton, ProgressDots } from '../components/ui';
 import { wordOf } from '../data/master';
 import { questionWordIds } from '../domain/generator';
@@ -12,6 +13,64 @@ import { useSettings } from '../store/stores';
 type View = 'answer' | 'question';
 
 export function Check({ session, onExit }: { session: Session; onExit: () => void }) {
+  return session.kind === 'review' ? (
+    <ReviewCheck session={session} onExit={onExit} />
+  ) : (
+    <NewCheck session={session} onExit={onExit} />
+  );
+}
+
+/** 復習の答え合わせ（D29）: 番号は選ばず、並べた語の見本を一覧で出し、書けなかった語に✕を付ける */
+function ReviewCheck({ session, onExit }: { session: Session; onExit: () => void }) {
+  const { questions } = session;
+  const prev = () => setPhase('solve', 0);
+  const next = () => setPhase('result');
+  useKeys({ ArrowLeft: prev, ArrowRight: next });
+
+  return (
+    <div className="flex min-h-svh flex-col px-4">
+      <Header
+        left={
+          <IconButton label="中断してホームへ" onClick={onExit}>
+            <CloseIcon />
+          </IconButton>
+        }
+        title={<span>復習の答え合わせ　{questions.length} 語</span>}
+      />
+      <main className="flex flex-1 flex-col gap-3 py-4">
+        <p className="m-0 text-[14px] text-ink-sub">書けなかった語をタップして✕にしよう</p>
+        <ScoringGuide />
+        <section aria-label="見本と自己採点">
+          <ul className="m-0 flex list-none flex-col gap-2 p-0">
+            {questions.map((q, i) => (
+              <AnswerRow
+                key={q.target}
+                id={q.target}
+                mark={reviewLabel(i)}
+                isAnswer={false}
+                isChosen={false}
+                missed={isMissed(session, i, 0)}
+                locked={false}
+                presumed={false}
+                onToggle={() => toggleMark(i, 0)}
+              />
+            ))}
+          </ul>
+        </section>
+      </main>
+      <BottomBar>
+        <Button variant="secondary" className="flex-1" onClick={prev}>
+          問題へ
+        </Button>
+        <Button className="flex-[1.6]" onClick={next}>
+          採点を終える
+        </Button>
+      </BottomBar>
+    </div>
+  );
+}
+
+function NewCheck({ session, onExit }: { session: Session; onExit: () => void }) {
   const writing = useSettings((s) => s.writing);
   // 答え合わせの途中で、同じ問の問題（選択肢の例文）を見直せるようにする
   const [view, setView] = useState<View>('answer');

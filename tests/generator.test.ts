@@ -13,7 +13,7 @@ import {
   unusedCount,
 } from '../src/domain/scheduler';
 import { createSession, outcomesOf } from '../src/domain/session';
-import { CHOICES, type Question, type Word } from '../src/domain/types';
+import { CHOICES, type Word } from '../src/domain/types';
 
 const words = master.words as Word[];
 
@@ -262,25 +262,18 @@ describe('generator', () => {
     }
   });
 
-  it('期日を迎えた選択肢専用の語は、同じ音の問題の誤りの選択肢に入れて復習する', () => {
+  it('選択肢専用の語は、新しい問題では設問にも正解にもならないが、復習ではそのまま出す', () => {
     const base = words.filter((w) => w.reading === 'シツ');
     const only: Word = { ...(base[0] as Word), id: 'w9999', word: '嫉妬', kana: 'シット', key: '嫉', keyIndex: 0 };
     only.distractorOnly = true;
     delete only.kun;
     const index = buildIndex([...words, only]);
-    for (let seed = 0; seed < 30; seed++) {
-      const qs = buildReviewSet(index, [only.id], mulberry32(seed), 5);
-      expect(qs.length).toBe(1);
-      const q = qs[0] as Question;
-      expect(checkQuestion(q, index.byId)).toBeNull();
-      expect(q.target).not.toBe(only.id);
-      expect(q.options.indexOf(only.id)).not.toBe(q.correct);
-      expect(q.options).toContain(only.id);
-      expect(q.reviewed).toEqual([only.id]);
-      // 自己採点は、設問の語と同じく復習の連続回数に数える
-      const outcomes = outcomesOf(createSession('review', seed, '2026-10-23', qs));
-      expect(outcomes.filter((o) => o.reviewTarget).map((o) => o.id)).toEqual([q.target, only.id]);
-    }
+    // 復習（D29）: 書けなかった語だけを出し、自己採点を復習の連続回数に数える
+    const qs = buildReviewSet(index, [only.id], 10);
+    expect(qs).toEqual([{ reading: only.reading, key: only.key, target: only.id, options: [], correct: -1 }]);
+    expect(outcomesOf(createSession('review', 1, '2026-10-23', qs))).toEqual([
+      { id: only.id, ok: true, reviewTarget: true },
+    ]);
     // 新しい問題では、設問にも正解にもならない
     const rng = mulberry32(5);
     let p = initialProgress();
@@ -296,31 +289,17 @@ describe('generator', () => {
     expect(seen).toBeGreaterThan(0);
   });
 
-  it('復習のセットは、期日を迎えた語を古い順に設問にする', () => {
+  it('復習のセットは、期日を迎えた語だけを古い順に、決めた語数まで出す（選択肢は付けない）', () => {
     const index = buildIndex(words);
-    // 別々のグループから 1 語ずつ
-    const due = [...index.groups.values()].slice(0, 7).map((g) => (g.words[0] as Word).id);
-    const qs = buildReviewSet(index, due, mulberry32(3), 5);
-    expect(qs.map((q) => q.target)).toEqual(due.slice(0, 5));
-    for (const q of qs) expect(checkQuestion(q, index.byId)).toBeNull();
-    const ids = qs.flatMap(questionWordIds);
-    expect(new Set(ids).size).toBe(ids.length);
-  });
-
-  it('復習の語が同じグループに偏っていても、組める分は組み、同じ語を 2 回使わない', () => {
-    const index = buildIndex(words);
+    // 同じグループに偏っていても、そのまま出す
     const group = [...index.groups.values()][0];
-    const due = (group?.words ?? []).slice(0, 8).map((w) => w.id);
-    for (let seed = 0; seed < 50; seed++) {
-      const qs = buildReviewSet(index, due, mulberry32(seed), 5);
-      expect(qs.length).toBeGreaterThanOrEqual(1);
-      for (const q of qs) {
-        expect(due).toContain(q.target);
-        expect(checkQuestion(q, index.byId)).toBeNull();
-      }
-      const ids = qs.flatMap(questionWordIds);
-      expect(new Set(ids).size).toBe(ids.length);
-    }
+    const due = [...(group?.words ?? []), ...words.slice(0, 12)].map((w) => w.id);
+    const qs = buildReviewSet(index, [...due, 'w-missing'], 10);
+    expect(qs.map((q) => q.target)).toEqual(due.slice(0, 10));
+    expect(qs.flatMap(questionWordIds)).toEqual(due.slice(0, 10));
+    expect(buildReviewSet(index, due.slice(0, 3), 10)).toHaveLength(3);
+    // マスタにない語は飛ばす
+    expect(buildReviewSet(index, ['w-missing'], 10)).toEqual([]);
   });
 
   it('同じ seed なら同じ問題になる', () => {

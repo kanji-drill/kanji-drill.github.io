@@ -11,6 +11,7 @@ import {
   initialProgress,
   markUsed,
   type Progress,
+  REVIEW_SET_WORDS,
   rankOf,
   rollDaily,
   today,
@@ -28,10 +29,16 @@ const updateSession = (fn: (s: Session) => Session) => {
   if (s) setSession(fn(s));
 };
 
-/** 起動時: マスタから消えた語を含む途中のセットは捨てる */
+/**
+ * 起動時: マスタから消えた語を含む途中のセットは捨てる。
+ * 5 択の形で作った途中の復習のセット（D29 より前の形）も捨てる
+ */
 export function dropStaleSession() {
   const s = useSession.getState().session;
-  if (s?.questions.some((q) => questionWordIds(q).some((id) => !index.byId.has(id)))) setSession(null);
+  if (!s) return;
+  const stale = s.questions.some((q) => questionWordIds(q).some((id) => !index.byId.has(id)));
+  const oldReview = s.kind === 'review' && s.questions.some((q) => q.options.length > 0);
+  if (stale || oldReview) setSession(null);
 }
 
 /** 今日の状態（日付と 1 日の回数）を進めた Progress */
@@ -77,7 +84,7 @@ export function startSet(kind: SetKind): StartResult {
     setSession(createSession(kind, seed, day, questions));
   } else {
     const remaining = DAILY_REVIEW_WORDS - p.daily.reviewWords;
-    const questions = buildReviewSet(index, dueReviewIds(p, day, usableIdSet), rng, Math.min(size, remaining));
+    const questions = buildReviewSet(index, dueReviewIds(p, day, usableIdSet), Math.min(REVIEW_SET_WORDS, remaining));
     if (questions.length === 0) return 'empty';
     p = { ...p, daily: { ...p.daily, reviewWords: p.daily.reviewWords + questions.length } };
     setProgress(p);

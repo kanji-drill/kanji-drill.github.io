@@ -121,7 +121,9 @@ export function Home({ onOpen, onSettings, updateReady, onUpdate }: Props) {
               <span className="ml-1 text-ink-sub">
                 （
                 {session.phase === 'solve'
-                  ? `${session.index + 1} / ${session.questions.length} 問目`
+                  ? session.kind === 'review'
+                    ? `${session.questions.length} 語`
+                    : `${session.index + 1} / ${session.questions.length} 問目`
                   : session.phase === 'check'
                     ? '答え合わせ中'
                     : '結果'}

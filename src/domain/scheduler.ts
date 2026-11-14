@@ -4,6 +4,8 @@ export const DAY_START_HOUR = 4;
 export const REVIEW_INTERVALS = [1, 3, 7] as const;
 export const DAILY_NEW_SETS = 3;
 export const DAILY_REVIEW_WORDS = 30;
+/** 復習の 1 セットの語数（D29）。5 択がなく 1 語ずつ短く終わるので、新しい問題より多くする */
+export const REVIEW_SET_WORDS = 10;
 
 export type ReviewState = {
   /** 0 始まりの段階 */
@@ -125,7 +127,7 @@ export type Outcome = {
   id: string;
   /** 書けたか */
   ok: boolean;
-  /** 期日を迎えた復習問題の設問の語か（このときだけ連続回数に数える） */
+  /** 期日を迎えた復習で出した語か（このときだけ連続回数に数える） */
   reviewTarget: boolean;
 };
 

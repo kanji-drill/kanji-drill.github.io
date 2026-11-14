@@ -28,5 +28,6 @@ describe('語彙マスタ', () => {
     expect(r.invalid).toBe(0);
     expect(r.shortSets).toBe(0);
     expect(r.fillRatio).toBeLessThanOrEqual(FILL_THRESHOLD);
-  });
+    // マスタが 1400 語を超えると、既定の 5 秒では足りないことがある
+  }, 30_000);
 });

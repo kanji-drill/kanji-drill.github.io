@@ -70,7 +70,7 @@ export function outcomesOf(s: Session): Outcome[] {
     questionWordIds(q).map((id, row) => ({
       id,
       ok: !isMissed(s, qi, row),
-      reviewTarget: s.kind === 'review' && (row === 0 || (q.reviewed?.includes(id) ?? false)),
+      reviewTarget: s.kind === 'review' && row === 0,
     })),
   );
 }

@@ -1,4 +1,5 @@
 import { QUESTION_LABELS, QuestionCard } from '../components/QuestionCard';
+import { ReviewSheet } from '../components/ReviewSheet';
 import { BottomBar, Button, CloseIcon, Header, IconButton, ProgressDots } from '../components/ui';
 import type { Session } from '../domain/session';
 import { useKeys, useWakeLock } from '../hooks';
@@ -6,9 +7,17 @@ import { goTo, setPhase } from '../store/actions';
 import { useSettings } from '../store/stores';
 
 export function Solve({ session, onExit }: { session: Session; onExit: () => void }) {
+  return session.kind === 'review' ? (
+    <ReviewSolve session={session} onExit={onExit} />
+  ) : (
+    <NewSolve session={session} onExit={onExit} />
+  );
+}
+
+function NewSolve({ session, onExit }: { session: Session; onExit: () => void }) {
   const writing = useSettings((s) => s.writing);
   const hintDone = useSettings((s) => s.onboardingDone);
-  const { index, questions, kind } = session;
+  const { index, questions } = session;
   const question = questions[index];
   const last = index === questions.length - 1;
   useWakeLock(true);
@@ -30,7 +39,7 @@ export function Solve({ session, onExit }: { session: Session; onExit: () => voi
         }
         title={
           <span>
-            {kind === 'new' ? '新しい問題' : '復習'}　{index + 1} / {questions.length}
+            新しい問題　{index + 1} / {questions.length}
           </span>
         }
       />
@@ -57,6 +66,39 @@ export function Solve({ session, onExit }: { session: Session; onExit: () => voi
         </Button>
         <Button className="flex-[1.6]" onClick={next}>
           {last ? '答え合わせへ' : '次へ'}
+        </Button>
+      </BottomBar>
+    </div>
+  );
+}
+
+/** 復習（D29）: 書けなかった語だけを 1 画面に並べ、全部書いてから答え合わせへ進む */
+function ReviewSolve({ session, onExit }: { session: Session; onExit: () => void }) {
+  const { questions } = session;
+  const next = () => setPhase('check', 0);
+  useWakeLock(true);
+  useKeys({ ArrowRight: next });
+
+  return (
+    <div className="flex min-h-svh flex-col px-4">
+      <Header
+        left={
+          <IconButton label="中断してホームへ" onClick={onExit}>
+            <CloseIcon />
+          </IconButton>
+        }
+        title={<span>復習　{questions.length} 語</span>}
+      />
+      <main className="flex flex-1 flex-col gap-3 py-3">
+        <h2 className="sr-only">傍線部のカタカナを漢字に直せ。</h2>
+        <p className="m-0 text-[14px] leading-snug text-ink-sub" aria-hidden="true">
+          前に書けなかった語です。傍線部を漢字にして、全部ノートに書こう
+        </p>
+        <ReviewSheet questions={questions} />
+      </main>
+      <BottomBar>
+        <Button className="flex-1" onClick={next}>
+          答え合わせへ
         </Button>
       </BottomBar>
     </div>

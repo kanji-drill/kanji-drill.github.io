@@ -56,6 +56,13 @@ body {
     font-size: min(var(--q-base), calc((100vw - 100px) / 14.5), calc((100svh - 250px) / 11));
   }
 
+  /* 復習の一覧（D29）。語を並べて一度に書くので、問題文より少し小さくし、長い文は折り返す */
+  .review-text {
+    font-family: var(--font-mincho);
+    font-size: calc(var(--q-base) - 2px);
+    line-height: 1.6;
+  }
+
   .vertical {
     writing-mode: vertical-rl;
     text-orientation: mixed;

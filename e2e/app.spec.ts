@@ -93,8 +93,94 @@ test('新しい問題 → 答え合わせ → 結果 → 翌日の復習', async
   const review = page.getByRole('button', { name: /復習する/ });
   await expect(review).toBeEnabled();
   await review.click();
-  await expect(page.getByText('復習　1 / 1')).toBeVisible();
-  await expectQuestionFits(page);
+  // 復習（D29）: 書けなかった語だけを例文つきで出す。番号は選ばない
+  await expect(page.getByText('復習　1 語')).toBeVisible();
+  await expect(page.getByTestId('review-sheet').locator('li')).toHaveCount(1);
+  await page.getByRole('button', { name: '答え合わせへ' }).click();
+  await expect(page.getByText('あなたが選んだ番号は？')).toHaveCount(0);
+  await expect(rows(page)).toHaveCount(1);
+  await page.getByRole('button', { name: '採点を終える' }).click();
+  await expect(page.getByText('復習の結果')).toBeVisible();
+  await expect(page.getByText('選択の正解')).toHaveCount(0);
+  await expect(page.getByText('全部書けました！')).toBeVisible();
+});
+
+/** 期日を迎えた復習の語を n 語入れた記録を保存して開き直す */
+async function seedReview(page: Page, n: number) {
+  const ids = (
+    JSON.parse(readFileSync('src/data/words.json', 'utf8')) as { words: { id: string; verified: boolean }[] }
+  ).words
+    .filter((w) => w.verified)
+    .slice(0, n)
+    .map((w) => w.id);
+  await page.evaluate((ids) => {
+    const words = Object.fromEntries(
+      ids.map((id) => [id, { right: 0, wrong: 1, review: { stage: 0, due: '2026-10-16' } }]),
+    );
+    const progress = {
+      cycle: 1,
+      cycleStartSeq: 0,
+      nextSeq: 0,
+      words,
+      lastDay: '2026-10-16',
+      daily: { day: '2026-10-16', newSets: 0, reviewWords: 0 },
+      lastExportAt: '2026-10-16T00:00:00.000Z',
+    };
+    localStorage.setItem('kanjiDrill.progress', JSON.stringify({ state: { progress }, version: 1 }));
+  }, ids);
+  await page.reload();
+  return ids;
+}
+
+async function expectNoSeriousA11y(page: Page, where: string) {
+  const result = await new AxeBuilder({ page }).analyze();
+  const serious = result.violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+  expect(serious.map((v) => `${where}: ${v.id} ${v.nodes.map((n) => n.target).join(' ')}`)).toEqual([]);
+}
+
+test('復習は 1 セット 10 語を 1 画面に並べ、一覧で採点する', async ({ page }) => {
+  await seedReview(page, 12);
+  await expect(page.getByText('今日の復習 12 語')).toBeVisible();
+  await page.getByRole('button', { name: /復習する/ }).click();
+  await expect(page.getByText('復習　10 語')).toBeVisible();
+  await expect(page.getByTestId('review-sheet').locator('li')).toHaveCount(10);
+  await page.evaluate(() => document.fonts.ready);
+  // 横にはみ出さない（縦に長いときはスクロールしてよい）
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await expectNoSeriousA11y(page, '復習');
+
+  await page.getByRole('button', { name: '答え合わせへ' }).click();
+  await expect(rows(page)).toHaveCount(10);
+  await expectNoSeriousA11y(page, '復習の答え合わせ');
+  await rows(page).nth(0).click();
+  await rows(page).nth(9).click();
+  await expect(rows(page).nth(9)).toHaveAttribute('aria-pressed', 'true');
+  await page.getByRole('button', { name: '採点を終える' }).click();
+  await expect(page.getByRole('heading', { name: '復習に入った語（2）' })).toBeVisible();
+  // 残りの 2 語で、もう 1 セット
+  await page.getByRole('button', { name: 'もう 1 セット' }).click();
+  await expect(page.getByText('復習　2 語')).toBeVisible();
+});
+
+test('5 択の形で作った途中の復習のセットは捨てる', async ({ page }) => {
+  const ids = await seedReview(page, 6);
+  await page.evaluate((ids) => {
+    const [target, ...options] = ids;
+    const session = {
+      kind: 'review',
+      seed: 1,
+      day: '2026-10-16',
+      questions: [{ reading: 'X', key: 'X', target, options, correct: 0 }],
+      phase: 'solve',
+      index: 0,
+      picks: [null],
+      marks: [ids.map(() => false)],
+    };
+    localStorage.setItem('kanjiDrill.session', JSON.stringify({ state: { session }, version: 1 }));
+  }, ids);
+  await page.reload();
+  await expect(page.getByRole('button', { name: /復習する/ })).toBeEnabled();
+  await expect(page.getByRole('region', { name: '途中のセット' })).toHaveCount(0);
 });
 
 test('選び間違えても見出し語は○に直せる・答え合わせ中に問題を見直せる', async ({ page }) => {
