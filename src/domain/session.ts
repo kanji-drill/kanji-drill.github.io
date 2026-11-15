@@ -39,21 +39,20 @@ export function createSession(kind: SetKind, seed: number, day: string, question
 export const NO_PICK = -1;
 
 /**
- * 選んだ番号が誤りのとき、自己採点にかかわらず✕にする行。
- * 選んでしまった選択肢の語（選べなかったときは設問の語）。
+ * 選んだ番号が誤りのとき、自己採点にかかわらず✕にする行（選んでしまった選択肢の語）。
+ * 選べなかったときは、ない（D28。2026-11-16 からは設問の語も○に直せる）
  */
 export function forcedRows(q: Question, pick: number | null): Set<number> {
-  if (pick === null || pick === q.correct) return new Set();
-  if (pick === NO_PICK) return new Set([0]);
+  if (pick === null || pick === q.correct || pick === NO_PICK) return new Set();
   return new Set([pick + 1]);
 }
 
 /**
- * 選んだ番号が誤りのとき、✕から始める行（設問の語）。
- * 選択肢の語が書けずに選び間違えることもあるので、設問の語が書けていれば○に直せる
+ * 選んだ番号が誤りのとき、または選べなかったとき、✕から始める行（設問の語）。
+ * 選択肢の語が書けずに選び間違えたり選べなかったりすることもあるので、設問の語が書けていれば○に直せる
  */
 export function presumedRows(q: Question, pick: number | null): Set<number> {
-  if (pick === null || pick === q.correct || pick === NO_PICK) return new Set();
+  if (pick === null || pick === q.correct) return new Set();
   return new Set([0]);
 }
 

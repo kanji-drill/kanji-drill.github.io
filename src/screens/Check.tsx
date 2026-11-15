@@ -51,7 +51,6 @@ function ReviewCheck({ session, onExit }: { session: Session; onExit: () => void
                 isChosen={false}
                 missed={isMissed(session, i, 0)}
                 locked={false}
-                presumed={false}
                 onToggle={() => toggleMark(i, 0)}
               />
             ))}
@@ -172,7 +171,11 @@ function NewCheck({ session, onExit }: { session: Session; onExit: () => void })
                   isChosen={row > 0 && row - 1 === chosen}
                   missed={isMissed(session, index, row)}
                   locked={forced.has(row)}
-                  presumed={presumed.has(row)}
+                  presumedNote={
+                    presumed.has(row)
+                      ? `${chosen === NO_PICK ? '選べなかった' : '選び間違えた'}ので✕から。書けていたらタップで○に`
+                      : undefined
+                  }
                   onToggle={() => toggleMark(index, row)}
                 />
               ))}
@@ -265,11 +268,12 @@ type RowProps = {
   isChosen: boolean;
   missed: boolean;
   locked: boolean;
-  presumed: boolean;
+  /** ✕から始める行の説明（選び間違えた・選べなかったときの設問の語） */
+  presumedNote?: string;
   onToggle: () => void;
 };
 
-function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, presumed, onToggle }: RowProps) {
+function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, presumedNote, onToggle }: RowProps) {
   const w = wordOf(id);
   // 訓読みの語は、ルビを漢字の部分だけに付け、送り仮名はその後ろに置く（例: 競〔キソ〕う）
   const [kanji, okuri] = splitOkurigana(w.word);
@@ -321,9 +325,7 @@ function AnswerRow({ id, mark, isAnswer, isChosen, missed, locked, presumed, onT
             {isAnswer && <span className="font-bold text-shu">正解</span>}
             {isChosen && <span className="text-ink-sub">あなたの選択</span>}
             {locked && <span className="text-shu">選び間違えたので復習へ</span>}
-            {presumed && (
-              <span className="whitespace-normal text-shu">選び間違えたので✕から。書けていたらタップで○に</span>
-            )}
+            {presumedNote && <span className="whitespace-normal text-shu">{presumedNote}</span>}
           </span>
         </span>
         <span

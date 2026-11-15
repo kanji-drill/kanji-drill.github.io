@@ -110,11 +110,12 @@ describe('セッションの採点', () => {
     expect(missedOf(s)).toEqual(['o4']);
   });
 
-  it('選べなかったときは、設問の語を✕にする', () => {
+  it('選べなかったときは、設問の語を✕から始める。書けていれば○に直せ、選択肢の語も✕を付けられる', () => {
     const s = createSession('new', 1, '2026-10-16', [q]);
     s.picks[0] = NO_PICK;
-    s.marks[0] = [true, false, false, false, false, false];
     expect(missedOf(s)).toEqual(['t']);
+    s.marks[0] = [true, false, true, false, false, false];
+    expect(missedOf(s)).toEqual(['o1']);
   });
 
   it('自己採点の✕と選んだ番号の正誤を集計する。新しい問題の語は復習の連続回数に数えない', () => {

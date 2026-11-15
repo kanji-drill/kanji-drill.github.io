@@ -209,6 +209,17 @@ test('選び間違えても見出し語は○に直せる・答え合わせ中�
   await expect(page.getByText('答え合わせ　3 / 5')).toBeVisible();
   await page.getByRole('button', { name: '（ア）へ' }).click();
   await expect(rows(page).nth(0)).toHaveAttribute('aria-pressed', 'false');
+
+  // 「選べなかった」: 見出し語は✕から始まり、書けていれば○に直せる
+  await page.getByRole('button', { name: '（イ）へ' }).click();
+  await page.getByRole('button', { name: '選べなかった' }).click();
+  await expect(page.getByText('選べなかったので✕から。書けていたらタップで○に')).toBeVisible();
+  await expect(rows(page).nth(0)).toHaveAttribute('aria-pressed', 'true');
+  await expect(rows(page).nth(0)).toBeEnabled();
+  await rows(page).nth(0).click();
+  await expect(rows(page).nth(0)).toHaveAttribute('aria-pressed', 'false');
+  await rows(page).nth(3).click();
+  await expect(rows(page).nth(3)).toHaveAttribute('aria-pressed', 'true');
 });
 
 test('途中で中断しても続きから解ける', async ({ page }) => {

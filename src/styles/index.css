@@ -44,6 +44,12 @@ body {
 }
 
 @layer components {
+  /* 答え合わせの見本。Klee One に入れない字（tools/subset-fonts.ts の KLEE_EXCLUDED。例: 心）は BIZ UD明朝 で出るが、
+     太字を合成すると その字だけ太くなりすぎるので合成しない */
+  .font-kyokasho {
+    font-synthesis-weight: none;
+  }
+
   /* 問題文の大きさ。縦書きの 1 列（最大 14 字＋番号）が画面の高さに収まるように上限を設ける */
   .q-text {
     font-family: var(--font-mincho);

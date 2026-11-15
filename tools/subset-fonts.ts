@@ -36,6 +36,12 @@ const sentences = words.map((w) => w.word + w.kana + w.sentence).join('');
 // 答え合わせで出す語の意味と、常用漢字表にない字の注意（UI の書体で表示する）
 const notes = words.map((w) => (w.meaning ?? '') + (w.nonJoyo ?? []).join('')).join('');
 
+/**
+ * Klee One の字形が紛らわしく、答え合わせの見本に使わない字（例: 心 は 3 画目の点が 2 画目の書き始めにくっつき、点が 1 つ足りないように見える）。
+ * Klee One のフォントに入れないので、見本では次の候補の BIZ UD明朝 で表示される（--font-kyokasho）
+ */
+export const KLEE_EXCLUDED = '心';
+
 /** 書体ごとに必要な字 */
 const FACES = [
   {
@@ -60,7 +66,7 @@ const FACES = [
     family: 'Klee One',
     weight: 600,
     file: 'klee-one/600SemiBold/KleeOne_600SemiBold.ttf',
-    text: words.map((w) => w.word).join(''),
+    text: [...words.map((w) => w.word).join('')].filter((ch) => !KLEE_EXCLUDED.includes(ch)).join(''),
   },
 ];
 
