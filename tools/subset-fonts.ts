@@ -37,10 +37,12 @@ const sentences = words.map((w) => w.word + w.kana + w.sentence).join('');
 const notes = words.map((w) => (w.meaning ?? '') + (w.nonJoyo ?? []).join('')).join('');
 
 /**
- * Klee One の字形が紛らわしく、答え合わせの見本に使わない字（例: 心 は 3 画目の点が 2 画目の書き始めにくっつき、点が 1 つ足りないように見える）。
+ * Klee One の字形が紛らわしく、答え合わせの見本に使わない字。
+ * - 心: 3 画目の点が 2 画目の書き始めにくっつき、点が 1 つ足りないように見える（2026-11-16）
+ * - 令とそれを含む字（領・冷・鈴・齢・零）: 下が「マ」の簡単な形になっている（2026-11-18）
  * Klee One のフォントに入れないので、見本では次の候補の BIZ UD明朝 で表示される（--font-kyokasho）
  */
-export const KLEE_EXCLUDED = '心';
+export const KLEE_EXCLUDED = '心令領冷鈴齢零';
 
 /** 書体ごとに必要な字 */
 const FACES = [
